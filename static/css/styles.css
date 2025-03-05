@@ -9,12 +9,6 @@ html, body {
     background-color: #f4f4f4; /* Light background color */
 }
 
-.features-page {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Ensures the body takes at least the full height of the viewport */
-}
-
 /* Background Image Styles for Login and Registration Pages */
 html.login-page, body.login-page,
 html.register-page, body.register-page,
@@ -48,126 +42,17 @@ html.main-page, body.main-page {
     color: #333;
     overflow: hidden;
 }
-
 header {
     width: 100%;
     background: rgba(255, 255, 255, 0.9);
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
-
-/* Merged Container */
-.merged-container {
-    background: rgba(255, 255, 255, 0.9);
-    padding: 40px 20px;
-    border-radius: 15px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    margin-top: 20px; /* Adjust this value as needed */
-    width: 90%; /* Adjust width as needed */
-    max-width: 800px; /* Adjust max width as needed */
-    text-align: center;
-}
-
 header h1 {
     color: #2e7d32;
     margin-bottom: 20px;
 }
 
-/* White Container */
-.white-container {
-    background: rgba(255, 255, 255, 0.9);
-    padding: 40px 20px;
-    border-radius: 15px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    margin-top: 20px; /* Adjust this value as needed */
-    width: 90%; /* Adjust width as needed */
-    max-width: 800px; /* Adjust max width as needed */
-    text-align: center;
-}
-
-.buttons-section {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.buttons-section button {
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    cursor: pointer;
-    padding: 15px 30px;
-    margin: 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.buttons-section button:hover {
-    background-color: #037108;
-    transform: scale(1.05);
-}
-
-footer {
-    background-color: #4caf50;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    margin-top: auto; /* This pushes the footer to the bottom */
-}
-
-/* Plain Background for Disease Info Page */
-html.disease-info, body.disease-info {
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 20px;
-}
-
-/* Content Background */
-.content-background {
-    background: rgba(255, 255, 255, 0.9);
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    max-width: 1200px;
-    width: 100%;
-}
-
-/* Main Page Styles for Navigation */
-header {
-    width: 100%;
-    background: rgba(255, 255, 255, 0.9);
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-}
-
-header h1 {
-    color: #2e7d32;
-}
-
-header nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-header nav ul li {
-    display: inline;
-}
-
-header nav ul li a {
-    text-decoration: none;
-    color: #2e7d32;
-    font-weight: bold;
-}
-
-header nav ul li a:hover {
-    text-decoration: underline;
-}
 
 /* Login and Register Container */
 .login-container, .register-container {
@@ -179,31 +64,6 @@ header nav ul li a:hover {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     text-align: center;
     animation: fadeIn 0.5s ease-in-out;
-}
-
-/* Flash Messages */
-.flashes {
-    list-style-type: none;
-    padding: 0;
-    margin: 10px 0 20px;
-}
-
-.flashes li {
-    padding: 10px;
-    margin-bottom: 5px;
-    border-radius: 5px;
-    font-size: 14px;
-    font-weight: bold;
-}
-
-.flashes .error {
-    background-color: #f8d7da;
-    color: #721c24;
-}
-
-.flashes .success {
-    background-color: #d4edda;
-    color: #155724;
 }
 
 /* Heading */
@@ -313,32 +173,69 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Form Text Help */
-.form-text {
-    font-size: 0.8em;
-    color: #555;
-    margin-top: 5px;
-}
-
-/* Flash Messages */
-.flash-message {
-    color: green;
+/* White Container */
+.white-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+    width: 80%;
+    max-width: 800px;
     text-align: center;
-    margin-top: 10px;
 }
 
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.buttons-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
+.buttons-section button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 15px 30px;
+    margin: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.buttons-section button:hover {
+    background-color: #037108;
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: #4caf50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto;
+}
+
+/* Plain Background for Disease Info Page */
+html.disease-info, body.disease-info {
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+/* Content Background */
+.content-background {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Login and Register Animations */
 .login-form {
     display: none;
     animation: slide-down 0.3s ease;
@@ -454,52 +351,6 @@ a:hover {
     font-size: 0.9em;
 }
 
-/* Additional Styles */
-.flash-message {
-    color: red;
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-/* Additional Styles for Forms */
-input[type="text"],
-input[type="email"],
-input[type="password"] {
-    font-size: 1em;
-}
-
-/* Error Styles */
-.error {
-    color: red;
-    font-size: 0.9em;
-    margin-top: 5px;
-}
-
-/* Success Styles */
-.success {
-    color: green;
-    font-size: 0.9em;
-    margin-top: 5px;
-}
-
-/* Loading Spinner */
-.loading-spinner {
-    border: 4px solid rgba(255, 255, 255, 0.3);
-    border-top: 4px solid #38ee0b;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    animation: spin 1s linear infinite;
-    display: none;
-    margin: 10px auto;
-}
-
-/* Spinner Animation */
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
 /* Modal Styles (if needed) */
 .modal {
     display: none;
@@ -523,7 +374,6 @@ input[type="password"] {
     border-radius: 10px;
 }
 
-/* Close Button for Modal */
 .close {
     color: #aaa;
     float: right;
@@ -564,63 +414,6 @@ input[type="password"] {
 .tooltip:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .plant-list-horizontal {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .plant-box {
-        width: 80%; /* Adjusted for smaller screens */
-    }
-
-    .filter-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .filter-container select {
-        margin-bottom: 10px;
-    }
-
-    .login-container, .register-container {
-        width: 90%; /* Adjusted for smaller screens */
-        padding: 20px; /* Reduced padding for smaller screens */
-    }
-
-    .button-container {
-        flex-direction: column;
-    }
-
-    .login-button {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-
-    .admin-dashboard {
-        padding: 15px;
-        width: 90%; /* Adjusted for smaller screens */
-    }
-
-    .admin-dashboard table, th, td {
-        font-size: 0.9em;
-    }
-
-    .admin-dashboard button {
-        padding: 8px 16px;
-    }
-
-    /* Adjust header and footer for smaller screens */
-    header {
-        padding: 15px; /* Reduced padding */
-    }
-
-    footer {
-        padding: 8px; /* Reduced padding */
-    }
 }
 
 /* General Utility Classes */
@@ -700,4 +493,99 @@ input[type="password"] {
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    text-align: center;
 }
+
+.disease-info-bottom button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.disease-info-bottom button:hover {
+    background-color: #388e3c;
+    transform: scale(1.05);
+}
+
+.disease-info-bottom a {
+    color: #2e7d32;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.disease-info-bottom a:hover {
+    text-decoration: underline;
+    color: #1b5e20;
+}
+
+/* Responsive Styles for Disease Info */
+@media (max-width: 768px) {
+    .disease-info-container {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .disease-info-top {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .disease-info-top img {
+        max-width: 100%;
+        margin: 0 0 15px 0;
+    }
+
+    .disease-info-content {
+        padding: 15px;
+    }
+}
+
+/* Loading Spinner */
+.loading-spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid #38ee0b;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    display: none;
+    margin: 10px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* General Responsive Adjustments */
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.8em;
+    }
+
+    .disease-info-content p {
+        font-size: 0.9em;
+    }
+
+    button {
+        font-size: 14px;
+    }
+
+    .plant-box {
+        width: 90%; /* Adjust to fit smaller screens */
+    }
+
+    .plant-list-horizontal {
+        gap: 10px;
+        padding: 10px;
+    }
+}
+
