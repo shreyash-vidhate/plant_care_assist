@@ -351,6 +351,61 @@ html.disease-info, body.disease-info {
     font-size: 0.9em;
 }
 
+
+
+
+/* Ensure Horizontal Layout */
+/* Diseases Grid - Horizontal Layout */
+.diseases-grid {
+    display: flex; /* Flexbox for horizontal alignment */
+    flex-wrap: nowrap; /* Prevent wrapping to new rows */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    gap: 20px; /* Add space between cards */
+    padding: 20px; /* Ensure internal padding */
+    white-space: nowrap; /* Prevent line breaks for items */
+    scroll-behavior: smooth; /* Smooth scrolling */
+    box-sizing: border-box; /* Include padding in width calculations */
+}
+
+/* Parent Container for Seeding Stage */
+.disease-grid-container {
+    width: 100%; /* Take full width */
+    overflow: hidden; /* Avoid overflowing content */
+    padding: 0; /* Reset any padding */
+    margin: 0; /* Remove any unintended margins */
+    box-sizing: border-box;
+}
+
+.diseases-grid {
+    display: flex !important;
+}
+
+
+
+
+.disease-card {
+    flex: 0 0 auto; /* Prevent shrinking or stretching of items */
+    width: 200px; /* Fixed width for cards */
+    background: #e8f5e9; /* Light green background */
+    padding: 10px; /* Padding inside each card */
+    border-radius: 10px; /* Rounded corners */
+    text-align: center; /* Align text within the cards */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.disease-card img {
+    width: 100%; /* Full width of the card */
+    height: 150px; /* Fixed height for images */
+    object-fit: cover; /* Maintain aspect ratio and crop excess */
+    border-radius: 5px; /* Rounded image corners */
+}
+
+.disease-card p {
+    color: #2e7d32; /* Green text */
+    font-size: 0.9em; /* Font size */
+    margin-top: 10px; /* Space between image and text */
+}
+
 /* Modal Styles (if needed) */
 .modal {
     display: none;
@@ -585,7 +640,231 @@ html.disease-info, body.disease-info {
 
     .plant-list-horizontal {
         gap: 10px;
-        padding: 10px;
+        padding: 10px;
     }
 }
 
+
+/* Main container styles */
+.about-container {
+    max-width: 900px;
+    margin: 0px auto;
+    padding: 10px;
+    background: white; /* Changed to white */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 0px;
+}
+
+/* Headings */
+h1, h2 {
+    color: #4caf50;
+}
+
+/* Paragraphs */
+p {
+    color: #333333;
+}
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 5px 0;
+    background-color: #4ac561;
+    color: rgb(244, 241, 241);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+}
+/* Header styles */
+header {
+    background-color: #4ac561;
+    color: white;
+    text-align: center;
+    padding: 7px 0;
+}
+/* Main container styles */
+.feature-container {
+    max-width: 900px;
+    margin: 0px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+/* Headings */
+h1, h2 {
+    color: #4caf50;
+    text-align: center;
+}
+/* List styles */
+ul {
+    list-style-type: square;
+    margin: 20px;
+    padding-left: 30px;
+}
+
+li {
+    color: #333333;
+    padding: 4px 0;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 5px 0;
+    background-color: #4ac561;
+    color: rgb(244, 241, 241);
+    font-size: 14px; /* Fixed typo */
+    margin-top: 10px;
+    width: 100vw; /* Ensures the footer takes up the full width of the viewport */
+    position: fixed; /* Fixes the footer at the bottom of the viewport */
+    bottom: 0; /* Keeps the footer at the very bottom */
+    left: 0; /* Aligns the footer to the left edge of the viewport */
+    box-sizing: border-box; /* Includes padding and border in the width calculation */
+    overflow: hidden; /* Hides any overflowing content */
+}
+/* Contact Page middle container */
+.contact-container {
+    max-width: 900px;
+    margin: 0px auto; /* Centers the container and adds vertical spacing */
+    padding: 40px;
+    background: white; /* White background for the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds subtle shadow for depth */
+    border-radius: 8px; /* Smooth rounded corners */
+}
+/* Headings inside container */
+.contact-container h1, .contact-container h2 {
+    color: #4caf50; /* Green accent for headings */
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* List styles */
+.contact-container ul {
+    list-style-type: square; /* Square bullet points */
+    margin: 20px;
+    padding-left: 30px;
+}
+
+.contact-container li {
+    color: #333333; /* Text color for list items */
+    padding: 4px 0;
+}
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 5px 0;
+    background-color: #4ac561;
+    color: rgb(244, 241, 241);
+    font-size: 14px;
+    position: fixed; /* Fixes the footer at the bottom */
+    width: 100vw; /* Full width footer */
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
+}
+
+/* Main container styles */
+.dashboard-container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white; /* White container for the main content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 8px; /* Rounded corners */
+    max-height: 70vh; /* Limits the height to 70% of the viewport */
+    overflow-y: auto; /* Adds vertical scrolling if content exceeds height */
+}
+
+/* Header styles */
+header {
+    background-color: #4ac561;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Section styles */
+.user-list h2 {
+    color: #4ac561;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.user-list table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.user-list table thead {
+    background-color: #4ac561;
+    color: white;
+}
+
+.user-list table th,
+.user-list table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd; /* Light gray borders for table cells */
+}
+
+.user-list table tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Alternating row colors for readability */
+}
+
+.user-list table tbody tr:hover {
+    background-color: #f1f1f1; /* Highlight row on hover */
+}
+
+.user-list table button {
+    padding: 7px 10px;
+    background-color: #4ac561;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.user-list table button:hover {
+    background-color: #3aa94e;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #4ac561;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+}

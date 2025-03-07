@@ -2666,36 +2666,372 @@ def insert_data():
             db.session.add(disease)
 
         # Add disease data for onion at the flowering stage
-        onion_diseases_flowering =[
-            ('Powdery Mildew', '''Symptoms:<br>''', 'Flowering'),
-            ('Foot and Collar Rot', '''Symptoms:<br>''', 'Flowering'),
-            ('Stemphylium Leaf Blight of Onion', '''Symptoms:<br>''', 'Flowering'),
-            ('Gray Leaf Spot', '''Symptoms:<br>''', 'Flowering'),
-            ('Aster Yellows Phytoplasma', '''Symptoms:<br>''', 'Flowering'),
+        onion_diseases_flowering = [
+            ('Powdery Mildew', 
+            '''Symptoms:<br>
+            - White, powdery fungal growth on leaves.<br>
+            - Leaf curling and distortion.<br>
+            - Premature leaf drop.<br>
+            <br>
+            Causes:<br>
+            - High humidity and poor air circulation.<br>
+            - Overhead watering can promote fungal growth.<br>
+            - Warm temperatures (20-25°C) favor disease development.<br>
+            <br>
+            Preventive Measures:<br>
+            - Ensure proper spacing between plants for air circulation.<br>
+            - Water plants at the base to avoid wetting foliage.<br>
+            - Apply fungicides preventively in high-risk conditions.<br>
+            <br>
+            Treatment:<br>
+            - Apply fungicides specifically for powdery mildew.<br>
+            - Remove and destroy infected plant debris.<br>
+            - Improve air circulation around plants.<br><br>''', 
+            'Flowering'),
+
+            ('Foot and Collar Rot', 
+            '''Symptoms:<br>
+            - Dark, water-soaked lesions at the base of the plant.<br>
+            - Wilting and yellowing of leaves.<br>
+            - Soft, mushy tissue at the collar region.<br>
+            <br>
+            Causes:<br>
+            - Fungal pathogens in the soil (e.g., *Fusarium* spp.).<br>
+            - Overwatering and poor drainage conditions.<br>
+            - High soil temperatures can exacerbate the disease.<br>
+            <br>
+            Preventive Measures:<br>
+            - Ensure proper drainage in planting areas.<br>
+            - Avoid overwatering and waterlogged conditions.<br>
+            - Rotate crops to reduce pathogen buildup in the soil.<br>
+            <br>
+            Treatment:<br>
+            - Remove and destroy infected plants.<br>
+            - Apply fungicides if necessary.<br>
+            - Improve soil drainage and aeration.<br><br>''', 
+            'Flowering'),
+
+            ('Stemphylium Leaf Blight of Onion', 
+            '''Symptoms:<br>
+            - Water-soaked lesions that turn brown.<br>
+            - Yellowing of leaves.<br>
+            - Premature leaf dieback.<br>
+            <br>
+            Causes:<br>
+            - Fungal pathogens (e.g., *Stemphylium* spp.).<br>
+            - High humidity and wet conditions favor disease spread.<br>
+            - Poor air circulation around plants.<br>
+            <br>
+            Preventive Measures:<br>
+            - Practice crop rotation to reduce pathogen buildup.<br>
+            - Ensure proper spacing for air circulation.<br>
+            - Apply fungicides preventively in high-risk conditions.<br>
+            <br>
+            Treatment:<br>
+            - Apply fungicides specifically for Stemphylium blight.<br>
+            - Remove and destroy infected plant material.<br>
+            - Improve air circulation around plants.<br><br>''', 
+            'Flowering'),
+
+            ('Gray Leaf Spot', 
+            '''Symptoms:<br>
+            - Small, round, grayish spots on leaves.<br>
+            - Yellowing of leaf margins.<br>
+            - Reduced photosynthesis and vigor.<br>
+            <br>
+            Causes:<br>
+            - Fungal pathogens (e.g., *Pyrenophora* spp.).<br>
+            - High humidity and wet foliage promote disease.<br>
+            - Poor air circulation around plants.<br>
+            <br>
+            Preventive Measures:<br>
+            - Ensure proper spacing between plants for air circulation.<br>
+            - Water plants at the base to avoid wetting foliage.<br>
+            - Apply fungicides preventively in high-risk conditions.<br>
+            <br>
+            Treatment:<br>
+            - Apply fungicides specifically for gray leaf spot.<br>
+            - Remove and destroy infected plant debris.<br>
+            - Improve air circulation around plants.<br><br>''', 
+            'Flowering'),
+
+            ('Aster Yellows Phytoplasma', 
+            '''Symptoms:<br>
+            - Yellowing of leaves and flowers.<br>
+            - Stunted growth and distorted leaves.<br>
+            - Flowering plants may produce fewer flowers.<br>
+            <br>
+            Causes:<br>
+            - Caused by phytoplasma transmitted by leafhoppers.<br>
+            - Poorly managed weed populations can harbor vectors.<br>
+            <br>
+            Preventive Measures:<br>
+            - Control leafhopper populations with insecticides.<br>
+            - Remove and destroy infected plants promptly.<br>
+            - Practice good weed management to reduce vector habitats.<br>
+            <br>
+            Treatment:<br>
+            - There is no chemical treatment for phytoplasma; focus on prevention.<br>
+            - Remove and destroy infected plants to limit spread.<br><br>''', 
+            'Flowering'),
         ]
         for name, description, stage in onion_diseases_flowering:
             disease = Disease(plant_id=onion.id, name=name, description=description, stage=stage)
             db.session.add(disease)
 
         # Add disease data for onion at the fruiting stage
-        onion_diseases_fruiting =[
-            ('Powdery Mildew', '''Symptoms:<br>''', 'Fruiting'),
-            ('Fusarium Wilt', '''Symptoms:<br>''', 'Fruiting'),
-            ('Black Shank', '''Symptoms:<br>''', 'Fruiting'),
-            ('Purple Blotch of Onion', '''Symptoms:<br>''', 'Fruiting'),
-            ('Spider Miltes', '''Symptoms:<br>''', 'Fruiting'),
-            ('Onion Yellow Dwarf', '''Symptoms:<br>''', 'Fruiting'),
+        onion_diseases_fruiting = [
+            ('Powdery Mildew', 
+            '''Symptoms:<br>
+            - White, powdery fungal growth on leaves.<br>
+            - Leaf curling and distortion.<br>
+            - Premature leaf drop.<br>
+            <br>
+            Causes:<br>
+            - High humidity and poor air circulation.<br>
+            - Overhead watering can promote fungal growth.<br>
+            - Warm temperatures (20-25°C) favor disease development.<br>
+            <br>
+            Preventive Measures:<br>
+            - Ensure proper spacing between plants for air circulation.<br>
+            - Water plants at the base to avoid wetting foliage.<br>
+            - Apply fungicides preventively in high-risk conditions.<br>
+            <br>
+            Treatment:<br>
+            - Apply fungicides specifically for powdery mildew.<br>
+            - Remove and destroy infected plant debris.<br>
+            - Improve air circulation around plants.<br><br>''', 
+            'Fruiting'),
+
+            ('Fusarium Wilt', 
+            '''Symptoms:<br>
+            - Yellowing and wilting of leaves.<br>
+            - Vascular discoloration in the stem.<br>
+            - Stunted growth and reduced yield.<br>
+            <br>
+            Causes:<br>
+            - Caused by *Fusarium* fungi in the soil.<br>
+            - High soil temperatures and poor drainage conditions.<br>
+            <br>
+            Preventive Measures:<br>
+            - Rotate crops to reduce pathogen buildup in the soil.<br>
+            - Avoid planting in overly wet conditions.<br>
+            - Use resistant onion varieties when available.<br>
+            <br>
+            Treatment:<br>
+            - Remove and destroy infected plants.<br>
+            - Improve soil drainage and aeration.<br>
+            - Apply fungicides if necessary.<br><br>''', 
+            'Fruiting'),
+
+            ('Black Shank', 
+            '''Symptoms:<br>
+            - Dark, water-soaked lesions on stems.<br>
+            - Wilting and yellowing of leaves.<br>
+            - Root rot and reduced bulb size.<br>
+            <br>
+            Causes:<br>
+            - Caused by *Phytophthora* spp. pathogens.<br>
+            - High soil moisture and poor drainage conditions.<br>
+            <br>
+            Preventive Measures:<br>
+            - Ensure proper drainage in planting areas.<br>
+            - Avoid overwatering and waterlogged conditions.<br>
+            - Rotate crops to reduce pathogen buildup in the soil.<br>
+            <br>
+            Treatment:<br>
+            - Remove and destroy infected plants.<br>
+            - Apply fungicides specifically for black shank.<br>
+            - Improve soil drainage and aeration.<br><br>''', 
+            'Fruiting'),
+
+            ('Purple Blotch of Onion', 
+            '''Symptoms:<br>
+            - Irregular, purplish lesions on leaves.<br>
+            - Yellowing of leaf margins.<br>
+            - Reduced photosynthesis and vigor.<br>
+            <br>
+            Causes:<br>
+            - Caused by *Alternaria* spp. fungi.<br>
+            - High humidity and wet foliage promote disease.<br>
+            <br>
+            Preventive Measures:<br>
+            - Ensure proper spacing between plants for air circulation.<br>
+            - Water plants at the base to avoid wetting foliage.<br>
+            - Apply fungicides preventively in high-risk conditions.<br>
+            <br>
+            Treatment:<br>
+            - Apply fungicides specifically for purple blotch.<br>
+            - Remove and destroy infected plant debris.<br>
+            - Improve air circulation around plants.<br><br>''', 
+            'Fruiting'),
+
+            ('Spider Mites', 
+            '''Symptoms:<br>
+            - Fine webbing on leaves.<br>
+            - Yellowing and stippling of leaf surfaces.<br>
+            - Leaf curling and premature drop.<br>
+            <br>
+            Causes:<br>
+            - Caused by feeding damage from spider mites.<br>
+            - High temperatures and low humidity favor mite populations.<br>
+            <br>
+            Preventive Measures:<br>
+            - Monitor for spider mites and apply miticides as needed.<br>
+            - Increase humidity around plants to deter mites.<br>
+            - Use reflective mulches to reduce mite populations.<br>
+            <br>
+            Treatment:<br>
+            - Apply miticides specifically targeting spider mites.<br>
+            - Introduce beneficial insects to help control mite populations.<br>
+            - Remove and destroy infested plant debris.<br><br>''', 
+            'Fruiting'),
+
+            ('Onion Yellow Dwarf', 
+            '''Symptoms:<br>
+            - Yellowing of leaves and stunted growth.<br>
+            - Reduced bulb size and quality.<br>
+            - Leaf curling and distortion.<br>
+            <br>
+            Causes:<br>
+            - Caused by viral infection (Onion yellow dwarf virus).<br>
+            - Transmitted by aphids and other insect vectors.<br>
+            <br>
+            Preventive Measures:<br>
+            - Control aphid populations with insecticides.<br>
+            - Remove and destroy infected plants promptly.<br>
+            - Practice good weed management to reduce vector habitats.<br>
+            <br>
+            Treatment:<br>
+            - There is no chemical treatment for viral infections; focus on prevention.<br>
+            - Remove and destroy infected plants to limit spread.<br><br>''', 
+            'Fruiting'),
         ]
         for name, description, stage in onion_diseases_fruiting:
             disease = Disease(plant_id=onion.id, name=name, description=description, stage=stage)
             db.session.add(disease)
 
         # Add disease data for onion at the harvesting stage
-        onion_diseases_harvesting =[
-            ('Steam Rot', '''Symptoms:<br>''', 'Harvesting'),
-            ('Beet Armyworm', '''Symptoms:<br>''', 'Harvesting'),
-            ('Helicoverpa Caterpillar', '''Symptoms:<br>''', 'Harvesting'),
-            ('Sunburn', '''Symptoms:<br>''', 'Harvesting'),
+        onion_diseases_harvesting = [
+            ('Steam Rot', 
+            '''Symptoms:<br>
+            - Soft, water-soaked areas on bulbs.<br>
+            - Foul odor from decaying tissue.<br>
+            - Bulbs may collapse and become mushy.<br>
+            - Discoloration of the bulb surface.<br>
+            - Presence of mold or fungal growth on the surface.<br>
+            <br>
+            Causes:<br>
+            - Caused by fungal pathogens (e.g., *Botrytis* spp.).<br>
+            - High humidity and poor ventilation during storage.<br>
+            - Damage to bulbs during harvesting or handling.<br>
+            - Storing wet or damaged bulbs increases risk.<br>
+            - Prolonged storage periods without proper conditions.<br>
+            <br>
+            Preventive Measures:<br>
+            - Ensure proper ventilation in storage areas.<br>
+            - Avoid storing damaged or wet bulbs.<br>
+            - Maintain low humidity levels during storage.<br>
+            - Use clean, dry containers for storage.<br>
+            - Regularly inspect stored bulbs for signs of rot.<br>
+            <br>
+            Treatment:<br>
+            - Remove and destroy infected bulbs immediately.<br>
+            - Improve storage conditions to prevent further outbreaks.<br>
+            - Apply fungicides if necessary before storage.<br>
+            - Clean storage areas to remove any fungal spores.<br>
+            - Monitor humidity and temperature regularly.<br><br>''', 
+            'Harvesting'),
+
+            ('Beet Armyworm', 
+            '''Symptoms:<br>
+            - Irregular holes in leaves caused by feeding.<br>
+            - Webbing and frass (caterpillar droppings) on plants.<br>
+            - Stunted growth and reduced yield.<br>
+            - Leaves may appear ragged or skeletonized.<br>
+            - Presence of caterpillars on or near the plants.<br>
+            <br>
+            Causes:<br>
+            - Caused by the larvae of the beet armyworm (*Spodoptera exigua*).<br>
+            - High populations can lead to significant damage.<br>
+            - Favorable conditions include warm temperatures and high humidity.<br>
+            - Poorly managed weeds can harbor armyworm populations.<br>
+            - Lack of natural predators can increase caterpillar numbers.<br>
+            <br>
+            Preventive Measures:<br>
+            - Monitor for armyworm populations and apply insecticides as needed.<br>
+            - Use row covers to protect young plants.<br>
+            - Practice crop rotation to disrupt life cycles.<br>
+            - Encourage beneficial insects that prey on armyworms.<br>
+            - Maintain healthy plant vigor to withstand damage.<br>
+            <br>
+            Treatment:<br>
+            - Apply insecticides specifically targeting beet armyworm.<br>
+            - Introduce beneficial insects to help control populations.<br>
+            - Remove and destroy infested plant debris.<br>
+            - Handpick caterpillars if populations are low.<br>
+            - Monitor plants regularly for signs of reinfestation.<br><br>''', 
+            'Harvesting'),
+
+            ('Helicoverpa Caterpillar', 
+            '''Symptoms:<br>
+            - Irregular feeding damage on leaves and bulbs.<br>
+            - Webbing and frass on plants.<br>
+            - Stunted growth and reduced yield.<br>
+            - Leaves may show signs of wilting or curling.<br>
+            - Presence of caterpillars, often green or brown in color.<br>
+            <br>
+            Causes:<br>
+            - Caused by the larvae of the Helicoverpa moths (e.g., *Helicoverpa armigera*).<br>
+            - High populations can lead to significant damage.<br>
+            - Favorable conditions include warm temperatures and high humidity.<br>
+            - Poorly managed weeds can harbor caterpillar populations.<br>
+            - Lack of natural predators can increase caterpillar numbers.<br>
+            <br>
+            Preventive Measures:<br>
+            - Monitor for caterpillar populations and apply insecticides as needed.<br>
+            - Use pheromone traps to monitor and control populations.<br>
+            - Practice crop rotation to disrupt life cycles.<br>
+            - Encourage beneficial insects that prey on Helicoverpa.<br>
+            - Maintain healthy plant vigor to withstand damage.<br>
+            <br>
+            Treatment:<br>
+            - Apply insecticides specifically targeting Helicoverpa caterpillars.<br>
+            - Introduce beneficial insects to help control populations.<br>
+            - Remove and destroy infested plant debris.<br>
+            - Handpick caterpillars if populations are low.<br>
+            - Monitor plants regularly for signs of reinfestation.<br><br>''', 
+            'Harvesting'),
+
+            ('Sunburn', 
+            '''Symptoms:<br>
+            - Scalded or bleached areas on the surface of bulbs.<br>
+            - Reduced quality and marketability of bulbs.<br>
+            - Increased susceptibility to diseases.<br>
+            - Leaves may show signs of wilting or curling.<br>
+            - Bulbs may develop sunken spots or cracks.<br>
+            <br>
+            Causes:<br>
+            - Excessive exposure to direct sunlight during growth.<br>
+            - Lack of adequate foliage cover over bulbs.<br>
+            - High temperatures and low humidity can exacerbate sunburn.<br>
+            - Poor plant spacing can lead to increased sun exposure.<br>
+            - Prolonged exposure to intense sunlight without shade.<br>
+            <br>
+            Preventive Measures:<br>
+            - Ensure proper plant spacing to provide shade.<br>
+            - Use mulch to protect bulbs from direct sunlight.<br>
+            - Harvest at the right time to minimize sun exposure.<br>
+            - Provide shade cloth during extreme heat conditions.<br>
+            - Monitor weather conditions and adjust practices accordingly.<br>
+            <br>
+            Treatment:<br>
+            - There is no chemical treatment for sunburn; focus on prevention.<br>
+            - Remove and discard severely sunburned bulbs.<br>
+            - Improve growing conditions to prevent future occurrences.<br>
+            - Apply protective coverings during extreme weather.<br>
+            - Monitor plants regularly for signs of stress.<br><br>''', 
+            'Harvesting'),
         ]
         for name, description, stage in onion_diseases_harvesting:
             disease = Disease(plant_id=onion.id, name=name, description=description, stage=stage)
@@ -2704,69 +3040,859 @@ def insert_data():
 
         # Add disease data for Potato at the seeding stage
         potato = Plant.query.filter_by(name='Potato').first()
-        potato_diseases_seeding =[
-            ('Bottom Rot', '''Symptoms:<br>''', 'Seeding'),
-            ('Damping-Off of Seeding ', '''Symptoms:<br>''', 'Seeding'),
-            ('Potato X Virus', '''Symptoms:<br>''', 'Seeding'),
-            ('Potato Mop Top Virus', '''Symptoms:<br>''', 'Seeding'),
-            ('Slugs and Snails', '''Symptoms:<br>''', 'Seeding'),
+        potato_diseases_seeding = [
+            ('Bottom Rot', 
+            '''Symptoms:<br>
+            - Dark, water-soaked lesions at the base of the stem.<br>
+            - Wilting and yellowing of leaves.<br>
+            - Soft, mushy tissue at the base of the plant.<br>
+            - Foul odor from decaying tissue.<br>
+            - Reduced plant vigor and stunted growth.<br>
+            <br>
+            Causes:<br>
+            - Caused by fungal pathogens (e.g., *Pythium* spp.).<br>
+            - High soil moisture and poor drainage conditions.<br>
+            - Overwatering or heavy rainfall can exacerbate the issue.<br>
+            - Soil compaction can hinder root development.<br>
+            - Infected seed tubers can introduce pathogens.<br>
+            <br>
+            Preventive Measures:<br>
+            - Ensure proper drainage in planting areas.<br>
+            - Avoid overwatering and waterlogged conditions.<br>
+            - Use disease-free seed tubers for planting.<br>
+            - Practice crop rotation to reduce pathogen buildup.<br>
+            - Improve soil structure to enhance drainage.<br>
+            <br>
+            Treatment:<br>
+            - Remove and destroy infected plants immediately.<br>
+            - Apply fungicides if necessary to protect healthy plants.<br>
+            - Improve soil drainage and aeration.<br>
+            - Monitor soil moisture levels regularly.<br>
+            - Avoid planting in overly wet conditions.<br><br>''', 
+            'Seeding'),
+
+            ('Damping-Off of Seeding', 
+            '''Symptoms:<br>
+            - Seedlings collapse and fall over at the soil line.<br>
+            - Water-soaked lesions on stems and leaves.<br>
+            - Poor germination and uneven seedling emergence.<br>
+            - Fungal growth on the soil surface.<br>
+            - Reduced plant vigor and stunted growth.<br>
+            <br>
+            Causes:<br>
+            - Caused by various fungal pathogens (e.g., *Rhizoctonia*, *Pythium*).<br>
+            - High humidity and poor air circulation in seedling trays.<br>
+            - Overwatering and waterlogged conditions.<br>
+            - Contaminated soil or planting media.<br>
+            - Inadequate sanitation practices in the growing area.<br>
+            <br>
+            Preventive Measures:<br>
+            - Use sterile seedling trays and planting media.<br>
+            - Ensure proper spacing for air circulation.<br>
+            - Water seedlings from below to avoid wetting foliage.<br>
+            - Maintain optimal humidity levels in the growing area.<br>
+            - Practice good sanitation to reduce pathogen presence.<br>
+            <br>
+            Treatment:<br>
+            - Remove and destroy infected seedlings immediately.<br>
+            - Apply fungicides specifically for damping-off.<br>
+            - Improve air circulation around seedlings.<br>
+            - Monitor moisture levels and avoid overwatering.<br>
+            - Use resistant varieties when available.<br><br>''', 
+            'Seeding'),
+
+            ('Potato X Virus', 
+            '''Symptoms:<br>
+            - Stunted growth and reduced yield.<br>
+            - Leaf curling and distortion.<br>
+            - Yellowing of leaves, especially along the margins.<br>
+            - Mosaic patterns on leaves.<br>
+            - Poor tuber development and quality.<br>
+            <br>
+            Causes:<br>
+            - Caused by the Potato X virus (PVX), transmitted by aphids.<br>
+            - Infected seed tubers can introduce the virus.<br>
+            - Poorly managed weed populations can harbor vectors.<br>
+            - High aphid populations can increase transmission risk.<br>
+            <br>
+            Preventive Measures:<br>
+            - Use certified disease-free seed tubers.<br>
+            - Control aphid populations with insecticides.<br>
+            - Remove and destroy infected plants promptly.<br>
+            - Practice good weed management to reduce vector habitats.<br>
+            - Monitor crops regularly for signs of infection.<br>
+            <br>
+            Treatment:<br>
+            - There is no chemical treatment for viral infections; focus on prevention.<br>
+            - Remove and destroy infected plants to limit spread.<br>
+            - Use resistant potato varieties when available.<br>
+            - Maintain healthy plant vigor to withstand disease.<br>
+            - Monitor aphid populations and apply control measures as needed.<br><br>''', 
+            'Seeding'),
+
+            ('Potato Mop Top Virus', 
+            '''Symptoms:<br>
+            - Stunted growth and reduced yield.<br>
+            - Leaf curling and distortion.<br>
+            - Yellowing of leaves, especially along the margins.<br>
+            - Poor tuber development and quality.<br>
+            - Presence of small, malformed tubers.<br>
+            <br>
+            Causes:<br>
+            - Caused by the Potato mop-top virus (PMTV), transmitted by nematodes.<br>
+            - Infected seed tubers can introduce the virus.<br>
+            - Poorly managed soil health can exacerbate the issue.<br>
+            - High nematode populations can increase transmission risk.<br>
+            <br>
+            Preventive Measures:<br>
+            - Use certified disease-free seed tubers.<br>
+            - Control nematode populations in the soil.<br>
+            - Remove and destroy infected plants promptly.<br>
+            - Practice good soil health management to reduce nematode populations.<br>
+            - Monitor crops regularly for signs of infection.<br>
+            <br>
+            Treatment:<br>
+            - There is no chemical treatment for viral infections; focus on prevention.<br>
+            - Remove and destroy infected plants to limit spread.<br>
+            - Use resistant potato varieties when available.<br>
+            - Maintain healthy plant vigor to withstand disease.<br>
+            - Monitor nematode populations and apply control measures as needed.<br><br>''', 
+            'Seeding'),
+
+            ('Slugs and Snails', 
+            '''Symptoms:<br>
+            - Irregular holes in leaves and stems.<br>
+            - Presence of slime trails on plants and soil.<br>
+            - Wilting and stunted growth of affected plants.<br>
+            - Damage to tubers, leading to reduced quality.<br>
+            - Increased susceptibility to diseases due to damaged tissue.<br>
+            <br>
+            Causes:<br>
+            - Caused by feeding damage from slugs and snails.<br>
+            - Favorable conditions include high humidity and wet soil.<br>
+            - Poor drainage and excessive moisture can attract them.<br>
+            - Dense vegetation can provide hiding places for slugs and snails.<br>
+            <br>
+            Preventive Measures:<br>
+            - Remove debris and weeds that provide shelter.<br>
+            - Use barriers such as copper tape around planting areas.<br>
+            - Apply organic slug bait to control populations.<br>
+            - Encourage natural predators like birds and toads.<br>
+            - Monitor moisture levels and avoid overwatering.<br>
+            <br>
+            Treatment:<br>
+            - Handpick slugs and snails from plants and surrounding areas.<br>
+            - Apply slug and snail baits as needed.<br>
+            - Use traps filled with beer or soapy water to catch them.<br>
+            - Improve drainage to reduce favorable conditions.<br>
+            - Monitor plants regularly for signs of damage.<br><br>''', 
+            'Seeding'),
         ]
         for name, description, stage in potato_diseases_seeding:
             disease = Disease(plant_id=potato.id, name=name, description=description, stage=stage)
             db.session.add(disease)
 
         # Add disease data for potato at the vegetative stage
-        potato_diseases_vegetative =[
-            ('Powdery Mildew', '''Symptoms:<br>''', 'Vegetative'),
-            ('Bottom Rot', '''Symptoms:<br>''', 'Vegetative'),
-            ('Atem Rot', '''Symptoms:<br>''', 'Vegetative'),
-            ('Septoria Leaf Spot', '''Symptoms:<br>''', 'Vegetative'),
-            ('Potato Leafroll Virus', '''Symptoms:<br>''', 'Vegetative'),
-            ('Potato Y Virus', '''Symptoms:<br>''', 'Vegetative'),
-            ('Potato S Virus', '''Symptoms:<br>''', 'Vegetative'),
-            ('Hadda Beetle', '''Symptoms:<br>''', 'Vegetative'),
+        potato_diseases_vegetative = [
+            ('Powdery Mildew', 
+            '''Symptoms:<br>
+            - White, powdery fungal growth on leaves.<br>
+            - Leaves may yellow and die prematurely.<br>
+            - Affected leaves may become distorted.<br>
+            - Fungal growth can spread to stems and flowers.<br>
+            - Reduced photosynthesis leading to stunted growth.<br>
+            <br>
+            Causes:<br>
+            - Caused by the fungal pathogen *Erysiphe cichoracearum*.<br>
+            - Thrives in warm, dry conditions with high humidity.<br>
+            - Poor air circulation around plants increases risk.<br>
+            - Overcrowding of plants can exacerbate the problem.<br>
+            - Infected plant debris can harbor spores.<br>
+            <br>
+            Preventive Measures:<br>
+            - Ensure good air circulation around plants.<br>
+            - Avoid overhead watering to reduce humidity.<br>
+            - Use resistant potato varieties when available.<br>
+            - Remove infected plant debris from the area.<br>
+            - Practice crop rotation to minimize recurrence.<br>
+            <br>
+            Treatment:<br>
+            - Apply fungicides as needed, following label instructions.<br>
+            - Remove and destroy infected leaves to reduce spread.<br>
+            - Improve air circulation by spacing plants properly.<br>
+            - Monitor humidity levels and adjust watering practices.<br>
+            - Consider using organic fungicides as a preventive measure.<br><br>''','Vegetative'), 
+            
+            ('Bottom Rot', 
+            '''Symptoms:<br>
+            - Dark, water-soaked lesions at the base of the stem.<br>
+            - Plants may wilt and exhibit yellowing leaves.<br>
+            - Soft, mushy tissue at the base of the plant.<br>
+            - Foul odor from decaying tissue.<br>
+            - Reduced plant vigor and stunted growth.<br>
+            <br>
+            Causes:<br>
+            - Caused by fungal pathogens (e.g., *Pythium* spp.).<br>
+            - High soil moisture and poor drainage conditions.<br>
+            - Overwatering or heavy rainfall can exacerbate the issue.<br>
+            - Soil compaction can hinder root development.<br>
+            - Infected seed tubers can introduce pathogens.<br>
+            <br>
+            Preventive Measures:<br>
+            - Ensure proper drainage in planting areas.<br>
+            - Avoid overwatering and waterlogged conditions.<br>
+            - Use disease-free seed tubers for planting.<br>
+            - Practice crop rotation to reduce pathogen buildup.<br>
+            - Improve soil structure to enhance drainage.<br>
+            <br>
+            Treatment:<br>
+            - Remove and destroy infected plants immediately.<br>
+            - Apply fungicides if necessary to protect healthy plants.<br>
+            - Improve soil drainage and aeration.<br>
+            - Monitor soil moisture levels regularly.<br>
+            - Avoid planting in overly wet conditions.<br><br>''','Vegetative'), 
+            
+            ('Atem Rot', 
+            '''Symptoms:<br>
+            - Soft, brown lesions on tubers.<br>
+            - Decay can lead to a foul odor.<br>
+            - Affected tubers may become mushy.<br>
+            - Reduced quality and marketability of tubers.<br>
+            - In severe cases, entire crops may be lost.<br>
+            <br>
+            Causes:<br>
+            - Caused by fungal pathogens (e.g., *Fusarium* spp.).<br>
+            - Often occurs in storage conditions with high humidity.<br>
+            - Mechanical damage during harvest can introduce pathogens.<br>
+            - Poor ventilation in storage areas can exacerbate the issue.<br>
+            - Infected seed tubers can introduce the disease.<br>
+            <br>
+            Preventive Measures:<br>
+            - Store tubers in a cool, dry place with good ventilation.<br>
+            - Avoid mechanical damage during harvest and handling.<br>
+            - Use disease-free seed tubers for planting.<br>
+            - Monitor storage conditions regularly to prevent humidity buildup.<br>
+            - Practice good sanitation in storage areas.<br>
+            <br>
+            Treatment:<br>
+            - Remove infected tubers immediately to prevent spread.<br>
+            - Apply appropriate fungicides if necessary.<br>
+            - Ensure proper storage conditions to prevent decay.<br>
+            - Monitor tubers regularly for signs of infection.<br>
+            - Dispose of infected material properly to avoid contamination.<br><br>''','Vegetative'), 
+            
+            ('Septoria Leaf Spot', 
+            '''Symptoms:<br>
+            - Small, dark spots with yellow halos on leaves.<br>
+            - Spots may coalesce, leading to larger areas of necrosis.<br>
+            - Affected leaves may drop prematurely.<br>
+            - Reduced photosynthesis and overall plant vigor.<br>
+            - In severe cases, entire plants may be affected.<br>
+            <br>
+            Causes:<br>
+            - Caused by the fungal pathogen *Septoria lycopersici*.<br>
+            - Thrives in wet conditions and high humidity.<br>
+            - Infected plant debris can serve as a source of spores.<br>
+            - Overcrowding can increase humidity and disease spread.<br>
+            - Poor air circulation around plants can exacerbate the issue.<br>
+            <br>
+            Preventive Measures:<br>
+            - Practice crop rotation to reduce pathogen buildup.<br>
+            - Ensure good air circulation around plants.<br>
+            - Remove and destroy infected plant debris.<br>
+            - Avoid overhead watering to minimize leaf wetness.<br>
+            - Use resistant varieties when available.<br>
+            <br>
+            Treatment:<br>
+            - Apply fungicides as needed, following label instructions.<br>
+            - Remove and destroy infected leaves to reduce spread.<br>
+            - Improve air circulation by spacing plants properly.<br>
+            - Monitor humidity levels and adjust watering practices.<br>
+            - Consider using organic fungicides as a preventive measure.<br><br>''','Vegetative') 
         ]
         for name, description, stage in potato_diseases_vegetative:
             disease = Disease(plant_id=potato.id, name=name, description=description, stage=stage)
             db.session.add(disease)
 
         # Add disease data for potato at the flowering stage
-        potato_diseases_flowering =[
-            ('Powdery Mildew', '''Symptoms:<br>''', 'Flowering'),
-            ('Verticillium Wilt', '''Symptoms:<br>''', 'Flowering'),
-            ('Alternaria Brown Spot', '''Symptoms:<br>''', 'Flowering'),
-            ('Gray Leaf Spot', '''Symptoms:<br>''', 'Flowering'),
-            ('Wet Rot', '''Symptoms:<br>''', 'Flowering'),
-            ('Spider Miltes', '''Symptoms:<br>''', 'Flowering'),
+        potato_diseases_flowering = [
+            ('Powdery Mildew', 
+            '''Symptoms:<br>
+            - White, powdery fungal growth on flowers and leaves.<br>
+            - Leaves may yellow and die prematurely.<br>
+            - Affected flowers may drop before blooming.<br>
+            - Fungal growth can spread to stems and tubers.<br>
+            - Reduced photosynthesis leading to stunted growth.<br>
+            <br>
+            Causes:<br>
+            - Caused by the fungal pathogen *Erysiphe cichoracearum*.<br>
+            - Thrives in warm, dry conditions with high humidity.<br>
+            - Poor air circulation around plants increases risk.<br>
+            - Overcrowding of plants can exacerbate the problem.<br>
+            - Infected plant debris can harbor spores.<br>
+            <br>
+            Preventive Measures:<br>
+            - Ensure good air circulation around plants.<br>
+            - Avoid overhead watering to reduce humidity.<br>
+            - Use resistant potato varieties when available.<br>
+            - Remove infected plant debris from the area.<br>
+            - Practice crop rotation to minimize recurrence.<br>
+            <br>
+            Treatment:<br>
+            - Apply fungicides as needed, following label instructions.<br>
+            - Remove and destroy infected leaves and flowers to reduce spread.<br>
+            - Improve air circulation by spacing plants properly.<br>
+            - Monitor humidity levels and adjust watering practices.<br>
+            - Consider using organic fungicides as a preventive measure.<br><br>''','Flowering'), 
+            
+            ('Verticillium Wilt', 
+            '''Symptoms:<br>
+            - Leaves may yellow and wilt, especially during hot weather.<br>
+            - Stunted growth and reduced yield.<br>
+            - Dark streaks may be visible in the vascular tissue.<br>
+            - Lower leaves may curl and die prematurely.<br>
+            - Overall plant vigor is significantly reduced.<br>
+            <br>
+            Causes:<br>
+            - Caused by the fungal pathogen *Verticillium dahliae*.<br>
+            - Soil-borne pathogen that can survive in the soil for years.<br>
+            - Often associated with poor soil health and compaction.<br>
+            - Infected plant debris can serve as a source of inoculum.<br>
+            - High temperatures and drought stress can exacerbate symptoms.<br>
+            <br>
+            Preventive Measures:<br>
+            - Practice crop rotation with non-host crops.<br>
+            - Improve soil health through organic amendments.<br>
+            - Avoid planting in infested soils.<br>
+            - Use resistant potato varieties when available.<br>
+            - Monitor soil moisture levels to avoid drought stress.<br>
+            <br>
+            Treatment:<br>
+            - Remove and destroy infected plants to limit spread.<br>
+            - Improve soil drainage and aeration.<br>
+            - Apply fungicides if necessary, though effectiveness may vary.<br>
+            - Maintain healthy soil conditions to support plant vigor.<br>
+            - Consider using biological control methods if available.<br><br>''','Flowering'), 
+            
+            ('Alternaria Brown Spot', 
+            '''Symptoms:<br>
+            - Dark brown spots with concentric rings on leaves and flowers.<br>
+            - Affected leaves may yellow and drop prematurely.<br>
+            - Spots may coalesce, leading to larger areas of necrosis.<br>
+            - Reduced photosynthesis and overall plant vigor.<br>
+            - In severe cases, entire plants may be affected.<br>
+            <br>
+            Causes:<br>
+            - Caused by the fungal pathogen *Alternaria solani*.<br>
+            - Thrives in warm, humid conditions.<br>
+            - Infected plant debris can serve as a source of spores.<br>
+            - Overcrowding can increase humidity and disease spread.<br>
+            - Poor air circulation around plants can exacerbate the issue.<br>
+            <br>
+            Preventive Measures:<br>
+            - Practice crop rotation to reduce pathogen buildup.<br>
+            - Ensure good air circulation around plants.<br>
+            - Remove and destroy infected plant debris.<br>
+            - Avoid overhead watering to minimize leaf wetness.<br>
+            - Use resistant varieties when available.<br>
+            <br>
+            Treatment:<br>
+            - Apply fungicides as needed, following label instructions.<br>
+            - Remove and destroy infected leaves and flowers to reduce spread.<br>
+            - Improve air circulation by spacing plants properly.<br>
+            - Monitor humidity levels and adjust watering practices.<br>
+            - Consider using organic fungicides as a preventive measure.<br><br>''','Flowering'), 
+            
+            ('Gray Leaf Spot', 
+            '''Symptoms:<br>
+            - Small, grayish-brown spots on leaves.<br>
+            - Spots may expand and cause leaf blight.<br>
+            - Affected leaves may yellow and drop prematurely.<br>
+            - Reduced photosynthesis and overall plant vigor.<br>
+            - In severe cases, entire plants may be affected.<br>
+            <br>
+            Causes:<br>
+            - Caused by the fungal pathogen *Stemphylium solani*.<br>
+            - Thrives in warm, humid conditions.<br>
+            - Infected plant debris can serve as a source of spores.<br>
+            - Overcrowding can increase humidity and disease spread.<br>
+            - Poor air circulation around plants can exacerbate the issue.<br>
+            <br>
+            Preventive Measures:<br>
+            - Practice crop rotation to reduce pathogen buildup.<br>
+            - Ensure good air circulation around plants.<br>
+            - Remove and destroy infected plant debris.<br>
+            - Avoid overhead watering to minimize leaf wetness.<br>
+            - Use resistant varieties when available.<br>
+            <br>
+            Treatment:<br>
+            - Apply fungicides as needed, following label instructions.<br>
+            - Remove and destroy infected leaves to reduce spread.<br>
+            - Improve air circulation by spacing plants properly.<br>
+            - Monitor humidity levels and adjust watering practices.<br>
+            - Consider using organic fungicides as a preventive measure.<br><br>''','Flowering'), 
+            
+            ('Wet Rot', 
+            '''Symptoms:<br>
+            - Soft, water-soaked lesions on flowers and stems.<br>
+            - Affected areas may emit a foul odor.<br>
+            - Flowers may wilt and drop prematurely.<br>
+            - Reduced quality and marketability of flowers.<br>
+            - In severe cases, entire crops may be lost.<br>
+            <br>
+            Causes:<br>
+            - Caused by fungal pathogens (e.g., *Botrytis cinerea*).<br>
+            - High humidity and poor air circulation can exacerbate the issue.<br>
+            - Overwatering or heavy rainfall can lead to conditions favorable for rot.<br>
+            - Infected plant debris can harbor pathogens.<br>
+            <br>
+            Preventive Measures:<br>
+            - Ensure good air circulation around plants.<br>
+            - Avoid overhead watering to reduce humidity.<br>
+            - Remove infected plant debris from the area.<br>
+            - Practice crop rotation to minimize recurrence.<br>
+            - Monitor humidity levels and adjust watering practices.<br>
+            <br>
+            Treatment:<br>
+            - Remove and destroy infected plants immediately.<br>
+            - Apply fungicides if necessary to protect healthy plants.<br>
+            - Improve soil drainage and aeration.<br>
+            - Monitor soil moisture levels regularly.<br>
+            - Avoid planting in overly wet conditions.<br><br>''','Flowering'), 
+            
+            ('Spider Mites', 
+            '''Symptoms:<br>
+            - Fine webbing on leaves and flowers.<br>
+            - Leaves may appear stippled or discolored.<br>
+            - Affected plants may exhibit wilting and stunted growth.<br>
+            - In severe infestations, leaves may drop prematurely.<br>
+            - Overall plant vigor is significantly reduced.<br>
+            <br>
+            Causes:<br>
+            - Caused by spider mites (e.g., *Tetranychus urticae*).<br>
+            - Thrive in hot, dry conditions with low humidity.<br>
+            - Overcrowding can increase humidity and disease spread.<br>
+            - Poor air circulation around plants can exacerbate the issue.<br>
+            <br>
+            Preventive Measures:<br>
+            - Ensure good air circulation around plants.<br>
+            - Monitor humidity levels and adjust watering practices.<br>
+            - Use insecticidal soaps or oils as a preventive measure.<br>
+            - Remove and destroy infected plant debris.<br>
+            - Practice crop rotation to minimize recurrence.<br>
+            <br>
+            Treatment:<br>
+            - Apply miticides as needed, following label instructions.<br>
+            - Remove and destroy heavily infested plants to reduce spread.<br>
+            - Improve air circulation by spacing plants properly.<br>
+            - Monitor humidity levels and adjust watering practices.<br>
+            - Consider using organic insecticides as a preventive measure.<br><br>''','Flowering')
         ]
         for name, description, stage in potato_diseases_flowering:
             disease = Disease(plant_id=potato.id, name=name, description=description, stage=stage)
             db.session.add(disease)
 
         # Add disease data for potato at the fruiting stage
-        potato_diseases_fruiting =[
-            ('Potato Late Blight', '''Symptoms:<br>''', 'Fruiting'),
-            ('Bottom Rot', '''Symptoms:<br>''', 'Fruiting'),
-            ('Southern Green Stink Bug', '''Symptoms:<br>''', 'Fruiting'),
-            ('Tussock Moths', '''Symptoms:<br>''', 'Fruiting'),
-            ('Scarab beetles', '''Symptoms:<br>''', 'Fruiting'),
-            ('Cockchafer', '''Symptoms:<br>''', 'Fruiting'),
-            ('Tobaccoo Caterpillar', '''Symptoms:<br>''', 'Fruiting'),
+        potato_diseases_fruiting = [
+            ('Potato Late Blight', 
+            '''Symptoms:<br>
+            - Dark, water-soaked lesions on leaves and stems.<br>
+            - White, fluffy fungal growth on the undersides of leaves.<br>
+            - Affected leaves may turn brown and die.<br>
+            - Tubers may develop dark, sunken lesions.<br>
+            - Rapid plant decline and reduced yield.<br>
+            <br>
+            Causes:<br>
+            - Caused by the fungal pathogen *Phytophthora infestans*.<br>
+            - Thrives in cool, moist conditions.<br>
+            - Infected plant debris can serve as a source of spores.<br>
+            - High humidity and wet weather increase disease spread.<br>
+            <br>
+            Preventive Measures:<br>
+            - Use resistant potato varieties.<br>
+            - Practice crop rotation to reduce pathogen buildup.<br>
+            - Remove and destroy infected plant debris.<br>
+            - Avoid overhead watering to minimize leaf wetness.<br>
+            - Monitor weather conditions and apply fungicides as needed.<br>
+            <br>
+            Treatment:<br>
+            - Apply fungicides at the first sign of infection.<br>
+            - Remove and destroy infected plants immediately.<br>
+            - Improve air circulation around plants.<br>
+            - Monitor humidity levels and adjust watering practices.<br>
+            - Consider using organic fungicides as a preventive measure.<br><br>''', 'Fruiting'), 
+            
+            ('Bottom Rot', 
+            '''Symptoms:<br>
+            - Dark, water-soaked lesions at the base of the stem.<br>
+            - Plants may wilt and exhibit yellowing leaves.<br>
+            - Soft, mushy tissue at the base of the plant.<br>
+            - Foul odor from decaying tissue.<br>
+            - Reduced plant vigor and stunted growth.<br>
+            <br>
+            Causes:<br>
+            - Caused by fungal pathogens (e.g., *Pythium* spp.).<br>
+            - High soil moisture and poor drainage conditions.<br>
+            - Overwatering or heavy rainfall can exacerbate the issue.<br>
+            - Soil compaction can hinder root development.<br>
+            - Infected seed tubers can introduce pathogens.<br>
+            <br>
+            Preventive Measures:<br>
+            - Ensure proper drainage in planting areas.<br>
+            - Avoid overwatering and waterlogged conditions.<br>
+            - Use disease-free seed tubers for planting.<br>
+            - Practice crop rotation to reduce pathogen buildup.<br>
+            - Improve soil structure to enhance drainage.<br>
+            <br>
+            Treatment:<br>
+            - Remove and destroy infected plants immediately.<br>
+            - Apply fungicides if necessary to protect healthy plants.<br>
+            - Improve soil drainage and aeration.<br>
+            - Monitor soil moisture levels regularly.<br>
+            - Avoid planting in overly wet conditions.<br><br>''', 'Fruiting'), 
+            
+            ('Southern Green Stink Bug', 
+            '''Symptoms:<br>
+            - Leaves may exhibit yellowing and wilting.<br>
+            - Feeding damage can cause dark spots on leaves.<br>
+            - Affected plants may show stunted growth.<br>
+            - Presence of the bugs can be observed on foliage.<br>
+            - Reduced yield and quality of tubers.<br>
+            <br>
+            Causes:<br>
+            - Caused by the insect pest *Nezara viridula*.<br>
+            - Feeds on plant sap, weakening the plant.<br>
+            - High populations can lead to significant damage.<br>
+            <br>
+            Preventive Measures:<br>
+            - Monitor crops regularly for signs of infestation.<br>
+            - Use row covers to protect young plants.<br>
+            - Encourage natural predators like birds and beneficial insects.<br>
+            - Practice good sanitation to reduce pest habitats.<br>
+            <br>
+            Treatment:<br>
+            - Apply insecticides as needed, following label instructions.<br>
+            - Handpick and remove bugs from plants.<br>
+            - Use traps to monitor and control populations.<br>
+            - Consider using organic insecticides if available.<br><br>''', 'Fruiting'), 
+            
+            ('Tussock Moths', 
+            '''Symptoms:<br>
+            - Irregular holes in leaves due to feeding.<br>
+            - Presence of caterpillars on foliage.<br - Affected plants may exhibit wilting and stunted growth.<br>
+            - Webbing may be visible on the plants.<br>
+            - Reduced yield and quality of tubers.<br>
+            <br>
+            Causes:<br>
+            - Caused by the caterpillars of *Lymantria dispar* (gypsy moths).<br>
+            - They feed on the foliage, weakening the plant.<br>
+            - High populations can lead to defoliation and stress on the plant.<br>
+            <br>
+            Preventive Measures:<br>
+            - Monitor for early signs of infestation.<br>
+            - Use pheromone traps to catch adult moths.<br>
+            - Encourage natural predators such as birds.<br>
+            - Maintain plant health through proper care and nutrition.<br>
+            <br>
+            Treatment:<br>
+            - Apply insecticides targeting caterpillars if necessary.<br>
+            - Handpick caterpillars from plants.<br>
+            - Use biological control methods, such as introducing beneficial insects.<br>
+            - Remove and destroy any infested plant material.<br><br>''', 'Fruiting'), 
+            
+            ('Scarab beetles', 
+            '''Symptoms:<br>
+            - Leaves may show signs of skeletonization due to feeding.<br>
+            - Presence of beetles on foliage and in the soil.<br>
+            - Affected plants may exhibit wilting and reduced vigor.<br>
+            - Damage to tubers can occur if beetles feed on them.<br>
+            <br>
+            Causes:<br>
+            - Caused by various species of scarab beetles.<br>
+            - They feed on roots and foliage, weakening the plant.<br>
+            - High populations can lead to significant damage.<br>
+            <br>
+            Preventive Measures:<br>
+            - Rotate crops to disrupt beetle life cycles.<br>
+            - Use row covers to protect young plants.<br>
+            - Monitor for signs of infestation and take action early.<br>
+            <br>
+            Treatment:<br>
+            - Apply insecticides as needed, following label instructions.<br>
+            - Handpick beetles from plants.<br>
+            - Use traps to monitor and control populations.<br>
+            - Consider using organic insecticides if available.<br><br>''', 'Fruiting'), 
+            
+            ('Cockchafer', 
+            '''Symptoms:<br>
+            - Grubs may cause root damage, leading to wilting plants.<br>
+            - Adult beetles can be seen feeding on foliage.<br>
+            - Affected plants may show stunted growth and reduced yield.<br>
+            <br>
+            Causes:<br>
+            - Caused by the larvae of *Melolontha* spp. (cockchafers).<br>
+            - They feed on roots, which can severely affect plant health.<br>
+            <br>
+            Preventive Measures:<br>
+            - Monitor for signs of grubs in the soil.<br>
+            - Rotate crops to disrupt the life cycle.<br>
+            - Encourage natural predators to help control populations.<br>
+            <br>
+            Treatment:<br>
+            - Apply insecticides targeting grubs if necessary.<br>
+            - Handpick adult beetles from plants.<br>
+            - Use traps to monitor and control populations.<br>
+            - Consider using organic insecticides if available.<br><br>''', 'Fruiting'), 
+            
+            ('Tobacco Caterpillar', 
+            '''Symptoms:<br>
+            - Leaves may show irregular holes due to feeding.<br>
+            - Presence of caterpillars on foliage.<br>
+            - Affected plants may exhibit wilting and stunted growth.<br>
+            - Reduced yield and quality of tubers.<br>
+            <br>
+            Causes:<br>
+            - Caused by the caterpillars of *Spodoptera litura* (tobacco caterpillar).<br>
+            - They feed on the foliage, weakening the plant.<br>
+            <br>
+            Preventive Measures:<br>
+            - Monitor for early signs of infestation.<br>
+            - Use pheromone traps to catch adult moths.<br>
+            - Encourage natural predators such as birds.<br>
+            - Maintain plant health through proper care and nutrition.<br>
+            <br>
+            Treatment:<br>
+            - Apply insecticides targeting caterpillars if necessary.<br>
+            - Handpick caterpillars from plants.<br>
+            - Use biological control methods, such as introducing beneficial insects.<br>
+            - Remove and destroy any infested plant material.<br><br>''', 'Fruiting'),
         ]
         for name, description, stage in potato_diseases_fruiting:
             disease = Disease(plant_id=potato.id, name=name, description=description, stage=stage)
             db.session.add(disease)
 
         # Add disease data for potato at the harvesting stage
-        potato_diseases_harvesting =[
-            ('Powdery Scab', '''Symptoms:<br>''', 'Harvesting'),
-            ('Black Scurf', '''Symptoms:<br>''', 'Harvesting'),
-            ('Sliver Scurf', '''Symptoms:<br>''', 'Harvesting'),
-            ('Blackleg of Potato', '''Symptoms:<br>''', 'Harvesting'),
-            ('Potato Scabs', '''Symptoms:<br>''', 'Harvesting'),
-            ('Potato Tuber Moth', '''Symptoms:<br>''', 'Harvesting'),
-            ('Frost Damage', '''Symptoms:<br>''', 'Harvesting'),
-            ('Tuber Discoloration', '''Symptoms:<br>''', 'Harvesting'),
+        potato_diseases_harvesting = [
+            ('Powdery Scab', 
+            '''Symptoms:<br>
+            - Raised, powdery lesions on the surface of tubers.<br>
+            - Affected tubers may have a rough texture.<br>
+            - Lesions can be white to gray in color.<br>
+            - Reduced marketability of affected tubers.<br>
+            - In severe cases, tubers may be unfit for consumption.<br>
+            <br>
+            Causes:<br>
+            - Caused by the soil-borne pathogen *Spongospora subterranea*.<br>
+            - Thrives in cool, moist soil conditions.<br>
+            - Infected seed tubers can introduce the pathogen.<br>
+            - Soil compaction and poor drainage can exacerbate the issue.<br>
+            - High organic matter in soil can increase disease incidence.<br>
+            <br>
+            Preventive Measures:<br>
+            - Use disease-free seed tubers for planting.<br>
+            - Practice crop rotation to reduce pathogen buildup.<br>
+            - Improve soil drainage and aeration.<br>
+            - Avoid planting in fields with a history of powdery scab.<br>
+            - Monitor soil moisture levels to prevent excessive wetness.<br>
+            <br>
+            Treatment:<br>
+            - Remove and destroy infected tubers immediately.<br>
+            - Apply fungicides if necessary, following label instructions.<br>
+            - Monitor soil conditions and adjust practices to reduce moisture.<br>
+            - Consider using resistant potato varieties if available.<br>
+            - Practice good sanitation in the field and storage.<br><br>''', 'Harvesting'), 
+            
+            ('Black Scurf', 
+            '''Symptoms:<br>
+            - Dark, rough lesions on the surface of tubers.<br>
+            - Affected tubers may have a scabby appearance.<br>
+            - Lesions can be black and may cover a large area.<br>
+            - Reduced marketability and quality of affected tubers.<br>
+            - In severe cases, tubers may be unfit for consumption.<br>
+            <br>
+            Causes:<br>
+            - Caused by the fungal pathogen *Rhizoctonia solani*.<br>
+            - Thrives in cool, moist soil conditions.<br>
+            - Infected seed tubers can introduce the pathogen.<br>
+            - Soil compaction and poor drainage can exacerbate the issue.<br>
+            - High organic matter in soil can increase disease incidence.<br>
+            <br>
+            Preventive Measures:<br>
+            - Use disease-free seed tubers for planting.<br>
+            - Practice crop rotation to reduce pathogen buildup.<br>
+            - Improve soil drainage and aeration.<br>
+            - Avoid planting in fields with a history of black scurf.<br>
+            - Monitor soil moisture levels to prevent excessive wetness.<br>
+            <br>
+            Treatment:<br>
+            - Remove and destroy infected tubers immediately.<br>
+            - Apply fungicides if necessary, following label instructions.<br>
+            - Monitor soil conditions and adjust practices to reduce moisture.<br>
+            - Consider using resistant potato varieties if available.<br>
+            - Practice good sanitation in the field and storage.<br><br>''', 'Harvesting'), 
+            
+            ('Sliver Scurf', 
+            '''Symptoms:<br>
+            - Silvery lesions on the surface of tubers.<br>
+            - Affected tubers may have a shiny appearance.<br>
+            - Lesions can be light gray to silver in color.<br>
+            - Reduced marketability and quality of affected tubers.<br>
+            - In severe cases, tubers may be unfit for consumption.<br>
+            <br>
+            Causes:<br>
+            - Caused by the fungal pathogen *Helminthosporium solani*.<br>
+            - Thrives in cool, moist conditions during storage.<br>
+            - Infected seed tubers can introduce the pathogen.<br>
+            - Poor ventilation in storage can exacerbate the issue.<br>
+            - High humidity levels can promote disease development.<br>
+            <br>
+            Preventive Measures:<br>
+            - Use disease-free seed tubers for planting.<br>
+            - Store tubers in a cool, dry place with good ventilation.<br>
+            - Avoid mechanical damage during harvest and handling.<br>
+            - Monitor storage conditions regularly to prevent humidity buildup.<br>
+            - Implement proper sanitation practices in storage areas.<br>
+            <br>
+            Treatment:<br>
+            - Remove and destroy infected tubers immediately.<br>
+            - Apply appropriate fungicides if necessary.<br>
+            - Ensure proper storage conditions to prevent decay.<br>
+            - Monitor tubers regularly for signs of infection.<br>
+            - Consider using resistant potato varieties if available.<br><br>''', 'Harvesting'), 
+            
+            ('Blackleg of Potato', 
+            '''Symptoms:<br>
+            - Dark, water-soaked lesions at the base of the stem.<br>
+            - Plants may wilt and exhibit yellowing leaves.<br>
+            - Soft, mushy tissue at the base of the plant.<br>
+            - Foul odor from decaying tissue.<br>
+            - Reduced plant vigor and stunted growth.<br>
+            <br>
+            Causes:<br>
+            - Caused by the bacterial pathogen *Erwinia carotovora*.<br>
+            - High soil moisture and poor drainage conditions can exacerbate the issue.<br>
+            - Infected seed tubers can introduce the pathogen.<br>
+            - Mechanical injury to plants can increase susceptibility.<br>
+            - Warm temperatures can promote bacterial growth.<br>
+            <br>
+            Preventive Measures:<br>
+            - Use disease-free seed tubers for planting.<br>
+            - Ensure proper drainage in planting areas.<br>
+            - Avoid overwatering and waterlogged conditions.<br>
+            - Practice crop rotation to reduce pathogen buildup.<br>
+            - Monitor soil moisture levels regularly.<br>
+            <br>
+            Treatment:<br>
+            - Remove and destroy infected plants immediately.<br>
+            - Apply bactericides if necessary to protect healthy plants.<br>
+            - Improve soil drainage and aeration.<br>
+            - Monitor soil moisture levels regularly.<br>
+            - Consider using resistant potato varieties if available.<br><br>''', 'Harvesting'), 
+            
+            ('Potato Scabs', 
+            '''Symptoms:<br>
+            - Rough, scabby lesions on the surface of tubers.<br>
+            - Affected tubers may have a distorted shape.<br>
+            - Lesions can be brown to black in color.<br>
+            - Reduced marketability and quality of affected tubers.<br>
+            - In severe cases, tubers may be unfit for consumption.<br>
+            <br>
+            Causes:<br>
+            - Caused by the soil-borne pathogen *Streptomyces scabies*.<br>
+            - Thrives in alkaline soil conditions.<br>
+            - Infected seed tubers can introduce the pathogen.<br>
+            - Soil compaction and poor drainage can exacerbate the issue.<br>
+            - High organic matter in soil can increase disease incidence.<br>
+            <br>
+            Preventive Measures:<br>
+            - Use disease-free seed tubers for planting.<br>
+            - Maintain soil pH below 7.0 to reduce scab incidence.<br>
+            - Practice crop rotation to reduce pathogen buildup.<br>
+            - Improve soil structure to enhance drainage.<br>
+            - Monitor soil moisture levels to prevent excessive wetness.<br>
+            <br>
+            Treatment:<br>
+            - Remove and destroy infected tubers immediately.<br>
+            - Apply appropriate fungicides if necessary.<br>
+            - Monitor soil conditions and adjust practices to reduce alkalinity.<br>
+            - Consider using resistant potato varieties if available.<br>
+            - Practice good sanitation in the field and storage.<br><br>''', 'Harvesting'), 
+            
+            ('Potato Tuber Moth', 
+            '''Symptoms:<br>
+            - Holes in tubers due to feeding damage.<br>
+            - Presence of larvae inside the tubers.<br>
+            - Affected tubers may have a rotten appearance.<br>
+            - Reduced yield and quality of affected tubers.<br>
+            - Visible frass (insect excrement) around damaged areas.<br>
+            <br>
+            Causes:<br>
+            - Caused by the insect pest *Phthorimaea operculella*.<br>
+            - Larvae feed on the tubers, causing significant damage.<br>
+            - Warm temperatures can promote pest activity.<br>
+            <br>
+            Preventive Measures:<br>
+            - Monitor crops regularly for signs of infestation.<br>
+            - Use row covers to protect young plants.<br>
+            - Practice good sanitation to reduce pest habitats.<br>
+            - Rotate crops to disrupt pest life cycles.<br>
+            - Consider using companion planting to deter pests.<br>
+            <br>
+            Treatment:<br>
+            - Apply insecticides as needed, following label instructions.<br>
+            - Handpick and remove larvae from tubers.<br>
+            - Use traps to monitor and control populations.<br>
+            - Consider using organic insecticides if available.<br>
+            - Implement integrated pest management strategies.<br><br>''','Harvesting'),
+            ('Frost Damage', 
+            '''Symptoms:<br>
+            - Wilting and browning of leaves due to cold exposure.<br>
+            - Blackened or mushy tissue on affected areas.<br>
+            - Reduced yield and quality of tubers.<br>
+            - Stunted growth and delayed maturity of plants.<br>
+            - Increased susceptibility to diseases following frost damage.<br>
+            <br>
+            Causes:<br>
+            - Caused by exposure to freezing temperatures.<br>
+            - Late spring frosts can damage young plants.<br>
+            - Sudden temperature drops can exacerbate damage.<br>
+            <br>
+            Preventive Measures:<br>
+            - Monitor weather forecasts and cover plants during cold snaps.<br>
+            - Use row covers or blankets to protect young plants.<br>
+            - Plant at the appropriate time to avoid frost exposure.<br>
+            - Select frost-resistant potato varieties if available.<br>
+            <br>
+            Treatment:<br>
+            - Remove and destroy severely damaged plants.<br>
+            - Assess the extent of damage and adjust care accordingly.<br>
+            - Consider replanting if damage is extensive.<br>
+            - Provide additional nutrients to support recovery.<br><br>''', 'Harvesting'), 
+            
+            ('Tuber Discoloration', 
+            '''Symptoms:<br>
+            - Darkening or browning of tuber flesh.<br>
+            - Affected tubers may have a poor appearance.<br>
+            - Reduced marketability and quality of affected tubers.<br>
+            - Possible internal rot in severe cases.<br>
+            - Increased susceptibility to secondary infections.<br>
+            <br>
+            Causes:<br>
+            - Caused by various factors including bruising, disease, or environmental stress.<br>
+            - Infected seed tubers can introduce pathogens.<br>
+            - Poor handling practices during harvest can lead to bruising.<br>
+            <br>
+            Preventive Measures:<br>
+            - Handle tubers carefully during harvest and storage.<br>
+            - Store tubers in a cool, dry place with good ventilation.<br>
+            - Avoid mechanical damage during harvest and handling.<br>
+            - Monitor storage conditions regularly to prevent humidity buildup.<br>
+            <br>
+            Treatment:<br>
+            - Remove and destroy severely affected tubers.<br>
+            - Apply appropriate fungicides if necessary.<br>
+            - Ensure proper storage conditions to prevent further decay.<br>
+            - Monitor tubers regularly for signs of infection.<br><br>''', 'Harvesting'),
         ]
         for name, description, stage in potato_diseases_harvesting:
             disease = Disease(plant_id=potato.id, name=name, description=description, stage=stage)
@@ -2775,35 +3901,356 @@ def insert_data():
 
         # Add disease data for rose at the seeding stage
         rose = Plant.query.filter_by(name='Rose').first()
-        rose_diseases_seeding =[
-            ('Aphids', '''Symptoms:<br>''', 'Seeding'),
-            ('Stecklenberger Disease', '''Symptoms:<br>''', 'Seeding'),
-            ('Healthy', '''Symptoms:<br>''', 'Seeding'),
+        rose_diseases_seeding = [
+            ('Aphids', 
+            '''Symptoms:<br>
+            - Small, soft-bodied insects found on new growth.<br>
+            - Leaves may curl, yellow, or become distorted.<br>
+            - Sticky honeydew may be present on leaves and flowers.<br>
+            - Ants may be seen tending to aphids.<br>
+            - Reduced plant vigor and overall health.<br>
+            <br>
+            Causes:<br>
+            - Caused by various species of aphids (e.g., *Macrosiphum rosae*).<br>
+            - Thrive in warm, dry conditions.<br>
+            - Can reproduce rapidly, leading to large infestations.<br>
+            <br>
+            Preventive Measures:<br>
+            - Monitor plants regularly for early signs of infestation.<br>
+            - Encourage natural predators like ladybugs and lacewings.<br>
+            - Use reflective mulches to deter aphids.<br>
+            - Maintain healthy plants through proper care and nutrition.<br>
+            <br>
+            Treatment:<br>
+            - Apply insecticidal soap or neem oil to affected areas.<br>
+            - Handpick and remove aphids from plants.<br>
+            - Use insecticides as a last resort, following label instructions.<br>
+            - Regularly wash plants with water to dislodge aphids.<br><br>''', 'Seeding'), 
+            
+            ('Stecklenberger Disease', 
+            '''Symptoms:<br>
+            - Leaves may exhibit yellowing and wilting.<br>
+            - Stunted growth and reduced flowering.<br>
+            - Dark streaks may be visible on stems.<br>
+            - Overall plant vigor is significantly reduced.<br>
+            - In severe cases, plants may die back completely.<br>
+            <br>
+            Causes:<br>
+            - Caused by a viral infection, often transmitted by aphids.<br>
+            - Infected plant debris can serve as a source of the virus.<br>
+            - Poorly managed weed populations can harbor vectors.<br>
+            <br>
+            Preventive Measures:<br>
+            - Use certified disease-free plants for seeding.<br>
+            - Control aphid populations to reduce transmission risk.<br>
+            - Remove and destroy infected plants promptly.<br>
+            - Practice good weed management to reduce vector habitats.<br>
+            <br>
+            Treatment:<br>
+            - There is no chemical treatment for viral infections; focus on prevention.<br>
+            - Remove and destroy infected plants to limit spread.<br>
+            - Use resistant rose varieties when available.<br>
+            - Maintain healthy plant vigor to withstand disease.<br><br>''', 'Seeding'), 
+            
+            ('Healthy', 
+            '''Symptoms:<br>
+            - Leaves are green and healthy without discoloration.<br>
+            - Stems are strong and upright.<br>
+            - Flowers bloom fully and are vibrant in color.<br>
+            - Overall plant growth is robust and vigorous.<br>
+            - No signs of pests or diseases present.<br>
+            <br>
+            Causes:<br>
+            - Healthy plants are a result of proper care and maintenance.<br>
+            - Adequate watering, fertilization, and sunlight contribute to health.<br>
+            - Good soil quality and drainage support healthy growth.<br>
+            <br>
+            Preventive Measures:<br>
+            - Regularly monitor plants for signs of stress or disease.<br>
+            - Provide appropriate nutrients and water as needed.<br>
+            - Prune dead or diseased wood to promote airflow.<br>
+            - Use mulch to retain moisture and suppress weeds.<br>
+            <br>
+            Treatment:<br>
+            - Continue regular care and maintenance practices.<br>
+            - Fertilize as needed to support growth during the growing season.<br>
+            - Monitor for pests and diseases, and take action if needed.<br>
+            - Ensure proper spacing between plants for good air circulation.<br><br>''', 'Seeding'),
         ]
         for name, description, stage in rose_diseases_seeding:
             disease = Disease(plant_id=rose.id, name=name, description=description, stage=stage)
             db.session.add(disease)
 
         # Add disease data for rose at the vegetative stage
-        rose_diseases_vegetative =[
-           ('Black Spot', '''Symptoms:<br>''', 'Vegetative'), 
-           ('Rose Mildew', '''Symptoms:<br>''', 'Vegetative'), 
-           ('Spider Mites', '''Symptoms:<br>''', 'Vegetative'), 
-           ('Leafcutter Bess', '''Symptoms:<br>''', 'Vegetative'), 
-           ('Nitrogen Deficiency', '''Symptoms:<br>''', 'Vegetative'), 
-           ('Boron Deficiency', '''Symptoms:<br>''', 'Vegetative'), 
+        rose_diseases_vegetative = [
+            ('Black Spot', 
+            '''Symptoms:<br>
+            - Dark, circular spots with fringed edges on leaves.<br>
+            - Yellowing of leaves surrounding the spots.<br>
+            - Premature leaf drop, leading to reduced vigor.<br>
+            - Affected plants may have fewer blooms.<br>
+            - In severe cases, stems may also show signs of infection.<br>
+            <br>
+            Causes:<br>
+            - Caused by the fungal pathogen *Diplocarpon rosae*.<br>
+            - Thrives in warm, humid conditions.<br>
+            - Infected plant debris can serve as a source of the fungus.<br>
+            <br>
+            Preventive Measures:<br>
+            - Water plants at the base to keep foliage dry.<br>
+            - Remove and destroy fallen leaves to reduce fungal spores.<br>
+            - Space plants to improve air circulation.<br>
+            - Apply fungicides as a preventive measure during wet seasons.<br>
+            <br>
+            Treatment:<br>
+            - Apply fungicides labeled for black spot control.<br>
+            - Remove and destroy infected leaves promptly.<br>
+            - Ensure proper cultural practices to reduce humidity.<br>
+            - Consider using resistant rose varieties when available.<br><br>''', 'Vegetative'), 
+            
+            ('Rose Mildew', 
+            '''Symptoms:<br>
+            - White, powdery fungal growth on leaves and stems.<br>
+            - Leaves may curl and become distorted.<br>
+            - Affected plants may exhibit stunted growth.<br>
+            - Flowers may be smaller and less vibrant.<br>
+            - In severe cases, leaves may yellow and drop prematurely.<br>
+            <br>
+            Causes:<br>
+            - Caused by fungal pathogens such as *Erysiphe* spp.<br>
+            - Thrives in warm, dry conditions with high humidity.<br>
+            - Poor air circulation around plants can exacerbate the issue.<br>
+            <br>
+            Preventive Measures:<br>
+            - Space plants adequately to improve air circulation.<br>
+            - Water plants at the base to avoid wetting foliage.<br>
+            - Apply mulch to maintain soil moisture and reduce humidity.<br>
+            - Use resistant rose varieties when available.<br>
+            <br>
+            Treatment:<br>
+            - Apply fungicides specifically labeled for powdery mildew.<br>
+            - Remove and destroy infected plant parts to reduce spread.<br>
+            - Use a mixture of water and baking soda as a home remedy.<br>
+            - Ensure proper cultural practices to minimize humidity.<br><br>''', 'Vegetative'), 
+            
+            ('Spider Mites', 
+            '''Symptoms:<br>
+            - Fine webbing on leaves and stems.<br>
+            - Leaves may appear stippled or discolored.<br>
+            - Affected plants may exhibit wilting and stunted growth.<br>
+            - In severe infestations, leaves may drop prematurely.<br>
+            - Overall plant vigor is significantly reduced.<br>
+            <br>
+            Causes:<br>
+            - Caused by spider mites (e.g., *Tetranychus urticae*).<br>
+            - Thrive in hot, dry conditions with low humidity.<br>
+            - Overcrowding can increase humidity and disease spread.<br>
+            <br>
+            Preventive Measures:<br>
+            - Ensure good air circulation around plants.<br>
+            - Monitor humidity levels and adjust watering practices.<br>
+            - Use insecticidal soaps or oils as a preventive measure.<br>
+            - Remove and destroy infected plant debris.<br>
+            <br>
+            Treatment:<br>
+            - Apply miticides as needed, following label instructions.<br>
+            - Remove and destroy heavily infested plants to reduce spread.<br>
+            - Improve air circulation by spacing plants properly.<br>
+            - Monitor humidity levels and adjust watering practices.<br>
+            - Consider using organic insecticides as a preventive measure.<br><br>''', 'Vegetative'), 
+            
+            ('Leafcutter Bees', 
+            '''Symptoms:<br>
+            - Irregular holes in leaves due to feeding.<br>
+            - Presence of leaf fragments around the base of plants.<br>
+            - Affected plants may exhibit wilting and stunted growth.<br>
+            - Reduced yield and quality of flowers.<br>
+            <br>
+            Causes:<br>
+            - Caused by leafcutter bees (e .g., *Megachile* spp.).<br>
+            - These bees cut leaves to line their nests.<br>
+            - They are generally not harmful to plant health but can affect aesthetics.<br>
+            <br>
+            Preventive Measures:<br>
+            - Encourage natural predators to maintain balance in the garden.<br>
+            - Avoid using broad-spectrum insecticides that can harm beneficial insects.<br>
+            - Provide alternative nesting materials to reduce leaf cutting.<br>
+            <br>
+            Treatment:<br>
+            - Generally, no treatment is necessary as they do not cause significant harm.<br>
+            - Monitor plant health and ensure proper care to mitigate stress.<br>
+            - If necessary, remove damaged leaves to improve appearance.<br><br>''', 'Vegetative'), 
+            
+            ('Nitrogen Deficiency', 
+            '''Symptoms:<br>
+            - Yellowing of older leaves while younger leaves remain green.<br>
+            - Stunted growth and reduced flowering.<br>
+            - Leaves may become small and pale.<br>
+            - Overall plant vigor is significantly reduced.<br>
+            <br>
+            Causes:<br>
+            - Insufficient nitrogen in the soil due to poor fertilization.<br>
+            - Heavy rainfall can leach nitrogen from the soil.<br>
+            - Soil compaction can limit root access to nutrients.<br>
+            <br>
+            Preventive Measures:<br>
+            - Conduct soil tests to monitor nutrient levels.<br>
+            - Apply nitrogen-rich fertilizers as needed.<br>
+            - Incorporate organic matter into the soil to improve fertility.<br>
+            <br>
+            Treatment:<br>
+            - Apply a balanced fertilizer with adequate nitrogen content.<br>
+            - Use compost or well-rotted manure to enrich the soil.<br>
+            - Monitor plant response and adjust fertilization practices accordingly.<br><br>''', 'Vegetative'), 
+            
+            ('Boron Deficiency', 
+            '''Symptoms:<br>
+            - Stunted growth and poor flower development.<br>
+            - Leaves may exhibit dark green or yellowing edges.<br>
+            - New growth may be distorted or die back.<br>
+            - Overall plant vigor is significantly reduced.<br>
+            <br>
+            Causes:<br>
+            - Insufficient boron in the soil, often due to leaching.<br>
+            - Sandy soils are more prone to boron deficiency.<br>
+            - High pH levels can limit boron availability to plants.<br>
+            <br>
+            Preventive Measures:<br>
+            - Conduct soil tests to check for boron levels.<br>
+            - Apply boron-containing fertilizers if deficiency is detected.<br>
+            - Ensure proper soil pH to improve nutrient availability.<br>
+            <br>
+            Treatment:<br>
+            - Apply boron as a foliar spray or soil amendment as needed.<br>
+            - Monitor plant response and adjust application rates accordingly.<br>
+            - Avoid over-application, as excessive boron can be toxic to plants.<br><br>''', 'Vegetative'),
         ]
         for name, description, stage in rose_diseases_vegetative:
             disease = Disease(plant_id=rose.id, name=name, description=description, stage=stage)
             db.session.add(disease)
 
         # Add disease data for rose at the flowering stage
-        rose_diseases_flowering =[
-            ('Whiteflies', '''Symptoms:<br>''', 'Flowering'), 
-            ('Cottony Cushion Scale', '''Symptoms:<br>''', 'Flowering'),
-            ('Rose Chafer', '''Symptoms:<br>''', 'Flowering'),
-            ('Sulfer Deficiency', '''Symptoms:<br>''', 'Flowering'),
-            ('Frost Damage', '''Symptoms:<br>''', 'Flowering'),
+        rose_diseases_flowering = [
+            ('Whiteflies', 
+            '''Symptoms:<br>
+            - Small, white, flying insects on the undersides of leaves.<br>
+            - Leaves may yellow and drop prematurely.<br>
+            - Sticky honeydew may be present on leaves and flowers.<br>
+            - Black sooty mold may develop on honeydew.<br>
+            - Reduced plant vigor and overall health.<br>
+            <br>
+            Causes:<br>
+            - Caused by various species of whiteflies (e.g., *Trialeurodes vaporariorum*).<br>
+            - Thrive in warm, humid conditions.<br>
+            - Can reproduce rapidly, leading to large infestations.<br>
+            <br>
+            Preventive Measures:<br>
+            - Monitor plants regularly for early signs of infestation.<br>
+            - Encourage natural predators like ladybugs and lacewings.<br>
+            - Use reflective mulches to deter whiteflies.<br>
+            - Maintain healthy plants through proper care and nutrition.<br>
+            <br>
+            Treatment:<br>
+            - Apply insecticidal soap or neem oil to affected areas.<br>
+            - Handpick and remove whiteflies from plants.<br>
+            - Use insecticides as a last resort, following label instructions.<br>
+            - Regularly wash plants with water to dislodge whiteflies.<br><br>''', 'Flowering'), 
+            
+            ('Cottony Cushion Scale', 
+            '''Symptoms:<br>
+            - White, cotton-like masses on leaves and stems.<br>
+            - Leaves may yellow and drop prematurely.<br>
+            - Affected plants may exhibit stunted growth.<br>
+            - Honeydew may be present, leading to sooty mold.<br>
+            - Reduced overall plant vigor and flowering.<br>
+            <br>
+            Causes:<br>
+            - Caused by the insect pest *Icerya purchasi*.<br>
+            - Feeds on plant sap, weakening the plant.<br>
+            - High populations can lead to significant damage.<br>
+            <br>
+            Preventive Measures:<br>
+            - Monitor crops regularly for signs of infestation.<br>
+            - Use row covers to protect young plants.<br>
+            - Encourage natural predators like ladybugs and parasitic wasps.<br>
+            - Practice good sanitation to reduce pest habitats.<br>
+            <br>
+            Treatment:<br>
+            - Apply insecticidal soap or horticultural oil to affected areas.<br>
+            - Handpick and remove cottony cushion scale from plants.<br>
+            - Use insecticides as needed, following label instructions.<br>
+            - Consider using biological control methods if available.<br><br>''', 'Flowering'), 
+            
+            ('Rose Chafer', 
+            '''Symptoms:<br>
+            - Irregular holes in leaves due to feeding.<br>
+            - Presence of adult beetles on foliage.<br>
+            - Affected plants may exhibit wilting and stunted growth.<br>
+            - Reduced yield and quality of flowers.<br>
+            <br>
+            Causes:<br>
+            - Caused by the insect pest *Macrodactylus subspinosus*.<br>
+            - Feeds on leaves and flowers, weakening the plant.<br>
+            - High populations can lead to significant damage.<br>
+            <br>
+            Preventive Measures:<br>
+            - Monitor crops regularly for signs of infestation.<br>
+            - Use row covers to protect young plants.<br>
+            - Encourage natural predators to help control populations.<br>
+            - Practice good sanitation to reduce pest habitats.<br>
+            <br>
+            Treatment:<br>
+            - Apply insecticides as needed, following label instructions.<br>
+            - Handpick and remove beetles from plants.<br>
+            - Use traps to monitor and control populations.<br>
+            - Consider using organic insecticides if available.<br><br>''', 'Flowering'), 
+            
+            ('Sulfur Deficiency', 
+            '''Symptoms:<br>
+            - Yellowing of younger leaves while older leaves remain green.<br>
+            - Stunted growth and reduced flowering.<br>
+            - Leaves may become small and pale.<br>
+            - Overall plant vigor is significantly reduced.<br>
+            <br>
+            Causes:<br>
+            - Insufficient sulfur in the soil due to poor fertilization.<br>
+            - Heavy rainfall can leach sulfur from the soil.<br>
+            - Soil compaction can limit root access to nutrients.<br>
+            <br>
+            Preventive Measures:<br>
+            - Conduct soil tests to monitor nutrient levels.<br>
+            - Apply sulfur-containing fertilizers as needed.<br>
+            - Incorporate organic matter into the soil to improve fertility.<br>
+            <br>
+            Treatment:<br>
+            - Apply a balanced fertilizer with adequate sulfur content.<br>
+            - Use compost or well-rotted manure to enrich the soil.<br>
+            - Monitor plant response and adjust fertilization practices accordingly.<br><br>''', 'Flowering'), 
+            
+            ('Frost Damage', 
+            '''Symptoms:<br>
+            - Wilting and browning of leaves due to cold exposure.<br>
+            - Blackened or mushy tissue on affected areas.<br>
+            - Reduced yield and quality of flowers.<br>
+            - Stunted growth and delayed maturity of plants.<br>
+            - Increased susceptibility to diseases following frost damage.<br>
+            <br>
+            Causes:<br>
+            - Caused by exposure to freezing temperatures.<br>
+            - Late spring frosts can damage young plants.<br>
+            - Sudden temperature drops can exacerbate damage.<br>
+            <br>
+            Preventive Measures:<br>
+            - Monitor weather forecasts and cover plants during cold snaps.<br>
+            - Use row covers or blankets to protect young plants.<br>
+            - Plant at the appropriate time to avoid frost exposure.<br>
+            - Select frost-resistant rose varieties if available.<br>
+            <br>
+            Treatment:<br>
+            - Remove and destroy severely damaged plants - Prune back damaged stems and leaves to encourage new growth.<br>
+            - Apply a balanced fertilizer to support recovery.<br>
+            - Ensure proper watering and care to help plants bounce back.<br>
+            - Monitor for secondary diseases that may arise from frost damage.<br><br>''', 'Flowering'),
         ]
         for name, description, stage in rose_diseases_flowering:
             disease = Disease(plant_id=rose.id, name=name, description=description, stage=stage)
@@ -2811,23 +4258,229 @@ def insert_data():
 
 
         # Add disease data for rose at the fruiting stage
-        rose_diseases_fruiting =[
-            ('Rose Mildew ', '''Symptoms:<br>''', 'Fruiting'),
-            ('Spider Mites', '''Symptoms:<br>''', 'Fruiting'),
-            ('Rose Chafer', '''Symptoms:<br>''', 'Fruiting'),
-            ('Magnesium Deficiency', '''Symptoms:<br>''', 'Fruiting'),
-            ('Slugs and Snails', '''Symptoms:<br>''', 'Fruiting'),
-            ('Sunburn', '''Symptoms:<br>''', 'Fruiting'),
+        rose_diseases_fruiting = [
+            ('Rose Mildew', 
+            '''Symptoms:<br>
+            - White, powdery fungal growth on leaves and stems.<br>
+            - Leaves may curl and become distorted.<br>
+            - Affected plants may exhibit stunted growth.<br>
+            - Flowers may be smaller and less vibrant.<br>
+            - In severe cases, leaves may yellow and drop prematurely.<br>
+            <br>
+            Causes:<br>
+            - Caused by fungal pathogens such as *Erysiphe* spp.<br>
+            - Thrives in warm, dry conditions with high humidity.<br>
+            - Poor air circulation around plants can exacerbate the issue.<br>
+            <br>
+            Preventive Measures:<br>
+            - Space plants adequately to improve air circulation.<br>
+            - Water plants at the base to avoid wetting foliage.<br>
+            - Apply mulch to maintain soil moisture and reduce humidity.<br>
+            - Use resistant rose varieties when available.<br>
+            <br>
+            Treatment:<br>
+            - Apply fungicides specifically labeled for powdery mildew.<br>
+            - Remove and destroy infected plant parts to reduce spread.<br>
+            - Use a mixture of water and baking soda as a home remedy.<br>
+            - Ensure proper cultural practices to minimize humidity.<br><br>''', 'Fruiting'), 
+            
+            ('Spider Mites', 
+            '''Symptoms:<br>
+            - Fine webbing on leaves and stems.<br>
+            - Leaves may appear stippled or discolored.<br>
+            - Affected plants may exhibit wilting and stunted growth.<br>
+            - In severe infestations, leaves may drop prematurely.<br>
+            - Overall plant vigor is significantly reduced.<br>
+            <br>
+            Causes:<br>
+            - Caused by spider mites (e.g., *Tetranychus urticae*).<br>
+            - Thrive in hot, dry conditions with low humidity.<br>
+            - Overcrowding can increase humidity and disease spread.<br>
+            <br>
+            Preventive Measures:<br>
+            - Ensure good air circulation around plants.<br>
+            - Monitor humidity levels and adjust watering practices.<br>
+            - Use insecticidal soaps or oils as a preventive measure.<br>
+            - Remove and destroy infected plant debris.<br>
+            <br>
+            Treatment:<br>
+            - Apply miticides as needed, following label instructions.<br>
+            - Remove and destroy heavily infested plants to reduce spread.<br>
+            - Improve air circulation by spacing plants properly.<br>
+            - Monitor humidity levels and adjust watering practices.<br>
+            - Consider using organic insecticides as a preventive measure.<br><br>''', 'Fruiting'), 
+            
+            ('Rose Chafer', 
+            '''Symptoms:<br>
+            - Irregular holes in leaves due to feeding.<br>
+            - Presence of adult beetles on foliage.<br>
+            - Affected plants may exhibit wilting and stunted growth.<br>
+            - Reduced yield and quality of flowers.<br>
+            <br>
+            Causes:<br>
+            - Caused by the insect pest *Macrodactylus subspinosus*.<br>
+            - Feeds on leaves and flowers, weakening the plant.<br>
+            - High populations can lead to significant damage.<br>
+            <br>
+            Preventive Measures:<br>
+            - Monitor crops regularly for signs of infestation.<br>
+            - Use row covers to protect young plants.<br>
+            - Encourage natural predators to help control populations.<br>
+            - Practice good sanitation to reduce pest habitats.<br>
+            <br>
+            Treatment:<br>
+            - Apply insecticides as needed, following label instructions.<br>
+            - Handpick and remove beetles from plants.<br>
+            - Use traps to monitor and control populations.<br>
+            - Consider using organic insecticides if available.<br><br>''', 'Fruiting'), 
+            
+            ('Magnesium Deficiency', 
+            '''Symptoms:<br>
+            - Yellowing of older leaves while younger leaves remain green.<br>
+            - Interveinal chlorosis (yellowing between leaf veins).<br>
+            - Leaves may curl or become brittle.<br>
+            - Reduced flowering and fruiting.<br>
+            - Overall plant vigor is significantly reduced.<br>
+            <br>
+            Causes:<br>
+            - Insufficient magnesium in the soil due to poor fertilization.< - Heavy rainfall can leach magnesium from the soil.<br>
+            - Soil compaction can limit root access to nutrients.<br>
+            <br>
+            Preventive Measures:<br>
+            - Conduct soil tests to monitor nutrient levels.<br>
+            - Apply magnesium-containing fertilizers as needed.<br>
+            - Incorporate organic matter into the soil to improve fertility.<br>
+            <br>
+            Treatment:<br>
+            - Apply Epsom salt (magnesium sulfate) to the soil.<br>
+            - Use a balanced fertilizer with adequate magnesium content.<br>
+            - Monitor plant response and adjust fertilization practices accordingly.<br><br>''', 'Fruiting'), 
+            
+            ('Slugs and Snails', 
+            '''Symptoms:<br>
+            - Irregular holes in leaves and flowers.<br>
+            - Presence of slime trails on plants and soil.<br>
+            - Affected plants may exhibit wilting and stunted growth.<br>
+            - Leaves may appear ragged and damaged.<br>
+            <br>
+            Causes:<br>
+            - Caused by gastropod pests that feed on plant material.<br>
+            - Thrive in moist, shady environments.<br>
+            - High populations can lead to significant damage.<br>
+            <br>
+            Preventive Measures:<br>
+            - Remove debris and hiding places around plants.<br>
+            - Use barriers such as copper tape or diatomaceous earth.<br>
+            - Encourage natural predators like birds and toads.<br>
+            - Water plants in the morning to reduce moisture at night.<br>
+            <br>
+            Treatment:<br>
+            - Handpick and remove slugs and snails from plants.<br>
+            - Apply iron phosphate-based baits to control populations.<br>
+            - Use organic methods like beer traps to attract and drown them.<br>
+            - Monitor and maintain garden hygiene to reduce habitats.<br><br>''', 'Fruiting'), 
+            
+            ('Sunburn', 
+            '''Symptoms:<br>
+            - Browning or scorching of leaves exposed to direct sunlight.<br>
+            - Leaves may become crispy and dry.<br>
+            - Affected plants may exhibit wilting and stunted growth.<br>
+            - Reduced yield and quality of flowers and fruits.<br>
+            <br>
+            Causes:<br>
+            - Caused by excessive exposure to intense sunlight.<br>
+            - Sudden changes in environmental conditions can exacerbate damage.<br>
+            - Lack of adequate moisture can increase susceptibility.<br>
+            <br>
+            Preventive Measures:<br>
+            - Provide shade for young or sensitive plants during peak sun.<br>
+            - Water plants adequately to maintain moisture levels.<br>
+            - Use mulch to help retain soil moisture and regulate temperature.<br>
+            - Select sun-resistant rose varieties when available.<br>
+            <br>
+            Treatment:<br>
+            - Prune back severely damaged leaves to encourage new growth.<br>
+            - Apply a balanced fertilizer to support recovery.<br>
+            - Ensure proper watering and care to help plants bounce back.<br>
+            - Monitor for secondary diseases that may arise from sunburn.<br><br>''', 'Fruiting'),
         ]
         for name, description, stage in rose_diseases_fruiting:
             disease = Disease(plant_id=rose.id, name=name, description=description, stage=stage)
             db.session.add(disease)
 
         # Add disease data for rose at the harvesting stage
-        rose_diseases_harvesting =[
-            ('Potassium Deficiency ', '''Symptoms:<br>''', 'Harvesting'),
-            ('Frost Damage', '''Symptoms:<br>''', 'Harvesting'),
-            ('Sunburn', '''Symptoms:<br>''', 'Harvesting'),
+        rose_diseases_harvesting = [
+            ('Potassium Deficiency', 
+            '''Symptoms:<br>
+            - Yellowing of leaf edges, starting with older leaves.<br>
+            - Leaves may develop a scorched appearance.<br>
+            - Reduced flowering and fruiting.<br>
+            - Stunted growth and overall plant vigor.<br>
+            - Increased susceptibility to diseases and pests.<br>
+            <br>
+            Causes:<br>
+            - Insufficient potassium in the soil due to poor fertilization.<br>
+            - Heavy rainfall can leach potassium from the soil.<br>
+            - Soil compaction can limit root access to nutrients.<br>
+            <br>
+            Preventive Measures:<br>
+            - Apply a balanced fertilizer with adequate potassium content.<br>
+            - Conduct soil tests to monitor nutrient levels.<br>
+            - Apply potassium-rich fertilizers as needed.<br>
+            - Incorporate organic matter into the soil to improve fertility.<br>
+            <br>
+            Treatment:<br>
+            - Use potassium sulfate or other potassium sources as needed.<br>
+            - Monitor plant response and adjust fertilization practices accordingly.<br><br>''', 'Harvesting'), 
+            
+            ('Frost Damage', 
+            '''Symptoms:<br>
+            - Wilting and browning of leaves due to cold exposure.<br>
+            - Blackened or mushy tissue on affected areas.<br>
+            - Reduced yield and quality of flowers.<br>
+            - Stunted growth and delayed maturity of plants.<br>
+            - Increased susceptibility to diseases following frost damage.<br>
+            <br>
+            Causes:<br>
+            - Caused by exposure to freezing temperatures.<br>
+            - Late spring frosts can damage young plants.<br>
+            - Sudden temperature drops can exacerbate damage.<br>
+            <br>
+            Preventive Measures:<br>
+            - Monitor weather forecasts and cover plants during cold snaps.<br>
+            - Use row covers or blankets to protect young plants.<br>
+            - Plant at the appropriate time to avoid frost exposure.<br>
+            - Select frost-resistant rose varieties if available.<br>
+            <br>
+            Treatment:<br>
+            - Remove and destroy severely damaged plants.<br>
+            - Assess the extent of damage and adjust care accordingly.<br>
+            - Provide additional nutrients to support recovery.<br>
+            - Monitor for secondary diseases that may arise from frost damage.<br><br>''', 'Harvesting'), 
+            
+            ('Sunburn', 
+            '''Symptoms:<br>
+            - Browning or scorching of leaves exposed to direct sunlight.<br>
+            - Leaves may become crispy and dry.<br>
+            - Affected plants may exhibit wilting and stunted growth.<br>
+            - Reduced yield and quality of flowers and fruits.<br>
+            <br>
+            Causes:<br>
+            - Caused by excessive exposure to intense sunlight.<br>
+            - Sudden changes in environmental conditions can exacerbate damage.<br>
+            - Lack of adequate moisture can increase susceptibility.<br>
+            <br>
+            Preventive Measures:<br>
+            - Provide shade for young or sensitive plants during peak sun.<br>
+            - Water plants adequately to maintain moisture levels.<br>
+            - Use mulch to help retain soil moisture and regulate temperature.<br>
+            - Select sun-resistant rose varieties when available.<br>
+            <br>
+            Treatment:<br>
+            - Prune back severely damaged leaves to encourage new growth.<br>
+            - Apply a balanced fertilizer to support recovery.<br>
+            - Ensure proper watering and care to help plants bounce back.<br>
+            - Monitor for secondary diseases that may arise from sunburn.<br><br>''', 'Harvesting'),
         ]
         for name, description, stage in rose_diseases_harvesting:
             disease = Disease(plant_id=rose.id, name=name, description=description, stage=stage)
@@ -2835,66 +4488,799 @@ def insert_data():
 
         # Add disease data for sugarcane at the seeding stage
         sugarcane = Plant.query.filter_by(name='Sugarcane').first()
-        sugarcane_diseases_seeding =[
-            ('Red Rot', '''Symptoms:<br>''', 'Seeding'),
-            ('Sugarcane Common Rust', '''Symptoms:<br>''', 'Seeding'),
-            ('Wilt Disease of Sugarcane', '''Symptoms:<br>''', 'Seeding'),
-            ('Eyespot of Sugarcane', '''Symptoms:<br>''', 'Seeding'),
-            ('Early Shoot Borer', '''Symptoms:<br>''', 'Seeding'),
+        sugarcane_diseases_seeding = [
+            ('Red Rot', 
+            '''Symptoms:<br>
+            - Dark red to brown lesions on the stalks.<br>
+            - Affected areas may become soft and mushy.<br>
+            - Leaves may yellow and die prematurely.<br>
+            - Reduced sugar content in affected plants.<br>
+            - Overall plant vigor is significantly reduced.<br>
+            <br>
+            Causes:<br>
+            - Caused by the fungal pathogen *Colletotrichum falcatum*.<br>
+            - Thrives in warm, humid conditions.<br>
+            - Infected plant debris can serve as a source of the fungus.<br>
+            - Soil compaction and poor drainage can exacerbate the issue.<br>
+            - High organic matter in soil can increase disease incidence.<br>
+            <br>
+            Preventive Measures:<br>
+            - Use disease-free seed cane for planting.<br>
+            - Practice crop rotation to reduce pathogen buildup.<br>
+            - Improve drainage in fields to reduce humidity.<br>
+            - Monitor fields regularly for early signs of infection.<br>
+            - Implement good sanitation practices in the field.<br>
+            <br>
+            Treatment:<br>
+            - Remove and destroy infected plants immediately.<br>
+            - Apply fungicides as needed, following label instructions.<br>
+            - Ensure proper cultural practices to minimize humidity.<br>
+            - Consider using resistant sugarcane varieties if available.<br>
+            - Regularly inspect and manage irrigation practices.<br><br>''', 'Seeding'), 
+            
+            ('Sugarcane Common Rust', 
+            '''Symptoms:<br>
+            - Small, elongated, reddish-brown pustules on leaves.<br>
+            - Leaves may yellow and exhibit premature senescence.<br>
+            - Reduced photosynthesis leading to stunted growth.<br>
+            - Affected plants may have lower sugar yields.<br>
+            - In severe cases, entire leaves may die off.<br>
+            <br>
+            Causes:<br>
+            - Caused by the fungal pathogen *Puccinia melanocephala*.<br>
+            - Thrives in warm, humid conditions.<br>
+            - Spores can be spread by wind and water.<br>
+            - Infected plant debris can serve as a source of spores.<br>
+            - High humidity and poor air circulation can exacerbate the issue.<br>
+            <br>
+            Preventive Measures:<br>
+            - Use resistant sugarcane varieties when available.<br>
+            - Practice crop rotation to reduce pathogen buildup.<br>
+            - Remove and destroy infected plant debris.<br>
+            - Ensure good air circulation around plants.<br>
+            - Monitor fields regularly for early signs of infection.<br>
+            <br>
+            Treatment:<br>
+            - Apply fungicides as needed, following label instructions.<br>
+            - Remove and destroy infected leaves promptly.<br>
+            - Monitor humidity levels and adjust watering practices.<br>
+            - Consider using integrated pest management strategies.<br>
+            - Regularly inspect plants for signs of disease.<br><br>''', 'Seeding'), 
+            
+            ('Wilt Disease of Sugarcane', 
+            '''Symptoms:<br>
+            - Yellowing and wilting of leaves, starting from the tip.<br>
+            - Stunted growth and reduced tillering.<br>
+            - Dark streaks may be visible in the vascular tissue.<br>
+            - Overall plant vigor is significantly reduced.<br>
+            - In severe cases, plants may die back completely.<br>
+            <br>
+            Causes:<br>
+            - Caused by the fungal pathogen *Fusarium* spp.<br>
+            - Soil-borne pathogen that can survive in the soil for years.<br>
+            - High soil moisture and poor drainage can exacerbate the issue.<br>
+            - Mechanical injury to plants can increase susceptibility.<br>
+            - Warm temperatures can promote fungal growth.<br>
+            <br>
+            Preventive Measures:<br>
+            - Use disease-free seed cane for planting.<br>
+            - Improve soil drainage and aeration.<br>
+            - Practice crop rotation to reduce pathogen buildup.<br>
+            - Monitor soil moisture levels regularly.<br>
+            - Implement good sanitation practices in the field.<br>
+            <br>
+            Treatment:<br>
+            - Remove and destroy infected plants to limit spread.<br>
+            - Apply fungicides if necessary, though effectiveness may vary.<br>
+            - Maintain healthy soil conditions to support plant vigor.<br>
+            - Consider using biological control methods if available.<br>
+            - Regularly inspect and manage irrigation practices.<br><br>''', 'Seeding'), 
+            
+            ('Eyespot of Sugarcane', 
+            '''Symptoms:<br>
+            - Small, round, dark spots on leaves with yellow halos.<br>
+            - Affected leaves may exhibit premature senescence.<br>
+            - Reduced photosynthesis leading to stunted growth.<br>
+            - In severe cases, entire plants may be affected.<br>
+            - Overall plant vigor is significantly reduced.<br>
+            <br>
+            Causes:<br>
+            - Caused by the fungal pathogen *Helminthosporium* spp.<br>
+            - Thrives in warm, humid conditions.<br>
+            - Infected plant debris can serve as a source of spores.<br>
+            - Poor air circulation can exacerbate the issue.<br>
+            - High humidity levels can promote disease development.<br>
+            <br>
+            Preventive Measures:<br>
+            - Use disease-free seed cane for planting.<br>
+            - Practice crop rotation to reduce pathogen buildup.<br>
+            - Remove and destroy infected plant debris.<br>
+            - Ensure good air circulation around plants.<br>
+            - Monitor fields regularly for early signs of infection.<br>
+            <br>
+            Treatment:<br>
+            - Apply fungicides as needed, following label instructions.<br>
+            - Remove and destroy infected leaves promptly.<br>
+            - Monitor humidity levels and adjust watering practices.<br>
+            - Consider using integrated pest management strategies.<br>
+            - Regularly inspect plants for signs of disease.<br><br>''', 'Seeding'), 
+            
+            ('Early Shoot Borer', 
+            '''Symptoms:<br>
+            - Presence of small holes in the stalks.<br>
+            - Wilting and yellowing of leaves.<br>
+            - Stunted growth and reduced tillering.<br>
+            - Affected plants may exhibit dead heart symptoms.<br>
+            - Overall plant vigor is significantly reduced.<br>
+            <br>
+            Causes:<br>
+            - Caused by the larval stage of the pest *Chilo infuscatellus*.<br>
+            - Larvae bore into the stalks, causing damage.<br>
+            - High populations can lead to significant damage.<br>
+            - Warm temperatures can promote pest activity.<br>
+            - Poor cultural practices can increase susceptibility.<br>
+            <br>
+            Preventive Measures:<br>
+            - Monitor crops regularly for signs of infestation.<br>
+            - Use resistant sugarcane varieties when available.<br>
+            - Practice good sanitation to reduce pest habitats.<br>
+            - Encourage natural predators to help control populations.<br>
+            - Implement crop rotation to disrupt pest life cycles.<br>
+            <br>
+            Treatment:<br>
+            - Apply insecticides as needed, following label instructions.<br>
+            - Handpick and remove larvae from plants.<br>
+            - Use traps to monitor and control populations.<br>
+            - Consider using organic insecticides if available.<br>
+            - Regularly inspect plants for signs of damage.<br><br>''', 'Seeding'),
         ]
         for name, description, stage in sugarcane_diseases_seeding:
             disease = Disease(plant_id=sugarcane.id, name=name, description=description, stage=stage)
             db.session.add(disease)
 
         # Add disease data for sugarcane at the vegetative stage
-        sugarcane_diseases_vegetative =[
-            ('Powdery Mildew', '''Symptoms:<br>''', 'Vegetative'),
-            ('Red Rot', '''Symptoms:<br>''', 'Vegetative'),
-            ('Smut of Sugarcane', '''Symptoms:<br>''', 'Vegetative'),
-            ('Foot and Collar Rot', '''Symptoms:<br>''', 'Vegetative'),
-            ('Eyespot of Sugarcane', '''Symptoms:<br>''', 'Vegetative'),
-            ('Bakanae and Foot Rot', '''Symptoms:<br>''', 'Vegetative'),
-            ('Orange Rust Sugarcane', '''Symptoms:<br>''', 'Vegetative'),
-            ('Leaf Scald of Sugarcane', '''Symptoms:<br>''', 'Vegetative'),
-            ('Sugarcane Yellow Leaf Virus', '''Symptoms:<br>''', 'Vegetative'),
+        sugarcane_diseases_vegetative = [
+            ('Powdery Mildew', 
+            '''Symptoms:<br>
+            - White, powdery fungal growth on leaves and stems.<br>
+            - Leaves may curl and become distorted.<br>
+            - Affected plants may exhibit stunted growth.<br>
+            - Flowers may be smaller and less vibrant.<br>
+            - In severe cases, leaves may yellow and drop prematurely.<br>
+            <br>
+            Causes:<br>
+            - Caused by fungal pathogens such as *Erysiphe* spp.<br>
+            - Thrives in warm, dry conditions with high humidity.<br>
+            - Poor air circulation around plants can exacerbate the issue.<br>
+            <br>
+            Preventive Measures:<br>
+            - Space plants adequately to improve air circulation.<br>
+            - Water plants at the base to avoid wetting foliage.<br>
+            - Apply mulch to maintain soil moisture and reduce humidity.<br>
+            - Use resistant sugarcane varieties when available.<br>
+            <br>
+            Treatment:<br>
+            - Apply fungicides specifically labeled for powdery mildew.<br>
+            - Remove and destroy infected plant parts to reduce spread.<br>
+            - Use a mixture of water and baking soda as a home remedy.<br>
+            - Ensure proper cultural practices to minimize humidity.<br><br>''', 'Vegetative'), 
+            
+            ('Red Rot', 
+            '''Symptoms:<br>
+            - Dark red to brown lesions on the stalks.<br>
+            - Affected areas may become soft and mushy.<br>
+            - Leaves may yellow and die prematurely.<br>
+            - Reduced sugar content in affected plants.<br>
+            - Overall plant vigor is significantly reduced.<br>
+            <br>
+            Causes:<br>
+            - Caused by the fungal pathogen *Colletotrichum falcatum*.<br>
+            - Thrives in warm, humid conditions.<br>
+            - Infected plant debris can serve as a source of the fungus.<br>
+            - Soil compaction and poor drainage can exacerbate the issue.<br>
+            - High organic matter in soil can increase disease incidence.<br>
+            <br>
+            Preventive Measures:<br>
+            - Use disease-free seed cane for planting.<br>
+            - Practice crop rotation to reduce pathogen buildup.<br>
+            - Improve drainage in fields to reduce humidity.<br>
+            - Monitor fields regularly for early signs of infection.<br>
+            - Implement good sanitation practices in the field.<br>
+            <br>
+            Treatment:<br>
+            - Remove and destroy infected plants immediately.<br>
+            - Apply fungicides as needed, following label instructions.<br>
+            - Ensure proper cultural practices to minimize humidity.<br>
+            - Consider using resistant sugarcane varieties if available.<br>
+            - Regularly inspect and manage irrigation practices.<br><br>''', 'Vegetative'), 
+            
+            ('Smut of Sugarcane', 
+            '''Symptoms:<br>
+            - Presence of dark, elongated galls on the flower heads.<br>
+            - Affected plants may exhibit stunted growth.<br>
+            - Leaves may yellow and die prematurely.<br>
+            - Reduced sugar content in affected plants.<br>
+            - Overall plant vigor is significantly reduced.<br>
+            <br>
+            Causes:<br>
+            - Caused by the fungal pathogen *Sporisorium scitamineum*.<br>
+            - Thrives in warm, humid conditions.<br>
+            - Infected plant debris can serve as a source of the fungus.<br>
+            <br>
+            Preventive Measures:<br>
+            - Use disease-free seed cane for planting.<br>
+            - Practice crop rotation to reduce pathogen buildup.<br>
+            - Monitor fields regularly for early signs of infection.<br>
+            - Implement good sanitation practices in the field.<br>
+            <br>
+            Treatment:<br>
+            - Remove and destroy infected plants immediately.<br>
+            - Apply fungicides as needed, following label instructions.<br>
+            - Ensure proper cultural practices to minimize humidity.<br>
+            - Consider using resistant sugarcane varieties if available.<br><br>''', 'Vegetative'), 
+            
+            ('Foot and Collar Rot', 
+            '''Symptoms:<br>
+            - Dark, water-soaked lesions at the base of the stalk.<br>
+            - Plants may wilt and exhibit yellowing leaves.<br>
+            - Soft, mushy tissue at the base of the plant.<br>
+            - Foul odor from decaying tissue.<br>
+            - Reduced plant vigor and stunted growth.<br>
+            <br>
+            Causes:<br>
+            - Caused by fungal pathogens (e.g., *Fusarium* spp.).<br>
+            - High soil moisture and poor drainage conditions.<br>
+            - Overwatering or heavy rainfall can exacerbate the issue.<br>
+            <br>
+            Preventive Measures:<br>
+            - Ensure proper drainage in planting areas.<br>
+            - Avoid overwatering and waterlogged conditions.<br>
+            - Use disease-free seed tubers for planting.<br>
+            - Practice crop rotation to reduce pathogen buildup.<br>
+            <br>
+            Treatment:<br>
+            - Remove and destroy infected plants immediately.<br>
+            - Apply fungicides if necessary to protect healthy plants.<br>
+            - Improve soil drainage and aeration.<br>
+            - Monitor soil moisture levels regularly.<br><br>''', 'Vegetative'), 
+            
+            ('Eyespot of Sugarcane', 
+            '''Symptoms:<br>
+            - Small, round, dark spots on leaves with yellow halos.<br>
+            - Affected leaves may exhibit premature senescence.<br>
+            - Reduced photosynthesis leading to stunted growth.<br>
+            - In severe cases, entire plants may be affected.<br>
+            - Overall plant vigor is significantly reduced.<br>
+            <br>
+            Causes:<br>
+            - Caused by the fungal pathogen *Helminthosporium* spp.<br>
+            - Thrives in warm, humid conditions.<br>
+            - Infected plant debris can serve as a source of spores.<br>
+            - Poor air circulation can exacerbate the issue.<br>
+            <br>
+            Preventive Measures:<br>
+            - Use disease-free seed cane for planting.<br>
+            - Practice crop rotation to reduce pathogen buildup.<br>
+            - Remove and destroy infected plant debris.<br>
+            - Ensure good air circulation around plants.<br>
+            <br>
+            Treatment:<br>
+            - Apply fungicides as needed, following label instructions.<br>
+            - Remove and destroy infected leaves promptly.<br>
+            - Monitor humidity levels and adjust watering practices.<br>
+            - Consider using integrated pest management strategies.<br><br>''', 'Vegetative'), 
+            
+            ('Bakanae and Foot Rot', 
+            '''Symptoms:<br>
+            - Wilting and yellowing of leaves - Stunted growth and reduced tillering.<br>
+            - Dark, water-soaked lesions at the base of the stalk.<br>
+            - Affected plants may exhibit a foul odor.<br>
+            - Overall plant vigor is significantly reduced.<br>
+            <br>
+            Causes:<br>
+            - Caused by the fungal pathogen *Gibberella fujikuroi*.<br>
+            - High soil moisture and poor drainage can exacerbate the issue.<br>
+            - Overwatering or heavy rainfall can lead to increased disease incidence.<br>
+            <br>
+            Preventive Measures:<br>
+            - Use disease-free seed cane for planting.<br>
+            - Ensure proper drainage in planting areas.<br>
+            - Avoid overwatering and waterlogged conditions.<br>
+            - Practice crop rotation to reduce pathogen buildup.<br>
+            <br>
+            Treatment:<br>
+            - Remove and destroy infected plants immediately.<br>
+            - Apply fungicides if necessary to protect healthy plants.<br>
+            - Improve soil drainage and aeration.<br>
+            - Monitor soil moisture levels regularly.<br><br>''', 'Vegetative'), 
+            
+            ('Orange Rust Sugarcane', 
+            '''Symptoms:<br>
+            - Bright orange pustules on the undersides of leaves.<br>
+            - Leaves may yellow and exhibit premature senescence.<br>
+            - Reduced photosynthesis leading to stunted growth.<br>
+            - Affected plants may have lower sugar yields.<br>
+            - In severe cases, entire leaves may die off.<br>
+            <br>
+            Causes:<br>
+            - Caused by the fungal pathogen *Puccinia kuehnii*.<br>
+            - Thrives in warm, humid conditions.<br>
+            - Spores can be spread by wind and water.<br>
+            - Infected plant debris can serve as a source of spores.<br>
+            <br>
+            Preventive Measures:<br>
+            - Use resistant sugarcane varieties when available.<br>
+            - Practice crop rotation to reduce pathogen buildup.<br>
+            - Remove and destroy infected plant debris.<br>
+            - Ensure good air circulation around plants.<br>
+            <br>
+            Treatment:<br>
+            - Apply fungicides as needed, following label instructions.<br>
+            - Remove and destroy infected leaves promptly.<br>
+            - Monitor humidity levels and adjust watering practices.<br>
+            - Consider using integrated pest management strategies.<br><br>''', 'Vegetative'), 
+            
+            ('Leaf Scald of Sugarcane', 
+            '''Symptoms:<br>
+            - Water-soaked lesions on leaves that turn brown.<br>
+            - Leaves may curl and become distorted.<br>
+            - Affected plants may exhibit stunted growth.<br>
+            - Overall plant vigor is significantly reduced.<br>
+            - In severe cases, entire leaves may die off.<br>
+            <br>
+            Causes:<br>
+            - Caused by the bacterial pathogen *Xanthomonas albilineans*.<br>
+            - High humidity and warm temperatures can promote disease development.<br>
+            - Infected plant debris can serve as a source of bacteria.<br>
+            <br>
+            Preventive Measures:<br>
+            - Use disease-free seed cane for planting.<br>
+            - Practice crop rotation to reduce pathogen buildup.<br>
+            - Remove and destroy infected plant debris.<br>
+            - Ensure good air circulation around plants.<br>
+            <br>
+            Treatment:<br>
+            - Remove and destroy infected plants immediately.<br>
+            - Apply bactericides if necessary, following label instructions.<br>
+            - Monitor fields regularly for early signs of infection.<br>
+            - Implement good sanitation practices in the field.<br><br>''', 'Vegetative'), 
+            
+            ('Sugarcane Yellow Leaf Virus', 
+            '''Symptoms:<br>
+            - Yellowing of leaves, starting from the leaf tips.<br>
+            - Stunted growth and reduced tillering.<br>
+            - Leaves may exhibit a characteristic yellowing pattern.<br>
+            - Overall plant vigor is significantly reduced.<br>
+            - In severe cases, plants may die back completely.<br>
+            <br>
+            Causes:<br>
+            - Caused by a virus transmitted by aphids.<br>
+            - High populations of aphids can lead to increased disease incidence.<br>
+            - Environmental stress can exacerbate symptoms.<br>
+            <br>
+            Preventive Measures:<br>
+            - Use resistant sugarcane varieties when available.<br>
+            - Monitor aphid populations and control them as needed.<br>
+            - Practice good sanitation to reduce pest habitats.<br>
+            - Implement crop rotation to disrupt pest life cycles.<br>
+            <br>
+            Treatment:<br>
+            - Remove and destroy infected plants to limit spread.<br>
+            - Apply insecticides as needed to control aphid populations.<br>
+            - Consider using integrated pest management strategies.< br>
+            - Regularly inspect plants for signs of disease.<br><br>''', 'Vegetative'),
         ]
         for name, description, stage in sugarcane_diseases_vegetative:
             disease = Disease(plant_id=sugarcane.id, name=name, description=description, stage=stage)
             db.session.add(disease)
 
         # Add disease data for sugarcane at the flowering stage
-        sugarcane_diseases_flowering =[
-            ('Powdery Mildew', '''Symptoms:<br>''', 'Flowering'),
-            ('Wilt Desease of Sugarcane', '''Symptoms:<br>''', 'Flowering'),
-            ('Scooty Mold', '''Symptoms:<br>''', 'Flowering'),
-            ('Pokkah Boeng', '''Symptoms:<br>''', 'Flowering'),
-            ('Striga', '''Symptoms:<br>''', 'Flowering'),
-            ('Mealybug', '''Symptoms:<br>''', 'Flowering'),
+        sugarcane_diseases_flowering = [
+            ('Powdery Mildew', 
+            '''Symptoms:<br>
+            - White, powdery fungal growth on leaves and flower heads.<br>
+            - Leaves may curl and become distorted.<br>
+            - Affected plants may exhibit stunted growth.<br>
+            - Flowers may be smaller and less vibrant.<br>
+            - In severe cases, leaves may yellow and drop prematurely.<br>
+            <br>
+            Causes:<br>
+            - Caused by fungal pathogens such as *Erysiphe* spp.<br>
+            - Thrives in warm, dry conditions with high humidity.<br>
+            - Poor air circulation around plants can exacerbate the issue.<br>
+            <br>
+            Preventive Measures:<br>
+            - Space plants adequately to improve air circulation.<br>
+            - Water plants at the base to avoid wetting foliage.<br>
+            - Apply mulch to maintain soil moisture and reduce humidity.<br>
+            - Use resistant sugarcane varieties when available.<br>
+            <br>
+            Treatment:<br>
+            - Apply fungicides specifically labeled for powdery mildew.<br>
+            - Remove and destroy infected plant parts to reduce spread.<br>
+            - Use a mixture of water and baking soda as a home remedy.<br>
+            - Ensure proper cultural practices to minimize humidity.<br><br>''', 'Flowering'), 
+            
+            ('Wilt Disease of Sugarcane', 
+            '''Symptoms:<br>
+            - Yellowing and wilting of leaves, starting from the tip.<br>
+            - Stunted growth and reduced tillering.<br>
+            - Dark streaks may be visible in the vascular tissue.<br>
+            - Overall plant vigor is significantly reduced.<br>
+            - In severe cases, plants may die back completely.<br>
+            <br>
+            Causes:<br>
+            - Caused by the fungal pathogen *Fusarium* spp.<br>
+            - Soil-borne pathogen that can survive in the soil for years.<br>
+            - High soil moisture and poor drainage can exacerbate the issue.<br>
+            <br>
+            Preventive Measures:<br>
+            - Use disease-free seed cane for planting.<br>
+            - Improve soil drainage and aeration.<br>
+            - Practice crop rotation to reduce pathogen buildup.<br>
+            - Monitor soil moisture levels regularly.<br>
+            <br>
+            Treatment:<br>
+            - Remove and destroy infected plants to limit spread.<br>
+            - Apply fungicides if necessary, though effectiveness may vary.<br>
+            - Maintain healthy soil conditions to support plant vigor.<br>
+            - Consider using biological control methods if available.<br><br>''', 'Flowering'), 
+            
+            ('Sooty Mold', 
+            '''Symptoms:<br>
+            - Black, sooty fungal growth on leaves and flower heads.<br>
+            - Leaves may appear dirty and may yellow.<br>
+            - Reduced photosynthesis leading to stunted growth.<br>
+            - Affected plants may have lower sugar yields.<br>
+            - In severe cases, entire leaves may die off.<br>
+            <br>
+            Causes:<br>
+            - Caused by various fungal pathogens that thrive on honeydew excreted by sap-sucking insects.<br>
+            - High humidity and poor air circulation can promote fungal growth.<br>
+            <br>
+            Preventive Measures:<br>
+            - Control aphid and whitefly populations to reduce honeydew.<br>
+            - Ensure good air circulation around plants.<br>
+            - Remove and destroy infected plant debris.<br>
+            - Monitor fields regularly for early signs of infection.<br>
+            <br>
+            Treatment:<br>
+            - Wash affected plants with water to remove sooty mold.<br>
+            - Apply fungicides as needed, following label instructions.<br>
+            - Monitor humidity levels and adjust watering practices.<br>
+            - Consider using integrated pest management strategies.<br><br>''', 'Flowering'), 
+            
+            ('Pokkah Boeng', 
+            '''Symptoms:<br>
+            - Distorted and stunted growth of the plant.<br>
+            - Leaves may exhibit yellowing and wilting.<br>
+            - Affected plants may have reduced flowering and fruiting.<br>
+            - Overall plant vigor is significantly reduced.<br>
+            - In severe cases, plants may die back completely.<br>
+            <br>
+            Causes:<br>
+            - Caused by the fungal pathogen *Fusarium moniliforme*.<br>
+            - High humidity and warm temperatures can promote disease development.<br>
+            - Infected plant debris can serve as a source of the fungus.<br>
+            <br>
+            Preventive Measures:<br>
+            - Use disease-free seed cane for planting.<br>
+            - Practice crop rotation to reduce pathogen buildup.<br>
+            - Remove and destroy infected plant debris.<br>
+            - Ensure good air circulation around plants.<br>
+            <br>
+            Treatment:<br>
+            - Remove and destroy infected plants immediately.<br>
+            - Apply fungicides if necessary, following label instructions.<br>
+            - Monitor humidity levels and adjust watering practices.<br>
+            - Consider using integrated pest management strategies.<br><br>''', 'Flowering'), 
+            
+            ('Striga', 
+            '''Symptoms:<br>
+            - Presence of parasitic plants attached to the roots.<br>
+            - Stunted growth and reduced tillering of sugarcane.<br>
+            - Yellowing and wilting of leaves.<br>
+            - Overall plant vigor is significantly reduced.<br>
+            - In severe cases, affected plants may die.<br>
+            <br>
+            Causes:<br>
+            - Caused by the parasitic plant *Striga* spp.<br>
+            - Thrives in nutrient-poor soils and can severely affect host plants.<br>
+            <br>
+            Preventive Measures:<br>
+            - Use resistant sugarcane varieties when available.<br>
+            - Practice crop rotation to disrupt the life cycle of the parasite.<br>
+            - Improve soil fertility to support healthy plant growth.<br>
+            - Remove and destroy Striga plants before they produce seeds.<br>
+            <br>
+            Treatment:<br>
+            - Hand-pull Striga plants from the field.<br>
+            - Apply herbicides specifically labeled for Striga control.<br>
+            - Monitor fields regularly for early signs of infestation.<br>
+            - Implement good sanitation practices in the field.<br><br>''', 'Flower'),
+            ('Mealybug', 
+            '''Symptoms:<br>
+            - Presence of white, cottony masses on leaves and stems.<br>
+            - Leaves may yellow and drop prematurely.<br>
+            - Reduced photosynthesis leading to stunted growth.<br>
+            - Affected plants may have lower sugar yields.<br>
+            - In severe cases, entire plants may be weakened.<br>
+            <br>
+            Causes:<br>
+            - Caused by the insect pest *Planococcus* spp.<br>
+            - Thrives in warm, humid conditions and can reproduce rapidly.<br>
+            - Can transmit plant viruses, exacerbating plant health issues.<br>
+            <br>
+            Preventive Measures:<br>
+            - Monitor plants regularly for early signs of infestation.<br>
+            - Maintain good air circulation around plants.<br>
+            - Remove and destroy infected plant debris.<br>
+            - Use resistant sugarcane varieties when available.<br>
+            <br>
+            Treatment:<br>
+            - Apply insecticides specifically labeled for mealybug control.<br>
+            - Use insecticidal soap or neem oil as a natural remedy.<br>
+            - Hand-pick mealybugs from plants if infestation is low.<br>
+            - Implement integrated pest management strategies to control populations.<br><br>''', 'Flowering'),
         ]
         for name, description, stage in sugarcane_diseases_flowering:
             disease = Disease(plant_id=sugarcane.id, name=name, description=description, stage=stage)
             db.session.add(disease)
 
         # Add disease data for sugarcane at the fruiting stage
-        sugarcane_diseases_fruiting =[
-            ('Ring Spot of Sugarcane', '''Symptoms:<br>''', 'Fruiting'),
-            ('Pokkah Boeng', '''Symptoms:<br>''', 'Fruiting'),
-            ('Bacterial Leaf Streak of Maize', '''Symptoms:<br>''', 'Fruiting'),
-            ('Violet Stem Borer', '''Symptoms:<br>''', 'Fruiting'),
-            ('Spiny Bollworm', '''Symptoms:<br>''', 'Fruiting'),
+        sugarcane_diseases_fruiting = [
+            ('Ring Spot of Sugarcane', 
+            '''Symptoms:<br>
+            - Circular, yellowish spots on leaves.<br>
+            - Leaves may exhibit yellowing and wilting.<br>
+            - Reduced photosynthesis leading to stunted growth.<br>
+            - Affected plants may have lower sugar yields.<br>
+            - In severe cases, entire leaves may die off.<br>
+            <br>
+            Causes:<br>
+            - Caused by the viral pathogen *Sugarcane yellow leaf virus*.<br>
+            - Transmitted by aphids and other sap-sucking insects.<br>
+            - High humidity and warm temperatures can promote disease development.<br>
+            <br>
+            Preventive Measures:<br>
+            - Use resistant sugarcane varieties when available.<br>
+            - Monitor aphid populations and control them as needed.<br>
+            - Practice good sanitation to reduce pest habitats.<br>
+            - Implement crop rotation to disrupt pest life cycles.<br>
+            <br>
+            Treatment:<br>
+            - Remove and destroy infected plants to limit spread.<br>
+            - Apply insecticides as needed to control aphid populations.<br>
+            - Consider using integrated pest management strategies.<br>
+            - Regularly inspect plants for signs of disease.<br><br>''', 'Fruiting'), 
+            
+            ('Pokkah Boeng', 
+            '''Symptoms:<br>
+            - Distorted and stunted growth of the plant.<br>
+            - Leaves may exhibit yellowing and wilting.<br>
+            - Affected plants may have reduced flowering and fruiting.<br>
+            - Overall plant vigor is significantly reduced.<br>
+            - In severe cases, plants may die back completely.<br>
+            <br>
+            Causes:<br>
+            - Caused by the fungal pathogen *Fusarium moniliforme*.<br>
+            - High humidity and warm temperatures can promote disease development.<br>
+            - Infected plant debris can serve as a source of the fungus.<br>
+            <br>
+            Preventive Measures:<br>
+            - Use disease-free seed cane for planting.<br>
+            - Practice crop rotation to reduce pathogen buildup.<br>
+            - Remove and destroy infected plant debris.<br>
+            - Ensure good air circulation around plants.<br>
+            <br>
+            Treatment:<br>
+            - Remove and destroy infected plants immediately.<br>
+            - Apply fungicides if necessary, following label instructions.<br>
+            - Monitor humidity levels and adjust watering practices.<br>
+            - Consider using integrated pest management strategies.<br><br>''', 'Fruiting'), 
+            
+            ('Bacterial Leaf Streak of Maize', 
+            '''Symptoms:<br>
+            - Water-soaked streaks on leaves that turn brown.<br>
+            - Leaves may curl and become distorted.<br>
+            - Affected plants may exhibit stunted growth.<br>
+            - Overall plant vigor is significantly reduced.<br>
+            - In severe cases, entire leaves may die off.<br>
+            <br>
+            Causes:<br>
+            - Caused by the bacterial pathogen *Xanthomonas* spp.<br>
+            - High humidity and warm temperatures can promote disease development.<br>
+            - Infected plant debris can serve as a source of bacteria.<br>
+            <br>
+            Preventive Measures:<br>
+            - Use disease-free seed cane for planting.<br>
+            - Practice crop rotation to reduce pathogen buildup.<br>
+            - Remove and destroy infected plant debris.<br>
+            - Ensure good air circulation around plants.<br>
+            <br>
+            Treatment:<br>
+            - Remove and destroy infected plants immediately.<br>
+            - Apply bactericides if necessary, following label instructions.<br>
+            - Monitor fields regularly for early signs of infection.<br>
+            - Implement good sanitation practices in the field.<br><br>''', 'Fruiting'), 
+            
+            ('Violet Stem Borer', 
+            '''Symptoms:<br>
+            - Presence of small holes in the stalks.<br>
+            - Wilting and yellowing of leaves.<br>
+            - Stunted growth and reduced tillering.<br>
+            - Affected plants may exhibit dead heart symptoms.<br>
+            - Overall plant vigor is significantly reduced.<br>
+            <br>
+            Causes:<br>
+            - Caused by the larval stage of the pest *Chilo infuscatellus*.<br>
+            - Larvae bore into the stalks, causing damage.<br>
+            - High populations can lead to significant damage.<br>
+            <br>
+            Preventive Measures:<br>
+            - Monitor crops regularly for signs of infestation.<br>
+            - Use resistant sugarcane varieties when available.<br>
+            - Practice good sanitation to reduce pest habitats.<br>
+            - Encourage natural predators to help control populations.<br>
+            <br>
+            Treatment:<br>
+            - Apply insecticides as needed, following label instructions.<br>
+            - Handpick and remove larvae from plants.<br>
+            - Use traps to monitor and control populations.<br>
+            - Consider using organic insecticides if available.<br><br>''', 'Fruiting'), 
+            
+            ('Spiny Bollworm', 
+            '''Symptoms:<br>
+            - Irregular holes in leaves and flower heads.<br>
+            - Presence of larvae on the plants.<br>
+            - Affected plants may exhibit wilting and stunted growth.<br>
+            - Reduced yield and quality of flowers and fruits.<br>
+            <br>
+            Causes:<br>
+            - Caused by the larval stage of the pest *Earias* spp.<br>
+            - Larvae feed on the flowers and developing fruits.<br>
+            - High populations can lead to significant damage.<br>
+            <br>
+            Preventive Measures:<br>
+            - Monitor crops regularly for signs of infestation.<br>
+            - Use resistant sugarcane varieties when available.<br>
+            - Practice good sanitation to reduce pest habitats.<br>
+            - Encourage natural predators to help control populations.<br>
+            <br>
+            Treatment:<br>
+            - Apply insecticides as needed, following label instructions.<br>
+            - Handpick and remove larvae from plants.<br>
+            - Use traps to monitor and control populations.<br>
+            - Consider using organic insecticides if available.<br><br>''', 'Fruiting'),
         ]
         for name, description, stage in sugarcane_diseases_fruiting:
             disease = Disease(plant_id=sugarcane.id, name=name, description=description, stage=stage)
             db.session.add(disease)
 
         # Add disease data for sugarcane at the harvesting stage
-        sugarcane_diseases_harvesting =[
-            ('Red Rot', '''Symptoms:<br>''', 'Harvesting'), 
-            ('Fall Armyworm', '''Symptoms:<br>''', 'Harvesting'),   
-            ('Spiny Bollworm', '''Symptoms:<br>''', 'Harvesting'), 
-            ('Termites', '''Symptoms:<br>''', 'Harvesting'), 
-            ('Tussock Moths', '''Symptoms:<br>''', 'Harvesting'), 
-            ('Sunburn', '''Symptoms:<br>''', 'Harvesting'), 
+        sugarcane_diseases_harvesting = [
+            ('Red Rot', 
+            '''Symptoms:<br>
+            - Dark red to brown lesions on the stalks.<br>
+            - Affected areas may become soft and mushy.<br>
+            - Leaves may yellow and die prematurely.<br>
+            - Reduced sugar content in affected plants.<br>
+            - Overall plant vigor is significantly reduced.<br>
+            <br>
+            Causes:<br>
+            - Caused by the fungal pathogen *Colletotrichum falcatum*.<br>
+            - Thrives in warm, humid conditions.<br>
+            - Infected plant debris can serve as a source of the fungus.<br>
+            <br>
+            Preventive Measures:<br>
+            - Use disease-free seed cane for planting.<br>
+            - Practice crop rotation to reduce pathogen buildup.<br>
+            - Improve drainage in fields to reduce humidity.<br>
+            - Monitor fields regularly for early signs of infection.<br>
+            <br>
+            Treatment:<br>
+            - Remove and destroy infected plants immediately.<br>
+            - Apply fungicides as needed, following label instructions.<br>
+            - Ensure proper cultural practices to minimize humidity.<br>
+            - Consider using resistant sugarcane varieties if available.<br><br>''', 'Harvesting'), 
+            
+            ('Fall Armyworm', 
+            '''Symptoms:<br>
+            - Irregular holes in leaves due to feeding.<br>
+            - Presence of larvae on the plants.<br>
+            - Affected plants may exhibit wilting and stunted growth.<br>
+            - Reduced yield and quality of flowers and fruits.<br>
+            - In severe cases, plants may die back completely.<br>
+            <br>
+            Causes:<br>
+            - Caused by the larval stage of the pest *Spodoptera frugiperda*.<br>
+            - Larvae feed on leaves and developing fruits.<br>
+            - High populations can lead to significant damage.<br>
+            <br>
+            Preventive Measures:<br>
+            - Monitor crops regularly for signs of infestation.<br>
+            - Use resistant sugarcane varieties when available.<br>
+            - Practice good sanitation to reduce pest habitats.<br>
+            - Encourage natural predators to help control populations.<br>
+            <br>
+            Treatment:<br>
+            - Apply insecticides as needed, following label instructions.<br>
+            - Handpick and remove larvae from plants.<br>
+            - Use traps to monitor and control populations.<br>
+            - Consider using organic insecticides if available.<br><br>''', 'Harvesting'), 
+            
+            ('Spiny Bollworm', 
+            '''Symptoms:<br>
+            - Irregular holes in leaves and flower heads.<br>
+            - Presence of larvae on the plants.<br>
+            - Affected plants may exhibit wilting and stunted growth.<br>
+            - Reduced yield and quality of flowers and fruits.<br>
+            <br>
+            Causes:<br>
+            - Caused by the larval stage of the pest *Earias* spp.<br>
+            - Larvae feed on the flowers and developing fruits.<br>
+            - High populations can lead to significant damage.<br>
+            <br>
+            Preventive Measures:<br>
+            - Monitor crops regularly for signs of infestation.<br>
+            - Use resistant sugarcane varieties when available.<br>
+            - Practice good sanitation to reduce pest habitats.<br>
+            - Encourage natural predators to help control populations.<br>
+            <br>
+            Treatment:<br>
+            - Apply insecticides as needed, following label instructions.<br>
+            - Handpick and remove larvae from plants.<br>
+            - Use traps to monitor and control populations.<br>
+            - Consider using organic insecticides if available.<br><br>''', 'Harvesting'), 
+            
+            ('Termites', 
+            '''Symptoms:<br>
+            - Presence of mud tubes on the stalks.<br>
+            - Hollowed-out stalks and reduced structural integrity.<br>
+            - Wilting and yellowing of leaves.<br>
+            - Overall plant vigor is significantly reduced.<br>
+            - In severe cases, plants may collapse.<br>
+            <br>
+            Causes:<br>
+            - Caused by various species of termites (e.g., *Reticulitermes* spp.).<br>
+            - They feed on the cellulose in the plant material.<br>
+            - High populations can lead to significant damage.<br>
+            <br>
+            Preventive Measures:<br>
+            - Monitor fields regularly for signs of termite activity.<br>
+            - Use resistant sugarcane varieties when available.<br>
+            - Practice good sanitation to reduce pest habitats.<br>
+            - Implement soil treatments to deter termite infestations.<br>
+            <br>
+            Treatment:<br>
+            - Apply insecticides specifically labeled for termite control.<br>
+            - Use baiting systems to manage termite populations.<br>
+            - Remove and destroy infested plant material.<br>
+            - Consider using integrated pest management strategies.<br><br>''', 'Harvesting'), 
+            
+            ('Tussock Moths', 
+            '''Symptoms:<br>
+            - Irregular holes in leaves due to feeding.<br>
+            - Presence of caterpillars on foliage.<br>
+            - Affected plants may exhibit wilting and stunted growth.<br>
+            - Reduced yield and quality of flowers and fruits.<br>
+            <br>
+            Causes:<br>
+            - Caused by the caterpillars of *Lymantria dispar* (gypsy moths).<br>
+            - They feed on the foliage, weakening the plant.<br>
+            - High populations can lead to defoliation and stress on the plant.<br>
+            <br>
+            Preventive Measures:<br>
+            - Monitor for early signs of infestation.<br>
+            - Use pheromone traps to catch adult moths.<br>
+            - Encourage natural predators such as birds.<br>
+            - Maintain plant health through proper care and nutrition.<br>
+            <br>
+            Treatment:<br>
+            - Apply insecticides targeting caterpillars if necessary.<br>
+            - Handpick caterpillars from plants.<br>
+            - Use biological control methods, such as introducing beneficial insects.<br>
+            - Remove and destroy any infested plant material.<br><br>''', 'Harvesting'),
         ]
         for name, description, stage in sugarcane_diseases_harvesting:
             disease = Disease(plant_id=sugarcane.id, name=name, description=description, stage=stage)
@@ -2904,10 +5290,103 @@ def insert_data():
         # Add disease data for Tomato at the seeding stage
         tomato = Plant.query.filter_by(name='Tomato').first()
         tomato_diseases_seeding = [
-            ('Bottom Rot', '''Symptoms:<br>''', 'Seeding'), 
-            ('Edema', '''Symptoms:<br>''', 'Seeding'), 
-            ('Herbicide Growth Damage', '''Symptoms:<br>''', 'Seeding'), 
-            ('Damping-Off of Seedings', '''Symptoms:<br>''', 'Seeding'), 
+            ('Bottom Rot', 
+            '''Symptoms:<br>
+            - Dark, water-soaked lesions at the base of the stem.<br>
+            - Plants may wilt and exhibit yellowing leaves.<br>
+            - Soft, mushy tissue at the base of the plant.<br>
+            - Foul odor from decaying tissue.<br>
+            - Reduced plant vigor and stunted growth.<br>
+            <br>
+            Causes:<br>
+            - Caused by fungal pathogens (e.g., *Pythium* spp.).<br>
+            - High soil moisture and poor drainage conditions.<br>
+            - Overwatering or heavy rainfall can exacerbate the issue.<br>
+            - Soil compaction can hinder root development.<br>
+            <br>
+            Preventive Measures:<br>
+            - Ensure proper drainage in planting areas.<br>
+            - Avoid overwatering and waterlogged conditions.<br>
+            - Use disease-free seedling trays for planting.<br>
+            - Practice crop rotation to reduce pathogen buildup.<br>
+            <br>
+            Treatment:<br>
+            - Remove and destroy infected plants immediately.<br>
+            - Apply fungicides if necessary to protect healthy plants.<br>
+            - Improve soil drainage and aeration.<br>
+            - Monitor soil moisture levels regularly.<br><br>''', 'Seeding'), 
+            
+            ('Edema', 
+            '''Symptoms:<br>
+            - Swelling or blisters on the undersides of leaves.<br>
+            - Leaves may appear distorted or curled.<br>
+            - Affected areas may turn brown and die.<br>
+            - Overall plant vigor may be reduced.<br>
+            - In severe cases, leaf drop may occur.<br>
+            <br>
+            Causes:<br>
+            - Caused by excessive moisture in the soil or environment.<br>
+            - High humidity and poor air circulation can exacerbate the issue.<br>
+            - Overwatering or rapid changes in temperature can trigger edema.<br>
+            <br>
+            Preventive Measures:<br>
+            - Ensure proper drainage in planting areas.<br>
+            - Avoid overwatering and monitor soil moisture levels.<br>
+            - Space plants adequately to improve air circulation.<br>
+            - Use mulch to help regulate soil moisture.<br>
+            <br>
+            Treatment:<br>
+            - Adjust watering practices to prevent excess moisture.<br>
+            - Improve air circulation around plants.<br>
+            - Remove affected leaves to reduce stress on the plant.<br>
+            - Monitor environmental conditions and adjust as needed.<br><br>''', 'Seeding'), 
+            
+            ('Herbicide Growth Damage', 
+            '''Symptoms:<br>
+            - Distorted or curled leaves.<br>
+            - Stunted growth and reduced vigor.<br>
+            - Yellowing or browning of leaf edges.<br>
+            - Overall plant health may decline.<br>
+            - In severe cases, plants may die.<br>
+            <br>
+            Causes:<br>
+            - Caused by exposure to herbicides, either through drift or soil contamination.<br>
+            - Sensitive varieties may be more affected by certain herbicides.<br>
+            <br>
+            Preventive Measures:<br>
+            - Use herbicides carefully and according to label instructions.<br>
+            - Avoid applying herbicides on windy days to prevent drift.<br>
+            - Maintain a buffer zone between treated areas and sensitive crops.<br>
+            <br>
+            Treatment:<br>
+            - Remove and destroy affected plants if damage is severe.<br>
+            - Monitor for recovery and adjust care practices accordingly.<br>
+            - Avoid using herbicides known to cause damage to tomatoes in the future.<br><br>''', 'Seeding'), 
+            
+            ('Damping-Off of Seedlings', 
+            '''Symptoms:<br>
+            - Seedlings may collapse at the soil line.<br>
+            - Affected plants may exhibit yellowing and wilting.<br>
+            - Fungal growth may be visible on the soil surface.<br>
+            - Overall plant vigor is significantly reduced.<br>
+            - In severe cases, entire trays of seedlings may be lost.<br>
+            <br>
+            Causes:<br>
+            - Caused by various fungal pathogens (e.g., *Rhizoctonia*, *Pythium*).<br>
+            - High soil moisture and poor drainage conditions.<br>
+            - Overcrowding of seedlings can increase disease incidence.<br>
+            <br>
+            Preventive Measures:<br>
+            - Use sterile seedling trays and potting mix.<br>
+            - Ensure proper drainage in planting areas.<br>
+            - Avoid overwatering and monitor soil moisture levels.<br>
+            - Space seedlings adequately to improve air circulation.<br>
+            <br>
+            Treatment:<br>
+            - Remove and destroy infected seedlings immediately.<br>
+            - Apply fungicides if necessary, following label instructions.<br>
+            - Improve soil drainage and aeration.<br>
+            - Monitor environmental conditions and adjust as needed.<br><br>''', 'Seeding'),
         ]
         for name, description, stage in tomato_diseases_seeding:
             disease = Disease(plant_id=tomato.id, name=name, description=description, stage=stage)
@@ -2915,10 +5394,110 @@ def insert_data():
         
         # Add disease data for Tomato at the vegetative stage
         tomato_diseases_vegetative = [
-            ('Early Blight', '''Symptoms:<br> - Dark, concentric rings on leaves, stems, and fruits.<br> - Yellowing and withering of leaves.<br> - Brown or black lesions with a concentric ring pattern.<br>''', 'Vegetative'),
-            ('Late Blight', 'A fungal disease causing water-soaked spots on leaves and fruit.', 'Vegetative'),
-            ('Bacterial Wilt', 'A bacterial disease causing wilting and yellowing of leaves.', 'Vegetative'),
-            ('Tomato Mosaic Virus', 'A viral disease causing mottling and yellowing of leaves.', 'Vegetative')
+            ('Early Blight', 
+            '''Symptoms:<br>
+            - Dark, concentric rings on leaves, stems, and fruits.<br>
+            - Yellowing and withering of leaves.<br>
+            - Brown or black lesions with a concentric ring pattern.<br>
+            - Affected leaves may drop prematurely.<br>
+            - Reduced overall plant vigor and yield.<br>
+            <br>
+            Causes:<br>
+            - Caused by the fungal pathogen *Alternaria solani*.<br>
+            - Thrives in warm, humid conditions.<br>
+            - Spores can be spread by wind and water.<br>
+            - Infected plant debris can serve as a source of spores.<br>
+            - High humidity and poor air circulation can exacerbate the issue.<br>
+            <br>
+            Preventive Measures:<br>
+            - Use disease-resistant tomato varieties when available.<br>
+            - Practice crop rotation to reduce pathogen buildup.<br>
+            - Remove and destroy infected plant debris.<br>
+            - Ensure good air circulation around plants.<br>
+            - Monitor fields regularly for early signs of infection.<br>
+            <br>
+            Treatment:<br>
+            - Apply fungicides as needed, following label instructions.<br>
+            - Remove and destroy infected leaves promptly.<br>
+            - Monitor humidity levels and adjust watering practices.<br>
+            - Consider using integrated pest management strategies.<br><br>''', 'Vegetative'), 
+            
+            ('Late Blight', 
+            '''Symptoms:<br>
+            - Water-soaked spots on leaves that turn brown.<br>
+            - Affected leaves may curl and die.<br>
+            - Dark, greasy lesions on stems and fruits.<br>
+            - Foul odor may be present in severely affected plants.<br>
+            - Rapid plant decline and reduced yield.<br>
+            <br>
+            Causes:<br>
+            - Caused by the fungal pathogen *Phytophthora infestans*.<br>
+            - Thrives in cool, moist conditions.<br>
+            - Infected plant debris can serve as a source of spores.<br>
+            - High humidity and wet weather increase disease spread.<br>
+            <br>
+            Preventive Measures:<br>
+            - Use resistant tomato varieties when available.<br>
+            - Practice crop rotation to reduce pathogen buildup.<br>
+            - Remove and destroy infected plant debris.<br>
+            - Avoid overhead watering to minimize leaf wetness.<br>
+            - Monitor weather conditions and apply fungicides as needed.<br>
+            <br>
+            Treatment:<br>
+            - Apply fungicides at the first sign of infection.<br>
+            - Remove and destroy infected plants immediately.<br>
+            - Improve air circulation around plants.<br>
+            - Monitor humidity levels and adjust watering practices.<br><br>''', 'Vegetative'), 
+            
+            ('Bacterial Wilt', 
+            '''Symptoms:<br>
+            - Wilting and yellowing of leaves, starting from the bottom.<br>
+            - Darkening of vascular tissue when cut.<br>
+            - Affected plants may exhibit stunted growth.<br>
+            - Overall plant vigor is significantly reduced.<br>
+            - In severe cases, plants may die back completely.<br>
+            <br>
+            Causes:<br>
+            - Caused by the bacterial pathogen *Ralstonia solanacearum*.<br>
+            - Soil-borne pathogen that can survive in the soil for years.<br>
+            - High soil moisture and poor drainage can exacerbate the issue.<br>
+            <br>
+            Preventive Measures:<br>
+            - Use disease-free seedling trays for planting.<br>
+            - Improve soil drainage and aeration.<br>
+            - Practice crop rotation to reduce pathogen buildup.<br>
+            - Monitor soil moisture levels regularly.<br>
+            <br>
+            Treatment:<br>
+            - Remove and destroy infected plants to limit spread.<br>
+            - Apply bactericides if necessary, though effectiveness may vary.<br>
+            - Maintain healthy soil conditions to support plant vigor.<br>
+            - Consider using biological control methods if available.<br><br>''', 'Vegetative'), 
+            
+            ('Tomato Mosaic Virus', 
+            '''Symptoms:<br>
+            - Mottling and yellowing of leaves.<br>
+            - Distorted leaf shape and stunted growth.<br>
+            - Reduced flowering and fruit set.<br>
+            - Overall plant vigor is significantly reduced.<br>
+            - In severe cases, plants may die back completely.<br>
+            <br>
+            Causes:<br>
+            - Caused by the viral pathogen *Tobacco mosaic virus* (TMV).<br>
+            - Transmitted by mechanical means, such as handling plants.<br>
+            - Infected plant debris can serve as a source of the virus.<br>
+            <br>
+            Preventive Measures:<br>
+            - Use resistant tomato varieties when available.<br>
+            - Practice good sanitation to reduce virus spread.<br>
+            - Avoid handling plants when wet to reduce mechanical transmission.<br>
+            - Remove and destroy infected plants promptly.<br>
+            <br>
+            Treatment:<br>
+            - There is no chemical treatment for viral infections; focus on prevention.<br>
+            - Remove and destroy infected plants to limit spread.<br>
+            - Use resistant varieties in future plantings.<br>
+            - Maintain healthy plant vigor to withstand disease.<br><br>''', 'Vegetative'),
         ]
         for name, description, stage in tomato_diseases_vegetative:
             disease = Disease(plant_id=tomato.id, name=name, description=description, stage=stage)
@@ -2926,12 +5505,159 @@ def insert_data():
 
         # Add disease data for Tomato at the flowering stage
         tomato_diseases_flowering = [
-            ('Verticillium Wilt', '''Symptoms:<br>''', 'Flowering'),
-            ('Fusarium Wilt ', '''Symptoms:<br>''', 'Flowering'), 
-            ('Leaf Mold of Tomato', '''Symptoms:<br>''', 'Flowering'),
-            ('Tomato Spotted Wilt Virus', '''Symptoms:<br>''', 'Flowering'),
-            ('Tomato Yellow Leaf Curl Virus', '''Symptoms:<br>''', 'Flowering'),
-            ('Blossom Drop', '''Symptoms:<br>''', 'Flowering'),
+            ('Verticillium Wilt', 
+            '''Symptoms:<br>
+            - Yellowing of leaves, starting from the bottom.<br>
+            - Wilting of leaves on one side of the plant.<br>
+            - Dark streaks in the vascular tissue when cut.<br>
+            - Stunted growth and reduced fruit set.<br>
+            - Overall plant vigor is significantly reduced.<br>
+            <br>
+            Causes:<br>
+            - Caused by the fungal pathogen *Verticillium dahliae*.<br>
+            - Soil-borne pathogen that can survive in the soil for years.<br>
+            - High soil moisture and poor drainage can exacerbate the issue.<br>
+            - Certain crops can act as hosts for the pathogen.<br>
+            <br>
+            Preventive Measures:<br>
+            - Use disease-resistant tomato varieties when available.<br>
+            - Practice crop rotation to reduce pathogen buildup.<br>
+            - Improve soil drainage and aeration.<br>
+            - Monitor soil moisture levels regularly.<br>
+            - Remove and destroy infected plants promptly.<br>
+            <br>
+            Treatment:<br>
+            - There is no chemical treatment for this wilt; focus on prevention.<br>
+            - Remove and destroy infected plants to limit spread.<br>
+            - Maintain healthy soil conditions to support plant vigor.<br>
+            - Consider using biological control methods if available.<br><br>''', 'Flowering'), 
+            
+            ('Fusarium Wilt', 
+            '''Symptoms:<br>
+            - Yellowing and wilting of leaves, starting from the bottom.<br>
+            - Dark brown streaks in the vascular tissue when cut.<br>
+            - Stunted growth and reduced fruit set.<br>
+            - Overall plant vigor is significantly reduced.<br>
+            - In severe cases, plants may die back completely.<br>
+            <br>
+            Causes:<br>
+            - Caused by the fungal pathogen *Fusarium oxysporum*.<br>
+            - Soil-borne pathogen that can survive in the soil for years.<br>
+            - High soil temperatures can promote disease development.<br>
+            <br>
+            Preventive Measures:<br>
+            - Use disease-resistant tomato varieties when available.<br>
+            - Practice crop rotation to reduce pathogen buildup.<br>
+            - Improve soil drainage and aeration.<br>
+            - Monitor soil moisture levels regularly.<br>
+            - Remove and destroy infected plants promptly.<br>
+            <br>
+            Treatment:<br>
+            - There is no chemical treatment for this wilt; focus on prevention.<br>
+            - Remove and destroy infected plants to limit spread.<br>
+            - Maintain healthy soil conditions to support plant vigor.<br>
+            - Consider using biological control methods if available.<br><br>''', 'Flowering'), 
+            
+            ('Leaf Mold of Tomato', 
+            '''Symptoms:<br>
+            - Olive-green to dark green spots on the upper leaf surface.<br>
+            - White, fuzzy fungal growth on the undersides of leaves.<br>
+            - Leaves may curl and die prematurely.<br>
+            - Reduced photosynthesis leading to stunted growth.<br>
+            - Overall plant vigor is significantly reduced.<br>
+            <br>
+            Causes:<br>
+            - Caused by the fungal pathogen *Cladosporium fulvum*.<br>
+            - Thrives in warm, humid conditions.<br>
+            - High humidity and poor air circulation can exacerbate the issue.<br>
+            <br>
+            Preventive Measures:<br>
+            - Use resistant tomato varieties when available.<br>
+            - Ensure good air circulation around plants.<br>
+            - Remove and destroy infected plant debris.<br>
+            - Monitor humidity levels and adjust watering practices.<br>
+            <br>
+            Treatment:<br>
+            - Apply fungicides as needed, following label instructions.<br>
+            - Remove and destroy infected leaves promptly.<br>
+            - Improve air circulation around plants.<br>
+            - Consider using integrated pest management strategies.<br><br>''', 'Flowering'), 
+            
+            ('Tomato Spotted Wilt Virus', 
+            '''Symptoms:<br>
+            - Mottling and yellowing of leaves.<br>
+            - Stunted growth and reduced fruit set.<br>
+            - Dark spots on leaves and stems.<br>
+            - Overall plant vigor is significantly reduced.<br>
+            - In severe cases, plants may die back completely.<br>
+            <br>
+            Causes:<br>
+            - Caused by the viral pathogen *Tomato spotted wilt virus* (TSWV).<br>
+            - Transmitted by thrips and other sap-sucking insects.<br>
+            - Infected plant debris can serve as a source of the virus.<br>
+            <br>
+            Preventive Measures:<br>
+            - Use resistant tomato varieties when available.<br>
+            - Monitor thrip populations and control them as needed.<br>
+            - Practice good sanitation to reduce virus spread.<br>
+            - Remove and destroy infected plants promptly.<br>
+            <br>
+            Treatment:<br>
+            - There is no chemical treatment for viral infections; focus on prevention.<br>
+            - Remove and destroy infected plants to limit spread.<br>
+            - Use resistant varieties in future plantings.<br>
+            - Maintain healthy plant vigor to withstand disease.<br><br>''', 'Flowering'), 
+            
+            ('Tomato Yellow Leaf Curl Virus', 
+            '''Symptoms:<br>
+            - Yellowing and curling of leaves, especially new growth.<br>
+            - Stunted growth and reduced fruit set.<br>
+            - Leaf edges may become crispy and dry.<br>
+            - Overall plant vigor is significantly reduced.<br>
+            - In severe cases, plants may die back completely.<br>
+            <br>
+            Causes:<br>
+            - Caused by the viral pathogen *Tomato yellow leaf curl virus* (TYLCV).<br>
+            - Transmitted by whiteflies and other sap-sucking insects.<br>
+            - Infected plant debris can serve as a source of the virus.<br>
+            <br>
+            Preventive Measures:<br>
+            - Use resistant tomato varieties when available.<br>
+            - Monitor whitefly populations and control them as needed.<br>
+            - Practice good sanitation to reduce virus spread.<br>
+            - Remove and destroy infected plants promptly.<br>
+            <br>
+            Treatment:<br>
+            - There is no chemical treatment for viral infections; focus on prevention.<br>
+            - Remove and destroy infected plants to limit spread.<br>
+            - Use resistant varieties in future plantings.<br>
+            - Maintain healthy plant vigor to withstand disease.<br><br>''', 'Flowering'), 
+            
+            ('Blossom Drop', 
+            '''Symptoms:<br>
+            - Flowers may drop prematurely before fruit set.<br>
+            - Poor fruit development and reduced yield.<br>
+            - Stunted growth and overall plant vigor may decline.<br>
+            - Leaves may exhibit yellowing or curling.<br>
+            - In severe cases, entire plants may fail to produce fruit.<br>
+            <br>
+            Causes:<br>
+            - Caused by environmental stress factors such as temperature extremes.<br>
+            - High humidity or low humidity can affect flower retention.<br>
+            - Nutrient deficiencies, particularly in potassium and calcium.<br>
+            - Inadequate pollination due to lack of pollinators.<br>
+            <br>
+            Preventive Measures:<br>
+            - Maintain consistent watering practices to avoid stress.<br>
+            - Ensure proper fertilization to support healthy growth.<br>
+            - Monitor environmental conditions and adjust as needed.<br>
+            - Encourage pollinators by planting flowers nearby.<br>
+            <br>
+            Treatment:<br>
+            - Adjust watering and fertilization practices as needed.<br>
+            - Remove any dead or diseased plant material to reduce stress.<br>
+            - Consider using plant growth regulators to improve flower retention.<br>
+            - Monitor for pests and diseases that may contribute to stress.<br><br>''', 'Flowering'),
         ]
         for name, description, stage in tomato_diseases_flowering:
             disease = Disease(plant_id=tomato.id, name=name, description=description, stage=stage)
@@ -2939,12 +5665,156 @@ def insert_data():
 
         # Add disease data for Tomato at the fruiting stage
         tomato_diseases_fruiting = [
-            ('Fusarium Wilt', '''Symptoms:<br>''', 'Fruiting'),
-            ('Stem Rot of Tomato', '''Symptoms:<br>''', 'Fruiting'),
-            ('Tomato Late Blight', '''Symptoms:<br>''', 'Fruiting'),
-            ('Leaf Mold of Tomato', '''Symptoms:<br>''', 'Fruiting'),
-            ('Tobacco Streak Virus', '''Symptoms:<br>''', 'Fruiting'),
-            ('Bacterial Canker of Tomato', '''Symptoms:<br>''', 'Fruiting'),
+            ('Fusarium Wilt', 
+            '''Symptoms:<br>
+            - Yellowing and wilting of leaves, starting from the bottom.<br>
+            - Dark brown streaks in the vascular tissue when cut.<br>
+            - Stunted growth and reduced fruit set.<br>
+            - Overall plant vigor is significantly reduced.<br>
+            - In severe cases, plants may die back completely.<br>
+            <br>
+            Causes:<br>
+            - Caused by the fungal pathogen *Fusarium oxysporum*.<br>
+            - Soil-borne pathogen that can survive in the soil for years.<br>
+            - High soil temperatures can promote disease development.<br>
+            <br>
+            Preventive Measures:<br>
+            - Use disease-resistant tomato varieties when available.<br>
+            - Practice crop rotation to reduce pathogen buildup.<br>
+            - Improve soil drainage and aeration.<br>
+            - Monitor soil moisture levels regularly.<br>
+            <br>
+            Treatment:<br>
+            - There is no chemical treatment for this wilt; focus on prevention.<br>
+            - Remove and destroy infected plants to limit spread.<br>
+            - Maintain healthy soil conditions to support plant vigor.<br>
+            - Consider using biological control methods if available.<br><br>''', 'Fruiting'), 
+            
+            ('Stem Rot of Tomato', 
+            '''Symptoms:<br>
+            - Dark, water-soaked lesions at the base of the stem.<br>
+            - Plants may wilt and exhibit yellowing leaves.<br>
+            - Soft, mushy tissue at the base of the plant.<br>
+            - Foul odor from decaying tissue.<br>
+            - Reduced plant vigor and stunted growth.<br>
+            <br>
+            Causes:<br>
+            - Caused by fungal pathogens (e.g., *Sclerotinia sclerotiorum*).<br>
+            - High soil moisture and poor drainage conditions.<br>
+            - Overwatering or heavy rainfall can exacerbate the issue.<br>
+            <br>
+            Preventive Measures:<br>
+            - Ensure proper drainage in planting areas.<br>
+            - Avoid overwatering and waterlogged conditions.<br>
+            - Use disease-free seedling trays for planting.<br>
+            - Practice crop rotation to reduce pathogen buildup.<br>
+            <br>
+            Treatment:<br>
+            - Remove and destroy infected plants immediately.<br>
+            - Apply fungicides if necessary to protect healthy plants.<br>
+            - Improve soil drainage and aeration.<br>
+            - Monitor soil moisture levels regularly.<br><br>''', 'Fruiting'), 
+            
+            ('Tomato Late Blight', 
+            '''Symptoms:<br>
+            - Water-soaked spots on leaves that turn brown.<br>
+            - Affected leaves may curl and die.<br>
+            - Dark, greasy lesions on stems and fruits.<br>
+            - Foul odor may be present in severely affected plants.<br>
+            - Rapid plant decline and reduced yield.<br>
+            <br>
+            Causes:<br>
+            - Caused by the fungal pathogen *Phytophthora infestans*.<br>
+            - Thrives in cool, moist conditions.<br>
+            - Infected plant debris can serve as a source of spores.<br>
+            - High humidity and wet weather increase disease spread.<br>
+            <br>
+            Preventive Measures:<br>
+            - Use resistant tomato varieties when available.<br>
+            - Practice crop rotation to reduce pathogen buildup.<br>
+            - Remove and destroy infected plant debris.<br>
+            - Avoid overhead watering to minimize leaf wetness.<br>
+            <br>
+            Treatment:<br>
+            - Apply fungicides at the first sign of infection.<br>
+            - Remove and destroy infected plants immediately.<br>
+            - Improve air circulation around plants.<br>
+            - Monitor humidity levels and adjust watering practices.<br><br>''', 'Fruiting'), 
+            
+            ('Leaf Mold of Tomato', 
+            '''Symptoms:<br>
+            - Olive-green to dark green spots on the upper leaf surface.<br>
+            - White, fuzzy fungal growth on the undersides of leaves.<br>
+            - Leaves may curl and die prematurely.<br>
+            - Reduced photosynthesis leading to stunted growth.<br>
+            - Overall plant vigor is significantly reduced.<br>
+            <br>
+            Causes:<br>
+            - Caused by the fungal pathogen *Cladosporium fulvum*.<br>
+            - Thrives in warm, humid conditions.<br>
+            - High humidity and poor air circulation can exacerbate the issue.<br>
+            <br>
+            Preventive Measures:<br>
+            - Use resistant tomato varieties when available.<br>
+            - Ensure good air circulation around plants.<br>
+            - Remove and destroy infected plant debris.<br>
+            - Monitor humidity levels and adjust watering practices.<br>
+            <br>
+            Treatment:<br>
+            - Apply fungicides as needed, following label instructions.<br>
+            - Remove and destroy infected leaves promptly.<br>
+            - Improve air circulation around plants.<br>
+            - Consider using integrated pest management strategies.<br><br>''', 'Fruiting'), 
+            
+            ('Tobacco Streak Virus', 
+            '''Symptoms:<br>
+            - Yellowing and mottling of leaves.<br>
+            - Stunted growth and reduced fruit set.<br>
+            - Dark streaks on leaves and stems.<br>
+            - Overall plant vigor is significantly reduced.<br>
+            - In severe cases, plants may die back completely.<br>
+            <br>
+            Causes:<br>
+            - Caused by the viral pathogen *Tobacco streak virus* (TSV).<br>
+            - Transmitted by thrips and other sap-sucking insects.<br>
+            - Infected plant debris can serve as a source of the virus.<br>
+            <br>
+            Preventive Measures:<br>
+            - Use resistant tomato varieties when available.<br>
+            - Monitor thrip populations and control them as needed.<br>
+            - Practice good sanitation to reduce virus spread.<br>
+            - Remove and destroy infected plants promptly.<br>
+            <br>
+            Treatment:<br>
+            - There is no chemical treatment for viral infections; focus on prevention.<br>
+            - Remove and destroy infected plants to limit spread.<br>
+            - Use resistant varieties in future plantings.<br>
+            - Maintain healthy plant vigor to withstand disease.<br><br>''', 'Fruiting'), 
+            
+            ('Bacterial Canker of Tomato', 
+            '''Symptoms:<br>
+            - Water-soaked lesions on leaves and stems.<br>
+            - Wilting and yellowing of leaves.<br>
+            - Dark streaks in the vascular tissue when cut.<br>
+            - Affected plants may exhibit stunted growth.<br>
+            - Overall plant vigor is significantly reduced.<br>
+            <br>
+            Causes:<br>
+            - Caused by the bacterial pathogen *Clavibacter michiganensis*.<br>
+            - Soil-borne pathogen that can survive in the soil for years.<br>
+            - High humidity and wet conditions can promote disease spread.<br>
+            <br>
+            Preventive Measures:<br>
+            - Use disease-free seedling trays for planting.<br>
+            - Practice crop rotation to reduce pathogen buildup.<br>
+            - Remove and destroy infected plant debris.<br>
+            - Ensure good air circulation around plants.<br>
+            <br>
+            Treatment:<br>
+            - Remove and destroy infected plants to limit spread.<br>
+            - Apply bactericides if necessary, following label instructions.<br>
+            - Monitor fields regularly for early signs of infection.<br>
+            - Implement good sanitation practices in the field.<br><br>''', 'Fruiting'),
         ]
         for name, description, stage in tomato_diseases_fruiting:
             disease = Disease(plant_id=tomato.id, name=name, description=description, stage=stage)
@@ -2952,11 +5822,131 @@ def insert_data():
 
         # Add disease data for Tomato at the harvesting stage
         tomato_diseases_harvesting = [
-            ('Tomato Late Blight', '''Symptoms:<br>''', 'Harvesting'),
-            ('Stem Rot of Tomato', '''Symptoms:<br>''', 'Harvesting'),
-            ('Tomato Spotted Wilt Virus ', '''Symptoms:<br>''', 'Harvesting'),
-            ('Bright Line Brown Eye', '''Symptoms:<br>''', 'Harvesting'),
-            ('Bacterial Spot and Speck of Tomato', '''Symptoms:<br>''', 'Harvesting'),
+            ('Tomato Late Blight', 
+            '''Symptoms:<br>
+            - Water-soaked spots on leaves that turn brown.<br>
+            - Affected leaves may curl and die.<br>
+            - Dark, greasy lesions on stems and fruits.<br>
+            - Foul odor may be present in severely affected plants.<br>
+            - Rapid plant decline and reduced yield.<br>
+            <br>
+            Causes:<br>
+            - Caused by the fungal pathogen *Phytophthora infestans*.<br>
+            - Thrives in cool, moist conditions.<br>
+            - Infected plant debris can serve as a source of spores.<br>
+            - High humidity and wet weather increase disease spread.<br>
+            <br>
+            Preventive Measures:<br>
+            - Use resistant tomato varieties when available.<br>
+            - Practice crop rotation to reduce pathogen buildup.<br>
+            - Remove and destroy infected plant debris.<br>
+            - Avoid overhead watering to minimize leaf wetness.<br>
+            <br>
+            Treatment:<br>
+            - Apply fungicides at the first sign of infection.<br>
+            - Remove and destroy infected plants immediately.<br>
+            - Improve air circulation around plants.<br>
+            - Monitor humidity levels and adjust watering practices.<br><br>''', 'Harvesting'), 
+            
+            ('Stem Rot of Tomato', 
+            '''Symptoms:<br>
+            - Dark, water-soaked lesions at the base of the stem.<br>
+            - Plants may wilt and exhibit yellowing leaves.<br>
+            - Soft, mushy tissue at the base of the plant.<br>
+            - Foul odor from decaying tissue.<br>
+            - Reduced plant vigor and stunted growth.<br>
+            <br>
+            Causes:<br>
+            - Caused by fungal pathogens (e.g., *Sclerotinia sclerotiorum*).<br>
+            - High soil moisture and poor drainage conditions.<br>
+            - Overwatering or heavy rainfall can exacerbate the issue.<br>
+            <br>
+            Preventive Measures:<br>
+            - Ensure proper drainage in planting areas.<br>
+            - Avoid overwatering and waterlogged conditions.<br>
+            - Use disease-free seedling trays for planting.<br>
+            - Practice crop rotation to reduce pathogen buildup.<br>
+            <br>
+            Treatment:<br>
+            - Remove and destroy infected plants immediately.<br>
+            - Apply fungicides if necessary to protect healthy plants.<br>
+            - Improve soil drainage and aeration.<br>
+            - Monitor soil moisture levels regularly.<br><br>''', 'Harvesting'), 
+            
+            ('Tomato Spotted Wilt Virus', 
+            '''Symptoms:<br>
+            - Mottling and yellowing of leaves.<br>
+            - Stunted growth and reduced fruit set.<br>
+            - Dark spots on leaves and stems.<br>
+            - Overall plant vigor is significantly reduced.<br>
+            - In severe cases, plants may die back completely.<br>
+            <br>
+            Causes:<br>
+            - Caused by the viral pathogen *Tomato spotted wilt virus* (TSWV).<br>
+            - Transmitted by thrips and other sap-sucking insects.<br>
+            - Infected plant debris can serve as a source of the virus.<br>
+            <br>
+            Preventive Measures:<br>
+            - Use resistant tomato varieties when available.<br>
+            - Monitor thrip populations and control them as needed.<br>
+            - Practice good sanitation to reduce virus spread.<br>
+            - Remove and destroy infected plants promptly.<br>
+            <br>
+            Treatment:<br>
+            - There is no chemical treatment for viral infections; focus on prevention.<br>
+            - Remove and destroy infected plants to limit spread.<br>
+            - Use resistant varieties in future plantings.<br>
+            - Maintain healthy plant vigor to withstand disease.<br><br>''', 'Harvesting'), 
+            
+            ('Bright Line Brown Eye', 
+            '''Symptoms:<br>
+            - Brown spots with a yellow halo on leaves.<br>
+            - Affected leaves may curl and die prematurely.<br>
+            - Reduced photosynthesis leading to stunted growth.<br>
+            - Overall plant vigor is significantly reduced.<br>
+            - In severe cases, entire plants may be affected.<br>
+            <br>
+            Causes:<br>
+            - Caused by the fungal pathogen *Didymella lycopersici*.<br>
+            - Thrives in warm, humid conditions.<br>
+            - High humidity and poor air circulation can exacerbate the issue.<br>
+            <br>
+            Preventive Measures:<br>
+            - Use resistant tomato varieties when available.<br>
+            - Ensure good air circulation around plants.<br>
+            - Remove and destroy infected plant debris.<br>
+            - Monitor humidity levels and adjust watering practices.<br>
+            <br>
+            Treatment:<br>
+            - Apply fungicides as needed, following label instructions.<br>
+            - Remove and destroy infected leaves promptly.<br>
+            - Improve air circulation around plants.<br>
+            - Consider using integrated pest management strategies.<br><br>''', 'Harvesting'), 
+            
+            ('Bacterial Spot and Speck of Tomato', 
+            '''Symptoms:<br>
+            - Water-soaked lesions on leaves and stems.<br>
+            - Wilting and yellowing of leaves.<br>
+            - Dark streaks in the vascular tissue when cut.<br>
+            - Affected plants may exhibit stunted growth.<br>
+            - Overall plant vigor is significantly reduced.<br>
+            <br>
+            Causes:<br>
+            - Caused by bacterial pathogens (e.g., *Xanthomonas* spp.).<br>
+            - Soil-borne pathogens that can survive in the soil for years.<br>
+            - High humidity and wet conditions can promote disease spread.<br>
+            <br>
+            Preventive Measures:<br>
+            - Use disease-free seedling trays for planting.<br>
+            - Practice crop rotation to reduce pathogen buildup.<br>
+            - Remove and destroy infected plant debris.<br>
+            - Ensure good air circulation around plants.<br>
+            <br>
+            Treatment:<br>
+            - Remove and destroy infected plants to limit spread.<br>
+            - Apply bactericides if necessary, following label instructions.<br>
+            - Monitor fields regularly for early signs of infection.<br>
+            - Implement good sanitation practices in the field.<br><br>''', 'Harvesting'),
         ]
         for name, description, stage in tomato_diseases_harvesting:
             disease = Disease(plant_id=tomato.id, name=name, description=description, stage=stage)
@@ -2966,10 +5956,108 @@ def insert_data():
         # Add disease data for wheat at the seeding stage
         wheat = Plant.query.filter_by(name='Wheat').first()
         wheat_diseases_seeding = [
-            ('Yellow Stripe Rust', '''Symptoms:<br>''', 'Seeding'),
-            ('Septoria Tritici Boltch', '''Symptoms:<br>''', 'Seeding'),
-            ('Leaf and Glume Boltch of Wheat', '''Symptoms:<br>''', 'Seeding'),
-            ('Snow Mold of Cereals', '''Symptoms:<br>''', 'Seeding'),
+            ('Yellow Stripe Rust', 
+            '''Symptoms:<br>
+            - Bright yellow stripes on leaves, often with a powdery appearance.<br>
+            - Leaves may yellow and die prematurely.<br>
+            - Reduced plant vigor and stunted growth.<br>
+            - In severe cases, entire plants may be affected.<br>
+            - Overall yield is significantly reduced.<br>
+            <br>
+            Causes:<br>
+            - Caused by the fungal pathogen *Puccinia striiformis*.<br>
+            - Thrives in cool, moist conditions.<br>
+            - Spores can be spread by wind and water.<br>
+            - Infected plant debris can serve as a source of spores.<br>
+            <br>
+            Preventive Measures:<br>
+            - Use resistant wheat varieties when available.<br>
+            - Practice crop rotation to reduce pathogen buildup.<br>
+            - Remove and destroy infected plant debris.<br>
+            - Monitor fields regularly for early signs of infection.<br>
+            <br>
+            Treatment:<br>
+            - Apply fungicides as needed, following label instructions.<br>
+            - Remove and destroy infected leaves promptly.<br>
+            - Improve air circulation around plants.<br>
+            - Consider using integrated pest management strategies.<br><br>''', 'Seeding'), 
+            
+            ('Septoria Tritici Blotch', 
+            '''Symptoms:<br>
+            - Dark brown to black lesions on leaves, often with yellow halos.<br>
+            - Affected leaves may exhibit premature senescence.<br>
+            - Reduced photosynthesis leading to stunted growth.<br>
+            - In severe cases, entire leaves may die off.<br>
+            - Overall plant vigor is significantly reduced.<br>
+            <br>
+            Causes:<br>
+            - Caused by the fungal pathogen *Zymoseptoria tritici*.<br>
+            - Thrives in warm, humid conditions.<br>
+            - Spores can be spread by wind and water.<br>
+            - Infected plant debris can serve as a source of spores.<br>
+            <br>
+            Preventive Measures:<br>
+            - Use resistant wheat varieties when available.<br>
+            - Practice crop rotation to reduce pathogen buildup.<br>
+            - Remove and destroy infected plant debris.<br>
+            - Ensure good air circulation around plants.<br>
+            <br>
+            Treatment:<br>
+            - Apply fungicides as needed, following label instructions.<br>
+            - Remove and destroy infected leaves promptly.<br>
+            - Monitor humidity levels and adjust watering practices.<br>
+            - Consider using integrated pest management strategies.<br><br>''', 'Seeding'), 
+            
+            ('Leaf and Glume Blotch of Wheat', 
+            '''Symptoms:<br>
+            - Dark brown to black lesions on leaves and glumes.<br>
+            - Affected leaves may exhibit premature senescence.<br>
+            - Reduced photosynthesis leading to stunted growth.<br>
+            - In severe cases, entire leaves may die off.<br>
+            - Overall plant vigor is significantly reduced.<br>
+            <br>
+            Causes:<br>
+            - Caused by the fungal pathogen *Parastagonospora nodorum*.<br>
+            - Thrives in warm, humid conditions.<br>
+            - Spores can be spread by wind and water.<br>
+            - Infected plant debris can serve as a source of spores.<br>
+            <br>
+            Preventive Measures:<br>
+            - Use resistant wheat varieties when available.<br>
+            - Practice crop rotation to reduce pathogen buildup.<br>
+            - Remove and destroy infected plant debris.<br>
+            - Ensure good air circulation around plants.<br>
+            <br>
+            Treatment:<br>
+            - Apply fungicides as needed, following label instructions.<br>
+            - Remove and destroy infected leaves promptly.<br>
+            - Monitor humidity levels and adjust watering practices.<br>
+            - Consider using integrated pest management strategies.<br><br>''', 'Seeding'), 
+            
+            ('Snow Mold of Cereals', 
+            '''Symptoms:<br>
+            - White, fluffy fungal growth on leaves and stems.<br>
+            - Affected areas may appear water-soaked or mushy.<br>
+            - Leaves may yellow and die prematurely.<br>
+            - Reduced plant vigor and stunted growth.<br>
+            - Overall yield is significantly reduced.<br>
+            <br>
+            Causes:<br>
+            - Caused by fungal pathogens such as *Typhula* spp. and *Microdochium* spp.<br>
+            - Thrives in cool, wet conditions, especially under snow cover.<br>
+            - Infected plant debris can serve as a source of spores.<br>
+            <br>
+            Preventive Measures:<br>
+            - Use resistant wheat varieties when available.<br>
+            - Practice crop rotation to reduce pathogen buildup.<br>
+            - Remove and destroy infected plant debris.<br>
+            - Ensure good air circulation around plants.<br>
+            <br>
+            Treatment:<br>
+            - Apply fungicides as needed, following label instructions.<br>
+            - Remove and destroy infected plants immediately.<br>
+            - Improve air circulation around plants.<br>
+            - Monitor humidity levels and adjust watering practices.<br><br>''', 'Seeding'),
         ]
         for name, description, stage in wheat_diseases_seeding:
             disease = Disease(plant_id=wheat.id, name=name, description=description, stage=stage)
@@ -2977,12 +6065,157 @@ def insert_data():
 
         # Add disease data for wheat at the vegetative stage
         wheat_diseases_vegetative = [
-            ('Wheat aastem Rust', '''Symptoms:<br>''', 'Vegetative'),
-            ('Septoria Tritici Blotch', '''Symptoms:<br>''', 'Vegetative'),
-            ('Oriental Armyworm ', '''Symptoms:<br>''', 'Vegetative'),
-            ('Violet Stem Borer', '''Symptoms:<br>''', 'Vegetative'),
-            ('Rice Leafroller', '''Symptoms:<br>''', 'Vegetative'),
-            ('Physiological Leaf Spot', '''Symptoms:<br>''', 'Vegetative'),
+            ('Wheat Stem Rust', 
+            '''Symptoms:<br>
+            - Reddish-brown pustules on leaves, stems, and heads.<br>
+            - Leaves may yellow and die prematurely.<br>
+            - Reduced plant vigor and stunted growth.<br>
+            - In severe cases, entire plants may be affected.<br>
+            - Overall yield is significantly reduced.<br>
+            <br>
+            Causes:<br>
+            - Caused by the fungal pathogen *Puccinia graminis*.<br>
+            - Thrives in warm, humid conditions.<br>
+            - Spores can be spread by wind and water.<br>
+            - Infected plant debris can serve as a source of spores.<br>
+            <br>
+            Preventive Measures:<br>
+            - Use resistant wheat varieties when available.<br>
+            - Practice crop rotation to reduce pathogen buildup.<br>
+            - Remove and destroy infected plant debris.<br>
+            - Monitor fields regularly for early signs of infection.<br>
+            <br>
+            Treatment:<br>
+            - Apply fungicides as needed, following label instructions.<br>
+            - Remove and destroy infected leaves promptly.<br>
+            - Improve air circulation around plants.<br>
+            - Consider using integrated pest management strategies.<br><br>''', 'Vegetative'), 
+            
+            ('Septoria Tritici Blotch', 
+            '''Symptoms:<br>
+            - Dark brown to black lesions on leaves, often with yellow halos.<br>
+            - Affected leaves may exhibit premature senescence.<br>
+            - Reduced photosynthesis leading to stunted growth.<br>
+            - In severe cases, entire leaves may die off.<br>
+            - Overall plant vigor is significantly reduced.<br>
+            <br>
+            Causes:<br>
+            - Caused by the fungal pathogen *Zymoseptoria tritici*.<br>
+            - Thrives in warm, humid conditions.<br>
+            - Spores can be spread by wind and water.<br>
+            - Infected plant debris can serve as a source of spores.<br>
+            <br>
+            Preventive Measures:<br>
+            - Use resistant wheat varieties when available.<br>
+            - Practice crop rotation to reduce pathogen buildup.<br>
+            - Remove and destroy infected plant debris.<br>
+            - Ensure good air circulation around plants.<br>
+            <br>
+            Treatment:<br>
+            - Apply fungicides as needed, following label instructions.<br>
+            - Remove and destroy infected leaves promptly.<br>
+            - Monitor humidity levels and adjust watering practices.<br>
+            - Consider using integrated pest management strategies.<br><br>''', 'Vegetative'), 
+            
+            ('Oriental Armyworm', 
+            '''Symptoms:<br>
+            - Irregular holes in leaves due to feeding.<br>
+            - Presence of larvae on the plants.<br>
+            - Affected plants may exhibit wilting and stunted growth.<br>
+            - Reduced yield and quality of crops.<br>
+            - In severe cases, plants may die back completely.<br>
+            <br>
+            Causes:<br>
+            - Caused by the larval stage of the pest *Mythimna separata*.<br>
+            - Larvae feed on leaves and can cause significant damage.<br>
+            - High populations can lead to defoliation.<br>
+            <br>
+            Preventive Measures:<br>
+            - Monitor crops regularly for signs of infestation.<br>
+            - Use resistant wheat varieties when available.<br>
+            - Practice good sanitation to reduce pest habitats.<br>
+            - Encourage natural predators to help control populations.<br>
+            <br>
+            Treatment:<br>
+            - Apply insecticides as needed, following label instructions.<br>
+            - Handpick and remove larvae from plants.<br>
+            - Use traps to monitor and control populations.<br>
+            - Consider using organic insecticides if available.<br><br>''', 'Vegetative'), 
+            
+            ('Violet Stem Borer', 
+            '''Symptoms:<br>
+            - Presence of small holes in the stalks.<br>
+            - Wilting and yellowing of leaves.<br>
+            - Stunted growth and reduced tillering.<br>
+            - Affected plants may exhibit dead heart symptoms.<br>
+            - Overall plant vigor is significantly reduced.<br>
+            <br>
+            Causes:<br>
+            - Caused by the larval stage of the pest *Chilo infuscatellus*.<br>
+            - Larvae bore into the stalks, causing damage.<br>
+            - High populations can lead to significant damage.<br>
+            <br>
+            Preventive Measures:<br>
+            - Monitor crops regularly for signs of infestation.<br>
+            - Use resistant wheat varieties when available.<br>
+            - Practice good sanitation to reduce pest habitats.<br>
+            - Encourage natural predators to help control populations.<br>
+            <br>
+            Treatment:<br>
+            - Apply insecticides as needed, following label instructions.<br>
+            - Handpick and remove larvae from plants.<br>
+            - Use traps to monitor and control populations.<br>
+            - Consider using organic insecticides if available.<br><br>''', 'Vegetative'), 
+            
+            ('Rice Leafroller', 
+            '''Symptoms:<br>
+            - Leaves may appear rolled or folded.<br>
+            - Presence of larvae inside the rolled leaves.<br>
+            - Reduced photosynthesis leading to stunted growth.<br>
+            - Overall plant vigor is significantly reduced.<br>
+            - In severe cases, plants may die back completely.<br>
+            <br>
+            Causes:<br>
+            - Caused by the larval stage of the pest *Cnaphalocrocis medinalis*.<br>
+            - Larvae feed on the leaves, causing them to roll.<br>
+            - High populations can lead to significant damage.<br>
+            <br>
+            Preventive Measures:<br>
+            - Monitor crops regularly for signs of infestation.<br>
+            - Use resistant wheat varieties when available.<br>
+            - Practice good sanitation to reduce pest habitats.<br>
+            - Encourage natural predators to help control populations.<br>
+            <br>
+            Treatment:<br>
+            - Apply insecticides as needed, following label instructions.<br>
+            - Handpick and remove larvae from plants.<br>
+            - Use traps to monitor and control populations.<br>
+            - Consider using organic insecticides if available.<br><br>''', 'Vegetative'), 
+            
+            ('Physiological Leaf Spot', 
+            '''Symptoms:<br>
+            - Irregular, water-soaked spots on leaves.<br>
+            - Leaves may exhibit yellowing or browning.<br>
+            - Reduced photosynthesis leading to stunted growth.<br>
+            - Overall plant vigor is significantly reduced.<br>
+            - In severe cases, entire leaves may die off.<br>
+            <br>
+            Causes:<br>
+            - Caused by environmental stress factors such as nutrient deficiencies.<br>
+            - High humidity and poor air circulation can exacerbate the issue.<br>
+            - Overwatering or rapid changes in temperature can trigger symptoms.<br>
+            <br>
+            Preventive Measures:<br>
+            - Maintain consistent watering practices to avoid stress.<br>
+            - Ensure proper fertilization to support healthy growth.<br>
+            - Monitor environmental conditions and adjust as needed.<br>
+            - Remove any dead or diseased plant material to reduce stress.<br>
+            <br>
+            Treatment:<br>
+            - Adjust watering and fertilization practices as needed.<br>
+            - Remove affected leaves to reduce stress on the plant.<br>
+            - Monitor for pests and diseases that may contribute to stress.<br>
+            - Consider using plant growth regulators to improve plant health.<br><br>''', 'Vegetative'),
         ]
         for name, description, stage in wheat_diseases_vegetative:
             disease = Disease(plant_id=wheat.id, name=name, description=description, stage=stage)
@@ -2990,11 +6223,131 @@ def insert_data():
 
         # Add disease data for wheat at the flowering stage
         wheat_diseases_flowering = [
-            ('Net Blotch ', '''Symptoms:<br>''', 'Flowering'),
-            ('Snow Mold of Cereals', '''Symptoms:<br>''', 'Flowering'),
-            ('Wheat Blast', '''Symptoms:<br>''', 'Flowering'),
-            ('Take All', '''Symptoms:<br>''', 'Flowering'),
-            ('Spider Mites', '''Symptoms:<br>''', 'Flowering'),
+            ('Net Blotch', 
+            '''Symptoms:<br>
+            - Dark brown to black lesions with a net-like pattern on leaves.<br>
+            - Affected leaves may exhibit yellowing and premature senescence.<br>
+            - Reduced photosynthesis leading to stunted growth.<br>
+            - Overall plant vigor is significantly reduced.<br>
+            - In severe cases, entire leaves may die off.<br>
+            <br>
+            Causes:<br>
+            - Caused by the fungal pathogen *Pyrenophora teres*.<br>
+            - Thrives in warm, humid conditions.<br>
+            - Spores can be spread by wind and water.<br>
+            - Infected plant debris can serve as a source of spores.<br>
+            <br>
+            Preventive Measures:<br>
+            - Use resistant wheat varieties when available.<br>
+            - Practice crop rotation to reduce pathogen buildup.<br>
+            - Remove and destroy infected plant debris.<br>
+            - Ensure good air circulation around plants.<br>
+            <br>
+            Treatment:<br>
+            - Apply fungicides as needed, following label instructions.<br>
+            - Remove and destroy infected leaves promptly.<br>
+            - Monitor humidity levels and adjust watering practices.<br>
+            - Consider using integrated pest management strategies.<br><br>''', 'Flowering'), 
+            
+            ('Snow Mold of Cereals', 
+            '''Symptoms:<br>
+            - White, fluffy fungal growth on leaves and stems.<br>
+            - Affected areas may appear water-soaked or mushy.<br>
+            - Leaves may yellow and die prematurely.<br>
+            - Reduced plant vigor and stunted growth.<br>
+            - Overall yield is significantly reduced.<br>
+            <br>
+            Causes:<br>
+            - Caused by fungal pathogens such as *Typhula* spp. and *Microdochium* spp.<br>
+            - Thrives in cool, wet conditions, especially under snow cover.<br>
+            - Infected plant debris can serve as a source of spores.<br>
+            <br>
+            Preventive Measures:<br>
+            - Use resistant wheat varieties when available.<br>
+            - Practice crop rotation to reduce pathogen buildup.<br>
+            - Remove and destroy infected plant debris.<br>
+            - Ensure good air circulation around plants.<br>
+            <br>
+            Treatment:<br>
+            - Apply fungicides as needed, following label instructions.<br>
+            - Remove and destroy infected plants immediately.<br>
+            - Improve air circulation around plants.<br>
+            - Monitor humidity levels and adjust watering practices.<br><br>''', 'Flowering'), 
+            
+            ('Wheat Blast', 
+            '''Symptoms:<br>
+            - Water-soaked lesions on leaves that turn brown.<br>
+            - Affected leaves may curl and die.<br>
+            - Dark, greasy lesions on stems and heads.<br>
+            - Foul odor may be present in severely affected plants.<br>
+            - Rapid plant decline and reduced yield.<br>
+            <br>
+            Causes:<br>
+            - Caused by the fungal pathogen *Magnaporthe oryzae*.<br>
+            - Thrives in warm, humid conditions.<br>
+            - Infected plant debris can serve as a source of spores.<br>
+            <br>
+            Preventive Measures:<br>
+            - Use resistant wheat varieties when available.<br>
+            - Practice crop rotation to reduce pathogen buildup.<br>
+            - Remove and destroy infected plant debris.<br>
+            - Avoid overhead watering to minimize leaf wetness.<br>
+            <br>
+            Treatment:<br>
+            - Apply fungicides at the first sign of infection.<br>
+            - Remove and destroy infected plants immediately.<br>
+            - Improve air circulation around plants.<br>
+            - Monitor humidity levels and adjust watering practices.<br><br>''', 'Flowering'), 
+            
+            ('Take All', 
+            '''Symptoms:<br>
+            - Yellowing and wilting of leaves, starting from the bottom.<br>
+            - Darkening of the roots and lower stems.<br>
+            - Stunted growth and reduced yield.<br>
+            - Overall plant vigor is significantly reduced.<br>
+            - In severe cases, plants may die back completely.<br>
+            <br>
+            Causes:<br>
+            - Caused by the fungal pathogen *Gaeumannomyces graminis*.<br>
+            - Soil-borne pathogen that can survive in the soil for years.<br>
+            - High soil moisture and poor drainage can exacerbate the issue.<br>
+            <br>
+            Preventive Measures:<br>
+            - Use disease-resistant wheat varieties when available.<br>
+            - Practice crop rotation to reduce pathogen buildup.<br>
+            - Improve soil drainage and aeration.<br>
+            - Monitor soil moisture levels regularly.<br>
+            <br>
+            Treatment:<br>
+            - Remove and destroy infected plants to limit spread.<br>
+            - Apply fungicides if necessary, though effectiveness may vary.<br>
+            - Maintain healthy soil conditions to support plant vigor.<br>
+            - Consider using biological control methods if available.<br><br>''', 'Flowering'), 
+            
+            ('Spider Mites', 
+            '''Symptoms:<br>
+            - Fine webbing on leaves and stems.<br>
+            - Yellowing and stippling of leaves.<br>
+            - Leaves may curl and drop prematurely.<br>
+            - Reduced photosynthesis leading to stunted growth.<br>
+            - Overall plant vigor is significantly reduced.<br>
+            <br>
+            Causes:<br>
+            - Caused by the pest *Tetranychus urticae* (two-spotted spider mite).<br>
+            - Thrives in hot, dry conditions.<br>
+            - High populations can lead to significant damage.<br>
+            <br>
+            Preventive Measures:<br>
+            - Monitor crops regularly for signs of infestation.<br>
+            - Use resistant wheat varieties when available.<br>
+            - Maintain good air circulation around plants.<br>
+            - Encourage natural predators to help control populations.<br>
+            <br>
+            Treatment:<br>
+            - Apply miticides as needed, following label instructions.<br>
+            - Handpick and remove infested leaves if possible.<br>
+            - Use insecticidal soaps or oils for organic control.<br>
+            - Monitor humidity levels to create less favorable conditions for mites.<br><br>''', 'Flowering'),
         ]
         for name, description, stage in wheat_diseases_flowering:
             disease = Disease(plant_id=wheat.id, name=name, description=description, stage=stage)
@@ -3002,13 +6355,180 @@ def insert_data():
 
         # Add disease data for wheat at the fruiting stage
         wheat_diseases_fruiting = [
-            ('Karnal Bunt of Wheat', '''Symptoms:<br>''', 'Fruiting'),
-            ('Loose Smut of Wheat', '''Symptoms:<br>''', 'Fruiting'),
-            ('Fusarium Head Blight', '''Symptoms:<br>''', 'Fruiting'),
-            ('Take All', '''Symptoms:<br>''', 'Fruiting'),
-            ('Brown Stink Bug', '''Symptoms:<br>''', 'Fruiting'),
-            ('Helicoberpa Capterpillar', '''Symptoms:<br>''', 'Fruiting'),
-            ('Ear Cockle Eelworm', '''Symptoms:<br>''', 'Fruiting'),
+            ('Karnal Bunt of Wheat', 
+            '''Symptoms:<br>
+            - Black, smutty grains that are often shriveled.<br>
+            - Affected grains may emit a foul odor.<br>
+            - Reduced grain yield and quality.<br>
+            - In severe cases, entire heads may be affected.<br>
+            - Overall plant vigor is significantly reduced.<br>
+            <br>
+            Causes:<br>
+            - Caused by the fungal pathogen *Neovossia indica*.<br>
+            - Soil-borne pathogen that can survive in the soil for years.<br>
+            - High humidity and wet conditions can promote disease spread.<br>
+            <br>
+            Preventive Measures:<br>
+            - Use disease-resistant wheat varieties when available.<br>
+            - Practice crop rotation to reduce pathogen buildup.<br>
+            - Remove and destroy infected plant debris.<br>
+            - Ensure good air circulation around plants.<br>
+            <br>
+            Treatment:<br>
+            - There is no effective chemical treatment; focus on prevention.<br>
+            - Remove and destroy infected plants to limit spread.<br>
+            - Maintain healthy soil conditions to support plant vigor.<br>
+            - Consider using biological control methods if available.<br><br>''', 'Fruiting'), 
+            
+            ('Loose Smut of Wheat', 
+            '''Symptoms:<br>
+            - Affected heads appear covered with a black, powdery mass.<br>
+            - Grains may be replaced by a mass of spores.<br>
+            - Reduced grain yield and quality.<br>
+            - In severe cases, entire heads may be affected.<br>
+            - Overall plant vigor is significantly reduced.<br>
+            <br>
+            Causes:<br>
+            - Caused by the fungal pathogen *Ustilago tritici*.<br>
+            - Spores can be spread by wind and water.<br>
+            - Infected seed can serve as a source of the fungus.<br>
+            <br>
+            Preventive Measures:<br>
+            - Use disease-free seed for planting.<br>
+            - Practice crop rotation to reduce pathogen buildup.<br>
+            - Remove and destroy infected plant debris.<br>
+            - Ensure good air circulation around plants.<br>
+            <br>
+            Treatment:<br>
+            - There is no effective chemical treatment; focus on prevention.<br>
+            - Remove and destroy infected plants to limit spread.<br>
+            - Maintain healthy soil conditions to support plant vigor.<br>
+            - Consider using biological control methods if available.<br><br>''', 'Fruiting'), 
+            
+            ('Fusarium Head Blight', 
+            '''Symptoms:<br>
+            - Water-soaked lesions on the heads of wheat.<br>
+            - Affected grains may be shriveled and discolored.<br>
+            - Reduced grain yield and quality.<br>
+            - In severe cases, entire heads may be affected.<br>
+            - Overall plant vigor is significantly reduced.<br>
+            <br>
+            Causes:<br>
+            - Caused by the fungal pathogen *Fusarium graminearum*.<br>
+            - Thrives in warm, humid conditions.<br>
+            - Infected plant debris can serve as a source of spores.<br>
+            <br>
+            Preventive Measures:<br>
+            - Use resistant wheat varieties when available.<br>
+            - Practice crop rotation to reduce pathogen buildup.<br>
+            - Remove and destroy infected plant debris.<br>
+            - Monitor humidity levels and adjust watering practices.<br>
+            <br>
+            Treatment:<br>
+            - Apply fungicides at the first sign of infection.<br>
+            - Remove and destroy infected plants immediately.<br>
+            - Improve air circulation around plants.<br>
+            - Monitor humidity levels and adjust watering practices.<br><br>''', 'Fruiting'), 
+            
+            ('Take All', 
+            '''Symptoms:<br>
+            - Yellowing and wilting of leaves, starting from the bottom.<br>
+            - Darkening of the roots and lower stems.<br>
+            - Stunted growth and reduced yield.<br>
+            - Overall plant vigor is significantly reduced.<br>
+            - In severe cases, plants may die back completely.<br>
+            <br>
+            Causes:<br>
+            - Caused by the fungal pathogen *Gaeumannomyces graminis*.<br>
+            - Soil-borne pathogen that can survive in the soil for years.<br>
+            - High soil moisture and poor drainage can exacerbate the issue.<br>
+            <br>
+            Preventive Measures:<br>
+            - Use disease-resistant wheat varieties when available.<br>
+            - Practice crop rotation to reduce pathogen buildup.<br>
+            - Improve soil drainage and aeration.<br>
+            - Monitor soil moisture levels regularly.<br>
+            <br>
+            Treatment:<br>
+            - Remove and destroy infected plants to limit spread.<br>
+            - Apply fungicides if necessary, though effectiveness may vary.<br>
+            - Maintain healthy soil conditions to support plant vigor.<br>
+            - Consider using biological control methods if available.<br><br>''', 'Fruiting'), 
+            
+            ('Brown Stink Bug', 
+            '''Symptoms:<br>
+            - Presence of brown, shield-shaped insects on plants.<br>
+            - Leaves may exhibit yellowing or wilting.<br>
+            - Reduced photosynthesis leading to stunted growth.<br>
+            - Overall plant vigor is significantly reduced.<br>
+            - In severe cases, plants may die back completely.<br>
+            <br>
+            Causes:<br>
+            - Caused by the pest *Euschistus servus* (brown stink bug).<br>
+            - Feeding on plant sap can weaken plants.<br>
+            - High populations can lead to significant damage.<br>
+            <br>
+            Preventive Measures:<br>
+            - Monitor crops regularly for signs of infestation.<br>
+            - Use resistant wheat varieties when available.<br>
+            - Practice good sanitation to reduce pest habitats.<br>
+            - Encourage natural predators to help control populations.<br>
+            <br>
+            Treatment:<br>
+            - Apply insecticides as needed, following label instructions.<br>
+            - Handpick and remove pests from plants.<br>
+            - Use traps to monitor and control populations.<br>
+            - Consider using organic insecticides if available.<br><br>''', 'Fruiting'), 
+            
+            ('Helicoverpa Caterpillar', 
+            '''Symptoms:<br>
+            - Irregular holes in leaves due to feeding.<br>
+            - Presence of larvae on the plants.<br>
+            - Affected plants may exhibit wilting and stunted growth.<br>
+            - Reduced yield and quality of crops.<br>
+            - In severe cases, plants may die back completely.<br>
+            <br>
+            Causes:<br>
+            - Caused by the larval stage of the pest *Helicoverpa armigera*.<br>
+            - Larvae feed on leaves and can cause significant damage.<br>
+            - High populations can lead to defoliation.<br>
+            <br>
+            Preventive Measures:<br>
+            - Monitor crops regularly for signs of infestation.<br>
+            - Use resistant wheat varieties when available.<br>
+            - Practice good sanitation to reduce pest habitats.<br>
+            - Encourage natural predators to help control populations.<br>
+            <br>
+            Treatment:<br>
+            - Apply insecticides as needed, following label instructions.<br>
+            - Handpick and remove larvae from plants.<br>
+            - Use traps to monitor and control populations.<br>
+            - Consider using organic insecticides if available.<br><br>''', 'Fruiting'), 
+            
+            ('Ear Cockle Eelworm', 
+            '''Symptoms:<br>
+            - Swelling and distortion of the ear or head.<br>
+            - Affected grains may be replaced by a mass of spores.<br>
+            - Reduced grain yield and quality.<br>
+            - In severe cases, entire heads may be affected.<br>
+            - Overall plant vigor is significantly reduced.<br>
+            <br>
+            Causes:<br>
+            - Caused by the eelworm *Heterodera* spp.<br>
+            - Soil-borne pathogen that can survive in the soil for years.<br>
+            - High soil moisture and poor drainage can exacerbate the issue.<br>
+            <br>
+            Preventive Measures:<br>
+            - Use disease-resistant wheat varieties when available.<br>
+            - Practice crop rotation to reduce pathogen buildup.<br>
+            - Remove and destroy infected plant debris.<br>
+            - Ensure good air circulation around plants.<br>
+            <br>
+            Treatment:<br>
+            - There is no effective chemical treatment; focus on prevention.<br>
+            - Remove and destroy infected plants to limit spread.<br>
+            - Maintain healthy soil conditions to support plant vigor.<br>
+            - Consider using biological control methods if available.<br><br>''', 'Fruiting'),
         ]
         for name, description, stage in wheat_diseases_fruiting:
             disease = Disease(plant_id=wheat.id, name=name, description=description, stage=stage)
@@ -3016,13 +6536,152 @@ def insert_data():
 
         # Add disease data for wheat at the harvesting stage
         wheat_diseases_harvesting = [
-            ('Loose Smut of Wheat', '''Symptoms:<br>''', 'Harvesting'),
-            ('Fusarium Head Blight', '''Symptoms:<br>''', 'Harvesting'),
-            ('Foot and Collar Rot', '''Symptoms:<br>''', 'Harvesting'),
-            ('Fall Armuworm', '''Symptoms:<br>''', 'Harvesting'),
-            ('Short horned Grasshopper and Locust', '''Symptoms:<br>''', 'Harvesting'),
-            ('Frost Damage', '''Symptoms:<br>''', 'Harvesting'),
-
+            ('Loose Smut of Wheat', 
+            '''Symptoms:<br>
+            - Affected heads appear covered with a black, powdery mass.<br>
+            - Grains may be replaced by a mass of spores.<br>
+            - Reduced grain yield and quality.<br>
+            - In severe cases, entire heads may be affected.<br>
+            - Overall plant vigor is significantly reduced.<br>
+            <br>
+            Causes:<br>
+            - Caused by the fungal pathogen *Ustilago tritici*.<br>
+            - Spores can be spread by wind and water.<br>
+            - Infected seed can serve as a source of the fungus.<br>
+            <br>
+            Preventive Measures:<br>
+            - Use disease-free seed for planting.<br>
+            - Practice crop rotation to reduce pathogen buildup.<br>
+            - Remove and destroy infected plant debris.<br>
+            - Ensure good air circulation around plants.<br>
+            <br>
+            Treatment:<br>
+            - There is no effective chemical treatment; focus on prevention.<br>
+            - Remove and destroy infected plants to limit spread.<br>
+            - Maintain healthy soil conditions to support plant vigor.<br>
+            - Consider using biological control methods if available.<br><br>''', 'Harvesting'), 
+            
+            ('Fusarium Head Blight', 
+            '''Symptoms:<br>
+            - Water-soaked lesions on the heads of wheat.<br>
+            - Affected grains may be shriveled and discolored.<br>
+            - Reduced grain yield and quality.<br>
+            - In severe cases, entire heads may be affected.<br>
+            - Overall plant vigor is significantly reduced.<br>
+            <br>
+            Causes:<br>
+            - Caused by the fungal pathogen *Fusarium graminearum*.<br>
+            - Thrives in warm, humid conditions.<br>
+            - Infected plant debris can serve as a source of spores.<br>
+            <br>
+            Preventive Measures:<br>
+            - Use resistant wheat varieties when available.<br>
+            - Practice crop rotation to reduce pathogen buildup.<br>
+            - Remove and destroy infected plant debris.<br>
+            - Monitor humidity levels and adjust watering practices.<br>
+            <br>
+            Treatment:<br>
+            - Apply fungicides at the first sign of infection.<br>
+            - Remove and destroy infected plants immediately.<br>
+            - Improve air circulation around plants.<br>
+            - Monitor humidity levels and adjust watering practices.<br><br>''', 'Harvesting'), 
+            
+            ('Foot and Collar Rot', 
+            '''Symptoms:<br>
+            - Dark, water-soaked lesions at the base of the stem.<br>
+            - Plants may wilt and exhibit yellowing leaves.<br>
+            - Soft, mushy tissue at the base of the plant.<br>
+            - Foul odor from decaying tissue.<br>
+            - Reduced plant vigor and stunted growth.<br>
+            <br>
+            Causes:<br>
+            - Caused by fungal pathogens (e.g., *Fusarium* spp.).<br>
+            - High soil moisture and poor drainage conditions.<br>
+            - Overwatering or heavy rainfall can exacerbate the issue.<br>
+            <br>
+            Preventive Measures:<br>
+            - Ensure proper drainage in planting areas.<br>
+            - Avoid overwatering and waterlogged conditions.<br>
+            - Use disease-free seedling trays for planting.<br>
+            - Practice crop rotation to reduce pathogen buildup.<br>
+            <br>
+            Treatment:<br>
+            - Remove and destroy infected plants immediately.<br>
+            - Apply fungicides if necessary to protect healthy plants.<br>
+            - Improve soil drainage and aeration.<br>
+            - Monitor soil moisture levels regularly.<br><br>''', 'Harvesting'), 
+            
+            ('Fall Armyworm', 
+            '''Symptoms:<br>
+            - Irregular holes in leaves due to feeding.<br>
+            - Presence of larvae on the plants.<br>
+            - Affected plants may exhibit wilting and stunted growth.<br>
+            - Reduced yield and quality of crops.<br>
+            - In severe cases, plants may die back completely.<br>
+            <br>
+            Causes:<br>
+            - Caused by the larval stage of the pest *Spodoptera frugiperda*.<br>
+            - Larvae feed on leaves and can cause significant damage.<br>
+            - High populations can lead to defoliation.<br>
+            <br>
+            Preventive Measures:<br>
+            - Monitor crops regularly for signs of infestation.<br>
+            - Use resistant wheat varieties when available.<br>
+            - Practice good sanitation to reduce pest habitats.<br>
+            - Encourage natural predators to help control populations.<br>
+            <br>
+            Treatment:<br>
+            - Apply insecticides as needed, following label instructions.<br>
+            - Handpick and remove larvae from plants.<br>
+            - Use traps to monitor and control populations.<br>
+            - Consider using organic insecticides if available.<br><br>''', 'Harvesting'), 
+            
+            ('Short Horned Grasshopper and Locust', 
+            '''Symptoms:<br>
+            - Presence of grasshoppers or locusts on plants.<br>
+            - Leaves may exhibit irregular holes due to feeding.<br>
+            - Reduced photosynthesis leading to stunted growth.<br>
+            - Overall plant vigor is significantly reduced.<br>
+            - In severe cases, plants may die back completely.<br>
+            <br>
+            Causes:<br>
+            - Caused by various species of grasshoppers and locusts.<br>
+            - High populations can lead to significant damage.<br>
+            <br>
+            Preventive Measures:<br>
+            - Monitor crops regularly for signs of infestation.<br>
+            - Use resistant wheat varieties when available.<br>
+            - Practice good sanitation to reduce pest habitats.<br>
+            - Encourage natural predators to help control populations.<br>
+            <br>
+            Treatment:<br>
+            - Apply insecticides as needed, following label instructions.<br>
+            - Handpick and remove pests from plants.<br>
+            - Use traps to monitor and control populations.<br>
+            - Consider using organic insecticides if available.<br><br>''', 'Harvesting'), 
+            
+            ('Frost Damage', 
+            '''Symptoms:<br>
+            - Leaves may appear water-soaked or wilted.<br>
+            - Browning or blackening of leaf tips and edges.<br>
+            - Stunted growth and reduced yield.<br>
+            - Overall plant vigor is significantly reduced.<br>
+            - In severe cases, plants may die back completely.<br>
+            <br>
+            Causes:<br>
+            - Caused by exposure to frost or freezing temperatures.<br>
+            - Frost can damage plant tissues, especially during sensitive growth stages.<br>
+            <br>
+            Preventive Measures:<br>
+            - Monitor weather forecasts and take precautions during cold snaps.<br>
+            - Use row covers or mulch to protect plants from frost.<br>
+            - Plant wheat varieties that are more tolerant to cold conditions.<br>
+            <br>
+            Treatment:<br>
+            - Remove and destroy severely damaged plants.<br>
+            - Assess the extent of damage and adjust management practices accordingly.<br>
+            - Consider replanting if damage is extensive and recovery is unlikely.<br>
+            - Monitor for pests and diseases that may exploit weakened plants.<br><br>''', 'Harvesting'),
         ]
         for name, description, stage in wheat_diseases_harvesting:
             disease = Disease(plant_id=wheat.id, name=name, description=description, stage=stage)
